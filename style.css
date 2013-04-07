@@ -1,0 +1,34 @@
+/* I don't remember agreeing to this. */
+body {
+    font-size: 16px;
+    color: black;
+    background-color: #F8FFE0;
+}
+h1 {
+    margin: 12px;
+    padding: 6px;
+    color: black;
+    background-color: #EBFFF5;
+    font-size: 2em;
+    border-style: solid;
+    border-width: 2px;
+    border-left-width: 12px;
+    border-color: maroon;
+}
+h2 {
+    font-size: 1.3em;
+    color: black;
+    background-color: #FFFFE0;
+    margin: 15px;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-left-width: 10px;
+    border-color: purple;
+}
+p {
+    margin: 10px;
+}
+li {
+    margin: 1px;
+}
