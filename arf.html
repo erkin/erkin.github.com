@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- HTML is not my strong suit! Sorry! -->
+<meta charset="UTF-8" />
+<title>Arf - A language</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h3>Summary</h3>
+<p>Arf is my programming language idea, proposal and plan. Its syntax is based on M-expressions. Its semantics are "kinda" object-oriented, and it is strongly and statically typed. It is named after the mathematician Cahit Arf and is not related to the onomatopœia of the dog's cry, nor is it an acronym.</p>
+<h3>Syntax</h3>
+<p>Defining values:</p>
+<code>
+include(mathstypes)<br />
+## Functions are seperated from variables with the format of <em>name(argument)</em><br />
+a[int](3)<br />
+## Every variable follows the format of <em>name[type](value)</em> Every variable <strong>must</strong> have a value.<br />
+## There are plenty of pre-defined types (some include others, for example "num" includes "int") but it is also easy to define a new type.<br />
+b[coord[2]](12,~3)<br />
+## Types such as coordinates can take more than one value.<br />
+## Types can have types too. In this case, "coord" has a type of "2", indicating it is two dimensional.<br />
+## Type-types are obviously optional, the parser can recognise it in most cases.<br />
+## "~" indicates a negative value, to avoid confusion with "-" the numeric operation.<br />
+## (Though this is not mandatory as the plane can have varying number of dimensions if the type-type is not set.)<br />
+</code>
+<p>This draft is highly incomplete. There is much else to explain.</p>
+</body>
+</html>
