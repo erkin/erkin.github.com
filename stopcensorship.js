@@ -1,15 +1,3 @@
-﻿//
-// stopcensorship.js
-//
-// Author: Doug Martin (@dougmartin or http://dougmart.in/)
-//
-// Usage: Add to head or body of any page to automatically censor the content to protest censorship of the Internet
-//
-// Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
-//
-// NOTE: PLEASE DON'T HOTLINK THIS SCRIPT!
-//
-
 (function () {
         var walker, node, root, bar;
 
@@ -129,10 +117,8 @@
                         "zIndex": 2147483647
                 });
 
-                stopLink = createStyledNode("a", "STOP CENSORSHIP IN TURKEY", linkStyles);
-/*              stopLink.href = "http://americancensorship.org/";
-                Not in America.
-*/
+                stopLink = createStyledNode("a", "CENSORSHIP IN TURKEY", linkStyles);
+                stopLink.href = "https://en.wikipedia.org/wiki/Censorship_in_Turkey";
 
                 removeLink = createStyledNode("a", "Remove this", linkStyles);
                 removeLink.href = "#";
