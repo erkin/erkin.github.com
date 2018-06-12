@@ -1,4 +1,4 @@
-/* Adapted from orderedlist's minimal theme: https://github.com/orderedlist/minimal */
+/* Rewritten from orderedlist's minimal theme: https://github.com/orderedlist/minimal */
 
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono);
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Serif);
@@ -16,8 +16,7 @@ body
     display: table-cell;
     vertical-align: middle;
 
-    padding: 60px;
-    color: #777;
+    color: #555;
     line-height: 1.7em;
 
     font-family: "IBM Plex Serif", serif;
@@ -30,19 +29,18 @@ header
     vertical-align: top;
     display: inline-block;
     width: 250px;
-    padding-bottom: 50px;
 }
 
 section
 {
     display: inline-block;
-    width: 500px;
+    width: 520px;
 }
 
 footer
 {
     vertical-align: bottom;
-    padding-top: 150px;
+    padding-top: 100px;
     line-height: 1em;
     width: 300px;
     bottom: 30px;
@@ -51,16 +49,11 @@ footer
 
 code
 {
-    color: #333;
-    background: #f8f8f8;  
-
-    border: 1px solid #e5e5e5;
-    border-radius: 2px;
-    padding: 2px 2px;
-    overflow-x: initial;
+    color: #222;
+    /* background: #f0f0f0; */
 
     font-family: "IBM Plex Mono", mono, monospace;
-    font-style: italic;
+    font-size: 13px;
 }
 
 h1
@@ -71,25 +64,10 @@ h1
 
 h2, h3
 {
+    color: #222;
     line-height: 1em;
     font-weight: extra-light;
     font-variant: small-caps;
-}
-
-h1, h2, h3, h4, h5, h6
-{
-    color: #222;
-    margin: 0 0 20px;
-}
-
-p, ul, ol, table, pre, dl
-{
-    margin: 0 0 15px;
-}
-
-h3, h4, h5, h6
-{
-    color: #494949;
 }
 
 a
@@ -101,7 +79,7 @@ a
 
 small
 {
-    font-size: 9px;    
+    font-size: 10px;
 }
 
 ul
