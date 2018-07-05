@@ -12,3 +12,5 @@
 :END:
 
 This is a placeholder entry in order to be able to test internal
+links.
+
