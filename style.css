@@ -12,6 +12,11 @@ html
 
 body
 {
+    background-image: url("files/cheesy/stars.png");
+    background-repeat: repeat-x;
+    
+    background-color: #f0f0fa;
+
     height: 100%;
     display: table-cell;
     vertical-align: middle;
@@ -51,7 +56,6 @@ code
 {
     color: #222;
     /* background: #f0f0f0; */
-
     font-family: "IBM Plex Mono", mono, monospace;
     font-size: 13px;
 }
@@ -90,10 +94,10 @@ ul
 hr
 {
     border: 0em;
-    background: #e5e5e5;
-    height: 1px;
+    background: #c5e5f5;
+    height: 2px;
     margin: 0 0 0px;
-    width: 25%;
+    width: 30%;
 }
 
 /*
