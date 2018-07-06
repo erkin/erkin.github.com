@@ -1,0 +1,12 @@
+#+TITLE:    Test Post
+#+AUTHOR:   erkin
+#+DATE:     2018-07-06 Fri
+#+EMAIL:    a@a.a
+#+URI:      /weblog/%y/%m/%d/test-post/
+#+KEYWORDS: test, post
+#+TAGS:     :Test:Post:
+#+LANGUAGE: en
+#+OPTIONS:  H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: f1rst
+
+test
