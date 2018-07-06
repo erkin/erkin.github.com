@@ -72,6 +72,12 @@ h2, h3
     font-variant: small-caps;
 }
 
+.smol
+{
+    font-variant: small-caps;
+    font-weight: medium;
+}
+
 a
 {
     color: #39c;
