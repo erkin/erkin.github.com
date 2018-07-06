@@ -32,12 +32,14 @@ header
     vertical-align: top;
     display: inline-block;
     width: 250px;
+    margin-top: 80px;
 }
 
 section
 {
     display: inline-block;
     width: 520px;
+    margin-top: 80px;
 }
 
 footer
