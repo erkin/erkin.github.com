@@ -67,14 +67,13 @@ h2, h3
 {
     color: #222;
     line-height: 1em;
-    font-weight: extra-light;
+    font-weight: 100;
     font-variant: small-caps;
 }
 
 a
 {
     color: #39c;
-    font-weight: 400;
     text-decoration: none;
 }
 
