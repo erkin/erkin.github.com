@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /pubkey.txt
+Disallow: /files/
 Disallow: /humans.txt
-Disallow: /params.json
