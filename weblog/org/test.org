@@ -1,9 +1,0 @@
-#+TITLE:    First post
-#+AUTHOR:   erkin
-#+DATE:     2018-07-06 Fri
-#+URI:      /weblog/%y/%m/%d/test-post/
-#+TAGS:     :Meta:
-#+LANGUAGE: en
-#+DESCRIPTION: First post
-
-All right, let's try this org-page thing.
