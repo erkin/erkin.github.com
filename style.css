@@ -24,7 +24,7 @@ body
     line-height: 1.7em;
 
     font-family: "IBM Plex Serif", serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
 }
 
@@ -63,8 +63,9 @@ code
 
 h1
 {
-    font-size: 30px;
+    font-size: 32px;
     line-height: 0em;
+    font-weight: 500;
 }
 
 h2, h3
