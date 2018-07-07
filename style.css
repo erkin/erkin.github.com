@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono);
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Serif);
+@import url(https://fonts.googleapis.com/css?family=Enriqueta);
 
 html
 {
@@ -24,7 +25,7 @@ body
 
     font-family: "IBM Plex Serif", serif;
     font-size: 14px;
-    font-weight: light;
+    font-weight: 500;
 }
 
 header
@@ -70,14 +71,13 @@ h2, h3
 {
     color: #222;
     line-height: 1em;
-    font-weight: extra-light;
+    font-weight: 500;
     font-variant: small-caps;
 }
 
 .smol
 {
     font-variant: small-caps;
-    font-weight: medium;
 }
 
 a
@@ -90,20 +90,12 @@ a
 small
 {
     font-size: 10px;
+    font-family: "Enriqueta", serif;
 }
 
 ul
 {
     list-style-type: circle;
-}
-
-hr
-{
-    border: 0em;
-    background: #acf;
-    height: 2px;
-    margin: 0 0 0px;
-    width: 30%;
 }
 
 /*
