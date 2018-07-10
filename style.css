@@ -76,11 +76,6 @@ h2, h3
     font-variant: small-caps;
 }
 
-.smol
-{
-    font-variant: small-caps;
-}
-
 a
 {
     color: #39c;
@@ -97,6 +92,19 @@ small
 ul
 {
     list-style-type: circle;
+}
+
+
+span.smol
+{
+    font-variant: small-caps;
+}
+
+div.right
+{
+    font-size: 10px;
+    font-family: "Enriqueta", serif;
+    text-align: right;
 }
 
 /*
