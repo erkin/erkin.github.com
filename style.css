@@ -11,10 +11,9 @@ html
 
 body
 {
-    background-image: url("files/cheesy/stars.png");
+    background-image: url("files/cheesy/stars.png"); /* fallback */
+    background-image: url("files/cheesy/stars.png"), linear-gradient(#e0e0ef, #efe0e0);
     background-repeat: repeat-x;
-    
-    background-color: #f0f0fa;
 
     height: 100%;
     display: table-cell;
