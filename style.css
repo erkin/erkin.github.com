@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono);
-@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Serif);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif);
 @import url(https://fonts.googleapis.com/css?family=Enriqueta);
 
 html
@@ -11,8 +11,7 @@ html
 
 body
 {
-    background-image: url("files/cheesy/stars.png"); /* fallback */
-    background-image: url("files/cheesy/stars.png"), linear-gradient(#e0e0ef, #efe0e0);
+    background-image: linear-gradient(#e0e0ef, #efe0e0);
     background-repeat: repeat-x;
 
     height: 100%;
@@ -22,8 +21,8 @@ body
     color: #555;
     line-height: 1.7em;
 
-    font-family: "IBM Plex Serif", serif;
-    font-size: 15px;
+    font-family: "PT Serif", serif;
+    font-size: 18px;
     font-weight: 500;
 }
 
