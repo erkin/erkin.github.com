@@ -37,7 +37,7 @@ header
 section
 {
     display: inline-block;
-    width: 520px;
+    width: 620px;
     margin-top: 80px;
 }
 
@@ -46,7 +46,7 @@ footer
     vertical-align: bottom;
     padding-top: 100px;
     line-height: 1em;
-    width: 300px;
+    width: 350px;
     bottom: 30px;
 }
 
@@ -67,12 +67,17 @@ h1
     font-weight: 500;
 }
 
-h2, h3
+h2, h3, h4
 {
     color: #222;
     line-height: 1em;
     font-weight: 500;
     font-variant: small-caps;
+}
+
+h3, h4
+{
+    margin-bottom: -5px;
 }
 
 a
