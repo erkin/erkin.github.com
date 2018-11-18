@@ -11,8 +11,8 @@ html
 
 body
 {
+    background-color: #e8e0e8;
     background-image: linear-gradient(#e0e0ef, #efe0e0);
-    background-repeat: repeat-x;
 
     height: 100%;
     display: table-cell;
