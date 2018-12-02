@@ -1,7 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono);
-@import url(https://fonts.googleapis.com/css?family=PT+Serif);
-@import url(https://fonts.googleapis.com/css?family=Enriqueta);
-
 html
 {
     height: 100%;
@@ -21,7 +17,7 @@ body
     color: #555;
     line-height: 1.7em;
 
-    font-family: "PT Serif", serif;
+    font-family: serif;
     font-size: 18px;
     font-weight: 500;
 }
@@ -55,8 +51,8 @@ footer
 code
 {
     color: #222;
-    /* background: #f0f0f0; */
-    font-family: "IBM Plex Mono", mono, monospace;
+    background: #f0f0f0;
+    font-family: mono, monospace;
     font-size: 13px;
 }
 
@@ -107,7 +103,7 @@ span.smol
 div.right
 {
     font-size: 10px;
-    font-family: "Enriqueta", serif;
+    font-family: serif;
     text-align: right;
 }
 
