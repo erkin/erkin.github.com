@@ -10,31 +10,32 @@
     <meta name="description"
           content="this is my personal site so don't doxx me please, thanks"/>
 
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=yes"/>
+
     <link rel="canonical"
           href="https://erkin.party"/>
 
     <!-- Favicon stuff -->
-    <link href="/images/favicons/apple-touch-icon.png"
+    <link href="images/favicons/apple-touch-icon.png"
           rel="apple-touch-icon" sizes="180x180"/>
-    <link href="/images/favicons/favicon-32x32.png"
+    <link href="images/favicons/favicon-32x32.png"
           rel="icon" type="image/png" sizes="32x32"/>
-    <link href="/images/favicons/favicon-16x16.png"
+    <link href="images/favicons/favicon-16x16.png"
           rel="icon" type="image/png" sizes="16x16"/>
-    <link href="/images/favicons/site.webmanifest"
+    <link href="images/favicons/site.webmanifest"
           rel="manifest"/>
-    <link href="/images/favicons/safari-pinned-tab.svg"
+    <link href="images/favicons/safari-pinned-tab.svg"
           rel="mask-icon" color="#6e6e6e"/>
-    <link href="/images/favicons/favicon.ico"
+    <link href="images/favicons/favicon.ico"
           rel="shortcut icon"/>
 
     <meta name="msapplication-TileColor"
           content="#000000"/>
     <meta name="msapplication-config"
-          content="/images/favicons/browserconfig.xml"/>
+          content="images/favicons/browserconfig.xml"/>
     <meta name="theme-color"
           content="#000000"/>
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1"/>
 
     <!-- yea idk -->
     <meta name="google-site-verification"
@@ -42,6 +43,10 @@
 
     <meta http-equiv="X-Clacks-Overhead"
           content="GNU Terry Pratchett"/>
+
+    <!-- Uses native fonts only! :-) -->
+    <link rel="stylesheet" href="style.css"/>
+
     <!--    mmmm                                       mm
            ##"""                                       ##
          #######   ##m####m   m####m    ##m####   m###m##
@@ -49,19 +54,17 @@
            ##      ##    ##  ##    ##   ##       ##    ##
            ##      ##    ##  "##mm##"   ##       "##mm###
            ""      ""    ""    """"     ""         """ "" -->
-
     <title>~erkin</title>
-    <!-- Uses native fonts only! :-) -->
-    <link rel="stylesheet" href="style.css"/>
   </head>
 
   <body>
     <header>
       <h1>&#x0223D;erkin</h1>
-      <!-- weird hack for small <br>-->
+      <!-- weird hack for small <br/>-->
       <div style="line-height:50%;"><br/></div>
       <p class="view">
         <h3>Profiles</h3>
+        <h4>Code</h4>
         <ul>
           <li><a href="https://github.com/erkin"
                  rel="me">GitHub</a></li>
@@ -69,26 +72,36 @@
                  rel="me">Bitbucket</a></li>
           <li><a href="https://gitlab.com/erkin"
                  rel="me">GitLab</a></li>
-          <div style="line-height:50%;"><br/></div>
-          <li><a href="https://www.linkedin.com/in/erkinb"
-                 rel="me">LinkedIn</a></li>
-          <li><a href="https://www.xing.com/profile/ErkinBatu_Altunbas"
-                 rel="me">XING</a></li>
         </ul>
-        <h4>Personal</h4>
+
+        <h4>Social</h4>
         <ul>
-          <li><a href="https://libre.fm/user/erkin"
-                 rel="me">Libre.FM</a></li>
-          <li><a href="https://www.last.fm/user/erkinbatu"
-                 rel="me">Last.FM</a></li>
           <li><a href="https://lobste.rs/u/erkin"
                  rel="me">Lobsters</a></li>
           <li><a href="https://mastodon.sdf.org/@erkin"
                  rel="me">Mastodon</a></li>
         </ul>
-        <h3>Other</h3>
+
+        <h4>Networking</h4>
         <ul>
-          <li><a href="lambda-aleph">&lambda;&aleph;</a>
+          <li><a href="https://www.linkedin.com/in/erkinb"
+                 rel="me">LinkedIn</a></li>
+          <li><a href="https://www.xing.com/profile/ErkinBatu_Altunbas"
+                 rel="me">XING</a></li>
+        </ul>
+
+        <h4>Music</h4>
+        <ul>
+          <li><a href="https://libre.fm/user/erkin"
+                 rel="me">Libre.FM</a></li>
+          <li><a href="https://www.last.fm/user/erkinbatu"
+                 rel="me">Last.FM</a></li>
+        </ul>
+        <h3>Other stuff</h3>
+        <ul>
+          <li><a href="lambda-aleph">&lambda;&aleph;</a></li>
+          <li><a href="gopher://erkin.party"
+                 rel="me">Phlog</a></li>
         </ul>
       </p>
     </header>
@@ -98,24 +111,22 @@
       <p>
         I'm <strong>Erkin Batu <span class="smol">Altunbaş</span></strong>
         &mdash; a junior <span class="smol">DevOps</span> engineer in Turkey.
-        <br>
+        <br/>
         <a href="files/LP-Europass.pdf">Europass language passport</a>
-        <br>
+        <br/>
         CV coming soon.
       </p>
 
       <p>
-        I like and use Scheme, Rust, Haskell, Python and C, and have a slight
+        I like and use Scheme, Rust, Python and C, and have a slight
         preference for statically and strongly typed functional languages.
-        <br>
+        <br/>
         I swear by the <a href="files/layout">Dvorak layout</a>, and prefer
         mechanical keyboards and trackballs.
-        <br>
-        Using Arch with
-        <a href="https://github.com/awesomeWM/awesome">awesome</a> at home and
-        Debian Buster/Sid with
-        <a href="https://github.com/SirCmpwn/sway">sway</a> at work.
-        <br>
+        <br/>
+        Using Arch Linux with
+        <a href="https://github.com/awesomeWM/awesome">awesome</a> at home.
+        <br/>
         I finally put up
         <a href="https://github.com/erkin/dotfiles">my dotfiles here</a>.
         <!-- TODO: zsh, esolang -->
@@ -130,9 +141,9 @@
       <p>
         If you need/want to reach me, my main e-mail address is
         <code>b64decode('bWFpbHRvOm1lQGVya2luLnBhcnR5')</code>.
-        <br>
+        <br/>
         Please refrain from putting trackers in your e-mails.
-        <br>
+        <br/>
         And in case it's necessary: my <a href="files/pubkey.txt">public key</a>.
       </p>
       <p>
@@ -140,6 +151,7 @@
         <a href="irc://irc.freenode.net">FreeNode</a>
         under the nick <code>erkin</code>. (Surprise!)
       </p>
+
       <hr>
 
       <h2>Personal</h2>
@@ -158,7 +170,7 @@
           <li>Third stream</li>
         </ul>
         You can see my {Libre,Last}.fm profiles on the sidebar.
-        <br>
+        <br/>
         Oh and I have a growing collection of vinyl records;
         I should update my
         <a href="https://www.discogs.com/user/erkinb"
@@ -173,7 +185,7 @@
         obsolete during the digital age and were replaced by mass-produced
         equivalents that are much more practical to handle and cheaper to
         produce.
-        <br>
+        <br/>
         Such items were revived in the last decade as anachronistic
         quasi-luxury and hobby items that can be produced for cheaper now and
         became much more practical with technological advances, and became niche
@@ -194,31 +206,31 @@
           <a href="https://pages.github.com">
             GitHub Pages
           </a>.
-          <br>
+          <br/>
           &copy; 2012&ndash;2018 Erkin Batu Altunbaş
         </small>
-        <br>
-        <br>
+        <br/>
+        <br/>
         <a href="https://www.gnu.org/software/emacs/">
-          <img src="/images/cheesy/emacs/powered.gif"
+          <img src="images/cheesy/emacs/powered.gif"
                title="GNU Emacs: Everyone's favourite thermonuclear editor!"
                height="31" width="81"
                alt="[Powered by GNU Emacs]"/>
         </a>
         <a href="https://anybrowser.org/campaign/">
-          <img src="/images/cheesy/any/littlebbv.gif"
+          <img src="images/cheesy/any/littlebbv.gif"
                height="22" width="102"
                title="Use Firefox anyway."
                alt="[Best Viewed with Any Browser!]"/>
         </a>
         <a href="https://lynx.invisible-island.net/">
-          <img src="/images/cheesy/lynx/paula.gif"
+          <img src="images/cheesy/lynx/paula.gif"
                height="28" width="77"
                title="Lynx Friendly"
                alt="[Dehanced for Lynx!]"/>
         </a>
         <a href="http://www.catb.org/hacker-emblem/">
-          <img src="/images/cheesy/glider.png"
+          <img src="images/cheesy/glider.png"
                height="33" width="33"
                title="glider"
                alt="[Hacker Emblem]"/>
