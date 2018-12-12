@@ -7,27 +7,15 @@ html
 
 body
 {
-    background-color: #e8e0e8;
-    background-image: linear-gradient(#e0e0ef, #efe0e0);
-
     height: 100%;
     display: table-cell;
     vertical-align: middle;
 
-    color: #555;
     line-height: 1.7em;
 
     font-family: serif;
     font-size: 18px;
     font-weight: 500;
-}
-
-header
-{
-    vertical-align: top;
-    display: inline-block;
-    width: 250px;
-    margin-top: 80px;
 }
 
 section
@@ -37,21 +25,8 @@ section
     margin-top: 80px;
 }
 
-footer
-{
-    vertical-align: bottom;
-    padding-top: 100px;
-    line-height: 1em;
-    width: 350px;
-    bottom: 30px;
-}
-
-
-
 code
 {
-    color: #222;
-    background: #f0f0f0;
     font-family: mono, monospace;
     font-size: 13px;
 }
@@ -65,7 +40,6 @@ h1
 
 h2, h3, h4
 {
-    color: #222;
     line-height: 1em;
     font-weight: 500;
     font-variant: small-caps;
@@ -78,7 +52,6 @@ h3, h4
 
 a
 {
-    color: #39c;
     font-weight: 500;
     text-decoration: none;
 }
@@ -86,7 +59,7 @@ a
 small
 {
     font-size: 10px;
-    font-family: "Enriqueta", serif;
+    font-family: serif;
 }
 
 ul
@@ -105,6 +78,56 @@ div.right
     font-size: 10px;
     font-family: serif;
     text-align: right;
+}
+
+@media screen
+{
+    header
+    {
+        vertical-align: top;
+        display: inline-block;
+        width: 250px;
+        margin-top: 80px;
+    }
+
+    body
+    {
+        background-color: #e8e0e8;
+        background-image: linear-gradient(#e0e0ef, #efe0e0);
+        color: #555;
+    }
+
+    footer
+    {
+        vertical-align: bottom;
+        padding-top: 100px;
+        line-height: 1em;
+        width: 350px;
+        bottom: 30px;
+    }
+
+    code
+    {
+        color: #222;
+        background: #f0f0f0;
+    }
+
+    h2, h3, h4
+    {
+        color: #222;
+    }
+    a
+    {
+        color: #39c;
+    }
+}
+
+@media print
+{
+    header, footer
+    {
+        display: none;
+    }
 }
 
 /*
