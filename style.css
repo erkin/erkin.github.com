@@ -34,7 +34,7 @@ code
 caption
 {
     text-align: left;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 td
@@ -42,7 +42,7 @@ td
     text-align: center;
 
     line-height: 1.5em;
-    padding: 3px;
+    padding: 10px;
 
     font-family: mono, monospace;
     font-size: 11px;
@@ -75,7 +75,7 @@ a
 
 small
 {
-    font-size: 12px;
+    font-size: 13px;
     font-family: serif;
 }
 
