@@ -68,7 +68,8 @@ small
     body
     {
         background-color: #202020;
-        background-image: linear-gradient(#101A10, #10101A, #101A10);
+        /* sorry */
+        background-image: linear-gradient(#151010, #101510, #101015, #151010);
         color: #AAAAAA;
     }
 
