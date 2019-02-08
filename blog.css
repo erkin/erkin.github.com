@@ -20,6 +20,11 @@ body
     font-weight: 500;
 }
 
+header
+{
+    width: 100%;
+}
+
 code
 {
     font-family: mono, monospace;
@@ -69,8 +74,8 @@ small
     {
         background-color: #202020;
         /* sorry */
-        background-image: linear-gradient(#151010, #101510, #101015, #151010);
-        color: #AAAAAA;
+        background-image: linear-gradient(#111010, #101110, #101011, #111010);
+        color: #BABABA;
     }
 
     footer
