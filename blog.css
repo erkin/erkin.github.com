@@ -61,6 +61,10 @@ small
     font-size: 15px;
     font-family: serif;
 }
+ul
+{
+    list-style-type: circle;
+}
 
 @media screen
 {
