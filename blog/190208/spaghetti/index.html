@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="title"
+          content="Family spaghetti of programming languages"/>
+    <meta name="author"
+          content="Erkin B Altunbaş"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=yes"/>
+
+    <link rel="canonical"
+          href="https://erkin.party/blog/190208/spaghetti"/>
+
+    <title>Family spaghetti of programming languages</title>
+  </head>
+
+  <body>
+    <article>
+      <h1 class="title">Family spaghetti of programming languages</h1>
+      <div id="preamble" class="status">
+        <p class="author"><b>Author:</b> Erkin Batu Altunbaş</p>
+        <p class="date"><b>Date:</b> 2019-02-08</p>
+      </div>
+      <p>
+        This is my first ever blog post so I hope I don't ramble too much.
+        <i>ahem</i>
+      </p>
+
+      <p>
+        There are a lot of programming languages. A lot.
+        <a href="https://rosettacode.org">Rosetta Code</a> lists
+        <a href="https://www.rosettacode.org/wiki/Category:Programming_Languages">
+          714 of them</a>, as of the date of this post. Just like human languages,
+        it's really difficult to map them on family trees, because they
+        continuously evolve and have numerous dialects of varying mutual
+        intelligibility, informal dialects, different incompatible versions and
+        divergent implementations.
+      </p>
+
+      <p>
+        However, unlike natural languages, programming languages have a
+        significantly more problematic property that makes them nigh impossible
+        to cleanly reduce into pretty graphs: They're arbitrarily constructed. A
+        natural language simply descends from a previous language, and languages
+        form trees. Of course, interlanguage influence is widespread (and let's
+        not forget that there are pidgins, creoles and, of course, constructed
+        languages). Even then, it's still perfectly possible (if not feasible)
+        to trace each language's ancestor back.
+      </p>
+
+      <p>
+        The reason tracing geneological roots is infeasible in software is
+        simply because we "unorganically" take various influences from here and
+        there and sculpt a whole new project. This gets especially more
+        problematic with newer multi-paradigm languages that borrow something
+        from everyone! Whilst borrowing a few words from another language
+        doesn't align a natural language's lineage, borrowing a considerable
+        amount of semantics or syntax from another language completely alters a
+        programming language's lineage.
+      </p>
+
+      <p>
+        For instance, ask yourself: Where does Python come from? Graphs I found
+        online gave me various ridiculous answers, such as C, Perl and even
+        Java. Of course, you say to yourself, the answer is CLU, right? Not
+        quite. How about Rust? Where does it come from? The answer is,
+        unfortunately, a bit of everything.
+      </p>
+
+      <p>
+        Still, I thought to myself, it sure would be nice to see even a sloppy
+        graph, showing maybe <strong>just</strong> the direct influences. It
+        would be simpler if I just didn't include languages like Java!
+      </p>
+
+      <p>
+        Last year, August, I was chatting with my
+        friend <a href="https://baturin.org">Daniil</a> on IRC and he showed me
+        the blogpost he was working on, an
+        <a href="https://blog.baturin.org/introduction-to-ocaml.html">
+          Introduction to OCaml</a>. He had made a very simple family tree of the
+        three main functional programming language families from which all else
+        descends. (I exaggerate, but you get my point.)
+      </p>
+
+      <figure>
+        <img src="./dan_geneology.png"
+             alt="A tree depicting three groups"
+             style="width:75%"/>
+        <figcaption>
+          Dan's functional programming family tree
+        </figcaption>
+      </figure>
+
+      <p>
+        I thought that was fascinating. I tried to find similar graphs but, much
+        to my chagrin, they were all either way too reductionistic, or, well,
+        seemed to have strange preconceptions about what defines a
+        language. Hard to blame them, really.
+      </p>
+
+      <p>
+        Instead of taking such an approach, I tried to go by what the languages'
+        respective users (or enthusiasts, in case of historic languages) go by
+        and set out to make my very own incomplete and sloppy graph.
+      </p>
+
+
+      <figure>
+        <a href="./geneology.png">
+          <img src="./geneology_thumb.png"
+               title="Click to view the larger version."
+               alt="A very convoluted graph."
+               style="width:75%"/>
+        </a>
+        <figcaption>
+          The beauty of a bowl of saucy spaghetti (click for the larger version)
+        </figcaption>
+      </figure>
+
+      <p>
+        Unfortunately, I gave up halfway through and mothballed it in a single
+        Graphviz dot file and completely forgot about it by October.
+      </p>
+
+      <p>
+        Just today, I discovered it in the random junk I had stashed
+        in <a href="gopher://suika.erkin.party/1/files">my gopherspace</a>.
+        I brought it up
+        in <a href="ircs://freenode.net/#lobsters"><code>#lobsters</code></a>
+        and talked about how I made it. Much to my surprise, people encouraged
+        me to make a blogpost out of it so I'll try to describe what I remember
+        from making this.
+      </p>
+
+      <figure>
+        <a href="./geneology_simple.png">
+          <img src="./geneology_simple_thumb.png"
+               title="Click to view the larger version."
+               alt="A slightly less convoluted graph."
+               style="width:75%"/>
+        </a>
+        <figcaption>
+          Simplified by diking out secondary influences that
+          stretch the whole graph (click for the larger version)
+        </figcaption>
+      </figure>
+
+      <h2>Methodology</h2>
+      <p>
+        You can probably guess that I'm not well-versed in a good portion of
+        these languages, nor their historical backgrounds. I picked the most
+        straightforward ethod and simply asked people who are and consulted the
+        mighty information superhighway when that failed. Wikipedia has
+        "influences" and "influenced" sections in infoboxes of programming
+        language articles, just like those of artists and
+        philosophers. Unfortunately, it's rather lax about what can be
+        considered influences, so I had to narrow it down a bit with independent
+        research.
+      </p>
+
+      <p>
+        I considered design choices as of the language's birth more important
+        than later additions, even if they were slowly eclipsed by foreign
+        influences in later versions.
+      </p>
+
+      <!-- <h3>Lisps</h3> -->
+      <!-- <p> -->
+      <!--   Let's take Lisp. Is Lisp a single language? Are the fragmented Lisp -->
+      <!--   "dialects" from Lisp Machine era separate languages? Are CLOS and Loops -->
+      <!--   languages at all? Is Racket a Scheme implementation or a -->
+      <!--   Scheme-descended language on its own? -->
+      <!--   (Of course, there are no single answers to these questions. After all, -->
+      <!--   <a href="https://en.wikipedia.org/wiki/A_language_is_a_dialect_with_an_army_and_navy"> -->
+      <!--     a language is a dialect with an army and fleet</a>!) -->
+      <!-- </p> -->
+
+      <!-- <p> -->
+      <!--   Honestly, Lisp was especially problematic, as most recent Lisps can be -->
+      <!--   said to descend from Common Lisp and Scheme at the same time, which -->
+      <!--   tells you nothing at all. -->
+      <!-- </p> -->
+
+      <!-- <h3>Basics</h3> -->
+      <!-- <p> -->
+      <!--   This was the simplest one. -->
+      <!-- </p> -->
+
+      <!-- <h3>Shells</h3> -->
+      <!-- <p> -->
+      <!--   This was the most painful one. There's a myriad of different Unix shell -->
+      <!--   implementations out there with completely varying degrees of -->
+      <!--   compatibility and it's nigh-impossible to map them into a neat tree. -->
+      <!-- </p> -->
+
+      <details>
+        <summary>CC-BY-SA 4.0</summary>
+        <p>
+          Both images and the source file are licensed under
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/">
+            CC-BY-SA 4.0</a>.
+        </p>
+      </details>
+    </article>
+  </body>
+  
+  <footer>
+    <a href="https://erkin.party/emacs/">
+      <img src="/images/emacs/powered1.jpg"
+           title="Powered by GNU Emacs, the environmentally friendly editor!"
+           height="31" width="81"
+           alt="[Powered by GNU Emacs]"/>
+    </a>
+  </footer>
+</html>
