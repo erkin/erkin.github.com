@@ -1,16 +1,16 @@
 html
 {
-    height: 80%;
-    max-width: 700px;
+    height: 100%;
+    max-width: 800px;
     margin: auto;
 }
 
 body
 {
-    height: 80%;
+    height: 100%;
     vertical-align: middle;
 
-    width: 620px;
+    width: 720px;
     margin-top: 30px;
 
     line-height: 1.7em;
@@ -84,7 +84,7 @@ small
     body
     {
         background-color: #202020;
-        background-image: linear-gradient(#203020, #202030);
+        background-image: linear-gradient(#1A201A, #1A1A20);
         color: #A0A0A0;
     }
 
