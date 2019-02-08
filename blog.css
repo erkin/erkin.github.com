@@ -84,8 +84,8 @@ small
     body
     {
         background-color: #202020;
-        background-image: linear-gradient(#1A201A, #1A1A20);
-        color: #A0A0A0;
+        background-image: linear-gradient(#101A10, #10101A, #101A10);
+        color: #AAAAAA;
     }
 
     footer
@@ -100,7 +100,6 @@ small
     code
     {
         color: #A0A0C0;
-        background: #303030;
     }
 
     h2, h3, h4
