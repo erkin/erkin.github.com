@@ -31,17 +31,6 @@ figcaption
     font-variant: bold;
 }
 
-td
-{
-    text-align: center;
-
-    line-height: 1.5em;
-    padding: 10px;
-
-    font-family: mono, monospace;
-    font-size: 11px;
-}
-
 h1
 {
     font-size: 34px;
@@ -54,11 +43,6 @@ h2, h3, h4
     line-height: 1em;
     font-weight: 500;
     font-variant: small-caps;
-}
-
-h3, h4
-{
-    margin-bottom: -5px;
 }
 
 a
