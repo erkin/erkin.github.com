@@ -1,7 +1,6 @@
 html
 {
     height: 100%;
-    display: table;
     margin: auto;
 }
 
@@ -11,18 +10,14 @@ body
     display: table-cell;
     vertical-align: middle;
 
+    width: 620px;
+    margin-top: 30px;
+
     line-height: 1.7em;
 
     font-family: serif;
     font-size: 20px;
     font-weight: 500;
-}
-
-section
-{
-    display: inline-block;
-    width: 620px;
-    margin-top: 80px;
 }
 
 code
@@ -31,10 +26,9 @@ code
     font-size: 14px;
 }
 
-caption
+figcaption
 {
-    text-align: left;
-    font-size: 22px;
+    font-variant: bold;
 }
 
 td
@@ -77,24 +71,6 @@ small
 {
     font-size: 13px;
     font-family: serif;
-}
-
-ul
-{
-    list-style-type: circle;
-}
-
-
-span.smol
-{
-    font-variant: small-caps;
-}
-
-div.right
-{
-    font-size: 12px;
-    font-family: serif;
-    text-align: right;
 }
 
 @media screen
