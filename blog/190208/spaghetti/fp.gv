@@ -40,7 +40,7 @@ digraph FP
 		"Le Lisp" -> "ISLISP";
 		"Common Lisp" -> "EuLisp" -> "Dylan";
 		"T" -> "EuLisp" -> "ISLISP" -> "OpenLisp";
-		"Carp";
+		"Common Lisp" -> "Carp";
 	}
 
 	subgraph cluster_SASLs

@@ -12,6 +12,8 @@
     <link rel="canonical"
           href="https://erkin.party/blog/190208/spaghetti"/>
 
+    <link rel="stylesheet" href="/blog.css"/>
+
     <title>Family spaghetti of programming languages</title>
   </head>
 
@@ -85,7 +87,7 @@
       </p>
 
       <figure>
-        <img src="./dan_geneology.png"
+        <img src="dan_geneology.png"
              alt="A tree depicting three groups"
              style="width:75%"/>
         <figcaption>
@@ -108,8 +110,8 @@
 
 
       <figure>
-        <a href="./geneology.png">
-          <img src="./geneology_thumb.png"
+        <a href="geneology.png">
+          <img src="geneology_thumb.png"
                title="Click to view the larger version."
                alt="A very convoluted graph."
                style="width:75%"/>
@@ -130,13 +132,12 @@
         I brought it up
         in <a href="ircs://freenode.net/#lobsters"><code>#lobsters</code></a>
         and talked about how I made it. Much to my surprise, people encouraged
-        me to make a blogpost out of it so I'll try to describe what I remember
-        from making this.
+        me to make a blogpost out of it so there you go.
       </p>
 
       <figure>
-        <a href="./geneology_simple.png">
-          <img src="./geneology_simple_thumb.png"
+        <a href="geneology_simple.png">
+          <img src="geneology_simple_thumb.png"
                title="Click to view the larger version."
                alt="A slightly less convoluted graph."
                style="width:75%"/>
@@ -164,36 +165,51 @@
         I considered design choices as of the language's birth more important
         than later additions, even if they were slowly eclipsed by foreign
         influences in later versions.
+        In the end, I ended up including many insignificant languages and
+        excluding equally many significant languages.
       </p>
 
-      <!-- <h3>Lisps</h3> -->
-      <!-- <p> -->
-      <!--   Let's take Lisp. Is Lisp a single language? Are the fragmented Lisp -->
-      <!--   "dialects" from Lisp Machine era separate languages? Are CLOS and Loops -->
-      <!--   languages at all? Is Racket a Scheme implementation or a -->
-      <!--   Scheme-descended language on its own? -->
-      <!--   (Of course, there are no single answers to these questions. After all, -->
-      <!--   <a href="https://en.wikipedia.org/wiki/A_language_is_a_dialect_with_an_army_and_navy"> -->
-      <!--     a language is a dialect with an army and fleet</a>!) -->
-      <!-- </p> -->
+      <p>
+        <a href="fp.gv" type="text/vnd.graphviz">Here</a>'s the source code.
+        Just send fixes, patches and errata to
+        <code>b64decode('bWFpbHRvOm1lQGVya2luLnBhcnR5')</code>
+        and I'll update this post.
+      </p>
 
-      <!-- <p> -->
-      <!--   Honestly, Lisp was especially problematic, as most recent Lisps can be -->
-      <!--   said to descend from Common Lisp and Scheme at the same time, which -->
-      <!--   tells you nothing at all. -->
-      <!-- </p> -->
+      <h2>A few notes</h2>
+      <h3>Lisps</h3>
+      <p>
+        Is Lisp a single language? Are the fragmented Lisp "dialects" from Lisp
+        Machine era separate languages? Are CLOS and Loops languages at all, as
+        some graphs insinuate?
+        Is Racket a Scheme implementation or a Scheme-based language on its own?
+        (Of course, there are no single answers to these questions. After all,
+        <a href="https://en.wikipedia.org/wiki/A_language_is_a_dialect_with_an_army_and_navy">
+          a language is a dialect with an army and fleet</a>!)
+      </p>
 
-      <!-- <h3>Basics</h3> -->
-      <!-- <p> -->
-      <!--   This was the simplest one. -->
-      <!-- </p> -->
+      <p>
+        Honestly, Lisp was especially problematic, as most recent Lisps can be
+        said to descend from Common Lisp and Scheme at the same time, which
+        tells you nothing at all.
+      </p>
 
-      <!-- <h3>Shells</h3> -->
-      <!-- <p> -->
-      <!--   This was the most painful one. There's a myriad of different Unix shell -->
-      <!--   implementations out there with completely varying degrees of -->
-      <!--   compatibility and it's nigh-impossible to map them into a neat tree. -->
-      <!-- </p> -->
+      <h3>Basics</h3>
+      <p>
+        This was the simplest one and it contains the least significant
+        dialects of any family.
+        Basic vendors were very straightforward about taking a dialect and
+        expanding on it, fitting it to their own equipment and shipping it as
+        is.
+      </p>
+
+      <h3>Shells</h3>
+      <p>
+        This was the most painful one. There's a myriad of different Unix shell
+        implementations out there with completely varying degrees of
+        compatibility and it's nigh-impossible to map them into a neat tree.
+        So I ended up pruning away 80% of it in the end.
+      </p>
 
       <details>
         <summary>CC-BY-SA 4.0</summary>
