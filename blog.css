@@ -10,7 +10,7 @@ body
     height: 100%;
     vertical-align: middle;
 
-    width: 760px;
+    width: 800px;
     margin-top: 30px;
 
     line-height: 1.7em;
@@ -34,13 +34,13 @@ code
 
 figcaption
 {
-    font-variant: bold;
+    font-style: italic;
 }
 
 h1
 {
     font-size: 34px;
-    line-height: 0em;
+    line-height: 1em;
     font-weight: 500;
 }
 
