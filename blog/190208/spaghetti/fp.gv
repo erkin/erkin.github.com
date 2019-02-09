@@ -3,14 +3,15 @@ digraph FP
 {
 	graph[ranksep=1.5,
 	      ratio="compress",
-	      overlap=prism,
-	      concentrate=true,
+	      overlap="orthodoxy",
+	      concentrate=false,
 	      label="Mighty family spaghetti of programming languages",
-	      labelloc=t];
+	      labelloc=t,
+	      splines="polyline"];
 
 	subgraph cluster_Lisps
 	{
-		edge[color=red constraint=true];
+		edge[color=red, constraint=true];
 		node[color=red];
 		graph[pencolor=red,
 		      label="Lisp family",
@@ -24,7 +25,7 @@ digraph FP
 		"MacLisp" -> "NIL" -> "Common Lisp" -> "Dylan";
 		"NIL" -> "T";
 		"Common Lisp" -> "Clojure" -> "LFE";
-		"Scheme" -> "Clojure";
+		"Scheme" -> "Clojure" -> "Kawa";
 		"Lisp" -> "Logo";
 		"Lisp" -> "Franz Lisp";
 		"Lisp" -> "Scheme" -> "T";
@@ -32,9 +33,8 @@ digraph FP
 		"Racket" -> "Typed Racket" -> "Hackett";
 		"Racket" -> "Lazy Racket" -> "Hackett";
 		"Scheme" -> "Kawa";
-		"Clojure" -> "Hy" -> "LFE";
+		"Clojure" -> "Hy";
 		"Scheme" -> "newLISP";
-		"Scheme" -> "Logo";
 		"Common Lisp" -> "PicoLisp";
 		"MacLisp" -> "Le Lisp" -> "EuLisp";
 		"Le Lisp" -> "ISLISP";
@@ -45,7 +45,7 @@ digraph FP
 
 	subgraph cluster_SASLs
 	{
-		edge[color=forestgreen constraint=true];
+		edge[color=forestgreen, constraint=true];
 		node[color=forestgreen];
 		graph[pencolor=forestgreen,
 		      label="SASL family",
@@ -72,7 +72,7 @@ digraph FP
 
 	subgraph cluster_MLs
 	{
-		edge[color=blue constraint=true];
+		edge[color=blue, constraint=true];
 		node[color=blue];
 		graph[pencolor=blue,
 		      label="ML family",
@@ -89,7 +89,7 @@ digraph FP
 
 	subgraph cluster_APLs
 	{
-		edge[color=purple constraint=true];
+		edge[color=purple, constraint=true];
 		node[color=purple];
 		graph[pencolor=purple,
 		      label="APL family",
@@ -104,7 +104,7 @@ digraph FP
 
 	subgraph cluster_ALGOLs
 	{
-		edge[color=sienna constraint=true];
+		edge[color=sienna, constraint=true];
 		node[color=sienna];
 		graph[pencolor=sienna,
 		      label="Algol family",
@@ -118,7 +118,7 @@ digraph FP
 
 	subgraph cluster_Cs
 	{
-		edge[color=orange constraint=true];
+		edge[color=orange, constraint=true];
 		node[color=orange];
 		graph[pencolor=orange,
 		      label="C family",
@@ -126,8 +126,8 @@ digraph FP
 
 		"CPL" -> "BCPL";
 		"BCPL" -> "B";
-		"B" -> "C" -> "D";
-		"C" -> "C++";
+		"B" -> "C";
+		"C" -> "C++" -> "D";
 		"C" -> "Cyclone";
 		"C" -> "Objective C";
 		"C" -> "Alef";
@@ -136,7 +136,7 @@ digraph FP
 
 	subgraph cluster_Pascals
 	{
-		edge[color=darkslateblue constraint=true];
+		edge[color=darkslateblue, constraint=true];
 		node[color=darkslateblue];
 		graph[pencolor=darkslateblue,
 		      label="Pascal family",
@@ -156,7 +156,7 @@ digraph FP
 
 	subgraph cluster_shells
 	{
-		edge[color=darkslategrey constraint=true];
+		edge[color=darkslategrey, constraint=true];
 		node[color=darkslategrey];
 		graph[pencolor=darkslategrey,
 		      label="Shell family",
@@ -173,7 +173,7 @@ digraph FP
 
 	subgraph cluster_Squeakies
 	{
-		edge[color=cadetblue3 constraint=true];
+		edge[color=cadetblue3, constraint=true];
 		node[color=cadetblue3];
 		graph[pencolor=cadetblue3,
 		      label="Squeaky family",
@@ -181,22 +181,18 @@ digraph FP
 
 		"Simula" -> "BETA";
 		"Simula" -> "Smalltalk";
-		"Smalltalk" -> "Self";
-		"Smalltalk" -> "Squeak";
-		"Self" -> "Io";
-		"Squeak" -> "Newsqueak";
-		"Newsqueak" -> "Scratch";
-		"Scratch" -> "ScratchJr"
+		"Smalltalk" -> "Self" -> "Io";
+		"Smalltalk" -> "Squeak" -> "Scratch" -> "ScratchJr";
 		"Simula" -> "CLU";
 	}
 
 	subgraph cluster_Prolog
 	{
-		edge[color=burlywood3 constraint=true];
+		edge[color=burlywood3, constraint=true];
 		node[color=burlywood3];
 		graph[pencolor=burlywood3,
 		      label="Prolog family",
-		      clusterrank=local
+		      clusterrank=local,
 		      labelloc=b];
 
 		"Planner" -> "Prolog";
@@ -209,11 +205,12 @@ digraph FP
 
 	subgraph cluster_Basic
 	{
-		edge[color=maroon constraint=true];
+		edge[color=maroon, constraint=true];
 		node[color=maroon];
 		graph[pencolor=maroon,
 		      label="Basic family",
-		      clusterrank=local];
+		      clusterrank=local,
+		      labelloc=b];
 
 		"Dartmouth Basic" -> "HP Basic" -> "Integer Basic" -> "Applesoft Basic";
 		"HP Basic" -> "VAX BASIC";
@@ -231,6 +228,7 @@ digraph FP
 		"GW-BASIC" -> "QBasic" -> "Microsoft Small Basic";
 	}
 
+	"COWSEL" -> "POP-2" -> "POP-11" -> "Poplog";
 	"Datalog" -> "SQL"[color=burlywood3];
 	"Planner" -> "Scheme"[color=burlywood3];
 	"Planner" -> "Smalltalk"[color=burlywood3];
@@ -242,8 +240,10 @@ digraph FP
 	"Lisp" -> "COWSEL"[color=red];
 	"Lisp" -> "Forth"[color=red];
 	"Logo" -> "Smalltalk"[color=red];
-	"Scheme" -> "Pico"[color=red];
+	// "Scheme" -> "Pico"[color=red];
 	"Scheme" -> "scsh"[color=red];
+
+	"ABC" -> "Python";
 
 	"Smalltalk" -> "Logtalk"[color=cadetblue3];
 	"Smalltalk" -> "Erlang"[color=cadetblue3];
@@ -254,11 +254,11 @@ digraph FP
 	"CLU" -> "Ruby"[color=cadetblue3];
 	"Simula" -> "Eiffel"[color=cadetblue3];
 	"Self" -> "Rebol"[color=cadetblue3];
-
-	"COWSEL" -> "POP-2" -> "POP-11" -> "Poplog";
+	"Self" -> "Factor"[color=cadetblue3];
 
 	"PicoLisp" -> "Pilog"[color=red];
 
+	"Algol 68" -> "ABC"[color=sienna];
 	"Algol 58" -> "JOSS"[color=sienna];
 	"Algol 60" -> "Algol W"[color=sienna];
 	"Algol 60" -> "Euler"[color=sienna];
@@ -266,37 +266,37 @@ digraph FP
 	"Algol 60" -> "Simula"[color=sienna];
 	"Algol 68" -> "Ada"[color=sienna];
 
-	"Ada" -> "Chapel";
-
 	"JOSS" -> "Dartmouth Basic";
 	"JOSS" -> "Mumps";
 	"Fortran" -> "IPL";
 	"Fortran" -> "Dartmouth Basic";
 	"Fortran" -> "Chapel";
-	"Fortran" -> "Speakeasy" -> "MatLab" -> "Julia";
 	"Fortran" -> "Comtran" -> "Cobol" -> "PL/I" -> "Rexx";
 	"PL/I" -> "B";
 	"PL/I" -> "Unix shell";
 
+	"C++" -> "Chapel"[color=orange];
 	"C" -> "csh"[color=orange];
-	"C" -> "ZPL";
-	
-	"Newsqueak" -> "Alef";
+	"C" -> "ZPL"[color=orange];
+
+	"CSP" -> "Newsqueak" -> "Alef";
 	"Alef" -> "Limbo"[color=orange];
 	"CSP" -> "Limbo" -> "Go";
 	"CSP" -> "occam" -> "Go";
 
 	"ALF" -> "Epigram" -> "Coq";
 	"Epigram" -> "Agda";
-	"Erlang" -> "Oz" -> "Alice";
+	// "Erlang" -> "Oz" -> "Alice";
 	"Erlang" -> "Elixir";
 	"Erlang" -> "LFE";
+	"Erlang" -> "Clojure";
 
 	"Forth" -> "Rebol" -> "Red";
 	"Forth" -> "Factor";
 	"Forth" -> "PostScript";
 
 	"Coq" -> "Agda"[color=blue];
+	"Coq" -> "Idris"[color=blue];
 	"Haskell" -> "Agda"[color=forestgreen];
 	"Haskell" -> "Hackett"[color=forestgreen];
 
@@ -311,36 +311,39 @@ digraph FP
 	"AWK" -> "Perl" -> "PHP";
 	"AWK" -> "sh";
 	"COMIT" -> "SNOBOL" -> "SPITBOL";
-	"Perl" -> "Perl 6";
+	"Perl" -> "Raku";
 	"Perl" -> "Python" -> "Hy";
 	"Perl" -> "Ruby" -> "Crystal";
+	"Ruby" -> "Raku";
 	"sh" -> "Perl"[color=darkslategrey];
 
 	"APL" -> "Speakeasy"[color=purple];
+	"APL" -> "Forth"[color=purple];
 	"J" -> "ZPL" -> "Chapel";
 	"FP" -> "Joy"[color=purple];
+	"Joy" -> "Factor";
 	"S" -> "R" -> "Julia";
+	"Speakeasy" -> "MatLab" -> "Julia";
 	"Speakeasy" -> "R";
 	"PPL" -> "S"[color=purple];
 
 	// subgraph cluster_old
 	// {
-	// 	pencolor=invis;
-	// 	label="";
-	// 	newrank=true;
+	//  	pencolor=invis;
+	//  	label="";
+	//  	newrank=true;
 	// }
-
+	
 	"First order logic" -> "Begriffsschrift" -> "Plankalkül";
 	"First order logic" -> "Combinatory logic" -> "Untyped lambda calculus";
 	"First order logic" -> "Untyped lambda calculus";
 	"Untyped lambda calculus" -> "Simply typed lambda calculus" -> "Higher order logic";
-	"Turing machine";
+	"Turing machine" -> "P''";
+	"Process calculus" -> "CSP" -> "Crystal";
 	"Simply typed lambda calculus" -> "ML";
 	"First order logic" -> "JavaScript" -> "INTERCAL";
-	"Turing machine" -> "P''";
 	"Combinatory logic" -> "P''" -> "Brainfuck";
 	"Combinatory logic" -> "Unlambda";
-
 	"Turing machine" -> "various autocodes" -> "IPL";
 	"Machine code" -> "various autocodes" -> "Cobol";
 	"various autocodes" -> "Fortran" -> "Algol 58";
@@ -348,12 +351,10 @@ digraph FP
 	"Untyped lambda calculus" -> "Lisp";
 	"Plankalkül" -> "Algol 58";
 
-	edge[style=dashed constraint=false];
-	splines=true;
-	concentrate=false;
+	// edge[style=dashed, constraint=false];
+	// concentrate=false;
 
-	// "APL" -> "Forth"[color=purple];
-	"APL" -> "MatLab"[color=purple];
+	// "APL" -> "MatLab"[color=purple];
 	// "Ada" -> "C++";
 	// "Ada" -> "Eiffel";
 	// "Ada" -> "Ruby";
@@ -363,12 +364,7 @@ digraph FP
 	// "Algol 60" -> "POP-2"[color=sienna];
 	// "C" -> "Perl"[color=orange];
 	// "C" -> "FreeBASIC"[color=orange];
-	"C++" -> "Chapel";
-	"Common Lisp" -> "PicoLisp"[color=red];
-	// "Common Lisp" -> "Poplog"[color=red];
-	"Coq" -> "Idris"[color=blue];
 	// "Elm" -> "Grain"[color=forestgreen];
-	// "Erlang" -> "Clojure";
 	// "Erlang" -> "F#"
 	// "Forth" -> "Joy";
 	// "Fortran" -> "VAX BASIC";
@@ -376,23 +372,17 @@ digraph FP
 	// "Haskell" -> "Mercury"[color=forestgreen];
 	// "Hope" -> "Mercury"[color=forestgreen];
 	// "Hope" -> "Standard ML"[color=forestgreen];
-	"InterLisp" -> "MultiLisp"[color=red];
+	// "InterLisp" -> "MultiLisp"[color=red];
 	// "MetaHaskell" -> "Nemerle"[color=forestgreen];
 	// "Modula" -> "Go"[color=darkslateblue];
 	// "Prolog" -> "Curry"[color=burlywood3];
 	// "Prolog" -> "Erlang"[color=burlywood3];
 	// "Prolog" -> "Oz"[color=burlywood3];
-	// "Prolog" -> "Erlang"[color=burlywood3];
 	// "Rexx" -> "Perl";
 	// "scsh" -> "newLISP"[color=darkslategrey];
-	"Scheme" -> "Dylan"[color=red];
-	// "Scheme" -> "K"[color=red];
+	// "Scheme" -> "Dylan"[color=red];
 	// "Scheme" -> "Lua"[color=red];
 	// "Scheme" -> "R"[color=red];
-	// "Scheme" -> "Tcl"[color=red];
-	// "Self" -> "Factor"[color=cadetblue3];
 	// "Simula" -> "C++"[color=cadetblue3];
 	// "Smalltalk" -> "Dylan"[color=cadetblue3];
-	// "SNOBOL" -> "Lua";
-	// "Standard ML" -> "Poplog"[color=blue];
 }
