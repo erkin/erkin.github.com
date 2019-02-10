@@ -3,11 +3,11 @@ digraph FP
 {
 	graph[ranksep=1.5,
 	      ratio="compress",
-	      overlap="orthodoxy",
+	      overlap="orthodoyx",
 	      concentrate=false,
 	      label="Mighty family spaghetti of programming languages",
 	      labelloc=t,
-	      splines="polyline"];
+	      splines=true];
 
 	subgraph cluster_Lisps
 	{
@@ -17,30 +17,32 @@ digraph FP
 		      label="Lisp family",
 		      labelloc=b];
 
-		"IPL" -> "Lisp" -> "InterLisp" -> "Lisp Machine Lisp" -> "ZetaLisp" -> "Common Lisp";
-		"Lisp" -> "MacLisp" -> "Lisp Machine Lisp" -> "LMI Lisp" -> "Common Lisp";
+		"IPL" -> "Lisp";
+		"Lisp" -> { "InterLisp", "MacLisp" } ->	"Lisp Machine Lisp" -> { "ZetaLisp", "LMI Lisp" } -> "Common Lisp";
 		"MacLisp" -> "Scheme" -> "MultiLisp";
-		"Scheme" -> "XLISP" -> "AutoLisp" -> "Vital-Lisp" -> "Visual Lisp";
+		"Lisp" -> "XLISP" -> "AutoLisp" -> "Vital-Lisp" -> "Visual Lisp";
+		"Common Lisp" -> "XLISP" -> "XLISP 3";
+		"Scheme" -> "XLISP 3";
 		"MacLisp" -> "Emacs Lisp";
 		"MacLisp" -> "NIL" -> "Common Lisp" -> "Dylan";
 		"NIL" -> "T";
-		"Common Lisp" -> "Clojure" -> "LFE";
-		"Scheme" -> "Clojure" -> "Kawa";
+		"Scheme" -> "Kawa";
+		"Common Lisp" -> "Clojure" -> "Kawa";
+		"Scheme" -> "newLISP";
 		"Lisp" -> "Logo";
 		"Lisp" -> "Franz Lisp";
 		"Lisp" -> "Scheme" -> "T";
+		"Lisp" -> "PicoLisp";
+		"Lisp" -> "LFE";
+		"Lisp" -> "Hy";
 		"Scheme" -> "Racket" -> "Arc";
 		"Racket" -> "Typed Racket" -> "Hackett";
 		"Racket" -> "Lazy Racket" -> "Hackett";
-		"Scheme" -> "Kawa";
-		"Clojure" -> "Hy";
-		"Scheme" -> "newLISP";
-		"Common Lisp" -> "PicoLisp";
+		"Clojure" -> "Carp";
 		"MacLisp" -> "Le Lisp" -> "EuLisp";
 		"Le Lisp" -> "ISLISP";
 		"Common Lisp" -> "EuLisp" -> "Dylan";
 		"T" -> "EuLisp" -> "ISLISP" -> "OpenLisp";
-		"Common Lisp" -> "Carp";
 	}
 
 	subgraph cluster_SASLs
@@ -162,13 +164,19 @@ digraph FP
 		      label="Shell family",
 		      labelloc=b];
 
-		"Multics shell" -> "Unix shell";
-		"Unix shell" -> "sh" -> "bash";
-		"sh" -> "rc" -> "es";
-		"sh" -> "csh";
-		"sh" -> "ksh" -> "zsh";
-		"sh" -> "scsh";
-		"sh" -> "wish";
+		"Multics shell" -> "Thompson shell" -> "Bourne shell"
+		"Thompson shell" -> "Programmer's Workbench (Mashley) shell";
+		"Bourne shell" -> { "Bourne again shell", "Minix (Forsyth) shell" };
+		"Bourne shell" -> "Korn shell" -> "Z (Falstad) shell";
+		"Bourne shell" -> "Almquist shell" -> "Debian Almquist shell";
+		"Korn shell" -> "Public domain Korn shell" -> "MirOS Korn shell";
+		"Korn shell" -> "Korn shell '93" -> { "Desktop Korn shell", "Tk shell" };
+		"Korn shell" -> "Steve Koren shell";
+		"Tk shell" -> "Windowing shell";
+		"Bourne shell" -> "rc" -> "es" -> "xs";
+		"Bourne shell" -> "C shell" -> "Hamilton C shell";
+		"C shell" -> "Tenex C shell" -> "Z (Falstad) shell";
+		"Lad shell" -> "Lameass shell";
 	}
 
 	subgraph cluster_Squeakies
@@ -272,11 +280,14 @@ digraph FP
 	"Fortran" -> "Dartmouth Basic";
 	"Fortran" -> "Chapel";
 	"Fortran" -> "Comtran" -> "Cobol" -> "PL/I" -> "Rexx";
+	"Rexx" -> { "Object Rexx", "ARexx" };	
+	"ARexx" -> "Steve Koren shell";
+
 	"PL/I" -> "B";
-	"PL/I" -> "Unix shell";
+	"PL/I" -> "Thompson shell";
 
 	"C++" -> "Chapel"[color=orange];
-	"C" -> "csh"[color=orange];
+	"C" -> "C shell"[color=orange];
 	"C" -> "ZPL"[color=orange];
 
 	"CSP" -> "Newsqueak" -> "Alef";
@@ -307,10 +318,9 @@ digraph FP
 	"OCaml" -> "O'Haskell"[color=blue];
 	"ML" -> "Miranda"[color=blue];
 
-	"Cobol" -> "SNOBOL" -> "AWK" -> "Tcl" -> "wish";
+	"Cobol" -> "SNOBOL" -> "AWK" -> "Tcl" -> "Windowing shell";
 	"AWK" -> "Perl" -> "PHP";
 	"AWK" -> "sh";
-	"COMIT" -> "SNOBOL" -> "SPITBOL";
 	"Perl" -> "Raku";
 	"Perl" -> "Python" -> "Hy";
 	"Perl" -> "Ruby" -> "Crystal";
@@ -347,6 +357,7 @@ digraph FP
 	"Turing machine" -> "various autocodes" -> "IPL";
 	"Machine code" -> "various autocodes" -> "Cobol";
 	"various autocodes" -> "Fortran" -> "Algol 58";
+	"various autocodes" -> "COMIT" -> "SNOBOL" -> "SPITBOL";
 	"First order logic" -> "APL";
 	"Untyped lambda calculus" -> "Lisp";
 	"Plankalkül" -> "Algol 58";
