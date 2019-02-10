@@ -20,7 +20,7 @@ body
     font-weight: 500;
 }
 
-header
+header, footer
 {
     text-decoration: none;
     font-size: 18px;
