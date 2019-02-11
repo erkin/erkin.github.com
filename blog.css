@@ -71,6 +71,7 @@ ul
     header
     {
         vertical-align: top;
+        line-height: 2em;
         width: 250px;
         margin-top: 80px;
     }
