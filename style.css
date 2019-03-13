@@ -96,7 +96,38 @@ div.right
     font-family: serif;
     text-align: right;
 }
+
+/* Look ma, I'm accessible! */
+#skip a
+{
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+#skip a:focus, #skip a:active
+{
+    position: static;
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    z-index: 999;
+
+    color: #220;
+    background-color: #eea;
+    padding: 2px;
+    border-radius: 2px;
+    border: 2px solid #ffa;
+}
+
 
+
 @media screen
 {
     header
