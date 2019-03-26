@@ -140,9 +140,9 @@ div.right
 
     body
     {
-        background-color: #e8e0e8;
-        background-image: linear-gradient(#e0e0ef, #efe0e0);
-        color: #555;
+        background-color: #f8f0f8;
+        background-image: linear-gradient(#f0f0ff, #fff0f0);
+        color: #444;
     }
 
     footer
@@ -165,7 +165,7 @@ div.right
     }
     a
     {
-        color: #39c;
+        color: #38c;
     }
 }
 
