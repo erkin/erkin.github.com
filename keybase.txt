@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/erkinb
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://erkin.party
+  * I am erkinb (https://keybase.io/erkinb) on keybase.
+  * I have a public key ASAc4RSCeufWknLV_H9Cmb6bYPis3q4Pab6z7vRxfvBX8go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01201ce114827ae7d69272d5fc7f4299be9b60f8acdeae0f69beb3eef4717ef057f20a",
+      "host": "keybase.io",
+      "kid": "01201ce114827ae7d69272d5fc7f4299be9b60f8acdeae0f69beb3eef4717ef057f20a",
+      "uid": "0e37031d3ea12f6aebaa3ae30bebb819",
+      "username": "erkinb"
+    },
+    "merkle_root": {
+      "ctime": 1555368157,
+      "hash": "11abdb23ffbf6f63579adcc7acc461a1095e28b5ac200b2c0718acde438e7d4e77cec139d06eb6869e29600d555141d725ac793d0ed2e3863a1287b349485daa",
+      "hash_meta": "1365586b9ae5a7b6347999942d2f7b5d70869aaade0042a3e01c8e91e3662e12",
+      "seqno": 5175336
+    },
+    "service": {
+      "entropy": "RugztqXgvN63xTAxOUBRwf5s",
+      "hostname": "erkin.party",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.2.2"
+  },
+  "ctime": 1555368167,
+  "expire_in": 504576000,
+  "prev": "60df417fcea141b97f2afde59969cc9763e37096da809a2ffc17fdc71e337232",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgHOEUgnrn1pJy1fx/Qpm+m2D4rN6uD2m+s+70cX7wV/IKp3BheWxvYWTESpcCBsQgYN9Bf86hQbl/Kv3lmWnMl2PjcJbagJov/Bf9xx4zcjLEIMW3GVbpKHF6llyQo4by2hAlV27mo1nb34sV/EA9JDn4AgHCo3NpZ8RAUrCjQKmX0Pof6cWrByEn9GcUTScMp+XSMENlUEgRKfaYR4aDfF66jPtuzmzjDHyo7d5twAZYBCUh/Ag1vq41AqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIIO+hEPvFJJvPl3WMuSB8gLtYosQkVa5Icbojcuf6tjxo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/erkinb
+
+==================================================================
