@@ -1,0 +1,92 @@
+html
+{
+    height: 100%;
+}
+
+body
+{
+    min-height: 80%;
+    vertical-align: middle;
+    
+    font-family: serif;
+    font-size: 18px;
+}
+
+header
+{
+    vertical-align: top;
+    text-align: center;
+
+    font-family: mono;
+    font-size: 16px;
+}
+
+section
+{
+    margin-top: 3em;
+}
+
+footer
+{
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+/* Look ma, I'm accessible! */
+#skip a
+{
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+#skip a:focus, #skip a:active
+{
+    position: static;
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    z-index: 999;
+
+    color: #220;
+    background-color: #eea;
+    padding: 2px;
+    border-radius: 2px;
+    border: 2px solid #ffa;
+}
+
+
+
+@media screen
+{
+    html
+    {
+        background-color: #111;
+        color: #f0f0f0;
+	margin-left: 3em;
+    }
+}
+
+@media print
+{
+    header, footer
+    {
+        display: none;
+    }
+}
+
+/*
+  Local Variables:
+    mode: css
+    indent-tabs-mode: nil
+  End:
+*/
