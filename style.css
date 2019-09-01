@@ -62,7 +62,7 @@ ul
     overflow: auto;
     z-index: 999;
 
-    color: #220;
+    color: #15151a;
     background-color: #eea;
     padding: 2px;
     border-radius: 2px;
@@ -75,7 +75,7 @@ ul
 {
     html
     {
-        background-color: #212;
+        background-color: #15151a;
         color: #f0f0f0;
 	margin-left: 3em;
 	margin-right: 3em;
