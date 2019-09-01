@@ -1,101 +1,39 @@
 html
 {
     height: 100%;
-    display: table;
-    margin: auto;
 }
 
 body
 {
-    height: 100%;
-    display: table-cell;
+    min-height: 80%;
     vertical-align: middle;
-
-    line-height: 1.7em;
-
+    
     font-family: serif;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 18px;
+}
+
+header
+{
+    vertical-align: top;
+    text-align: center;
+
+    font-family: mono;
+    font-size: 16px;
 }
 
 section
 {
-    display: inline-block;
-    width: 620px;
-    margin-top: 80px;
+    margin-top: 2em;
 }
 
-code
+footer
 {
-    font-family: mono, monospace;
-    font-size: 14px;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 0;
 }
 
-caption
-{
-    text-align: left;
-    font-size: 22px;
-}
-
-td
-{
-    text-align: center;
-
-    line-height: 1.5em;
-    padding: 10px;
-
-    font-family: mono, monospace;
-    font-size: 11px;
-}
-
-h1
-{
-    font-size: 34px;
-    line-height: 0em;
-    font-weight: 500;
-}
-
-h2, h3, h4
-{
-    line-height: 1em;
-    font-weight: 500;
-    font-variant: small-caps;
-}
-
-h3, h4
-{
-    margin-bottom: -5px;
-}
-
-a
-{
-    font-weight: 500;
-    text-decoration: none;
-}
-
-small
-{
-    font-size: 13px;
-    font-family: serif;
-}
-
-ul
-{
-    list-style-type: circle;
-}
-
-
-span.smol
-{
-    font-variant: small-caps;
-}
-
-div.right
-{
-    font-size: 12px;
-    font-family: serif;
-    text-align: right;
-}
+
 
 /* Look ma, I'm accessible! */
 #skip a
@@ -130,42 +68,12 @@ div.right
 
 @media screen
 {
-    header
+    html
     {
-        vertical-align: top;
-        display: inline-block;
-        width: 250px;
-        margin-top: 80px;
-    }
-
-    body
-    {
-        background-color: #f8f0f8;
-        background-image: linear-gradient(#f0f0ff, #fff0f0);
-        color: #444;
-    }
-
-    footer
-    {
-        vertical-align: bottom;
-        padding-top: 100px;
-        line-height: 1em;
-        bottom: 30px;
-    }
-
-    code
-    {
-        color: #222;
-        background: #f0f0f0;
-    }
-
-    h2, h3, h4
-    {
-        color: #222;
-    }
-    a
-    {
-        color: #38c;
+        background-color: #111;
+        color: #f0f0f0;
+	margin-left: 3em;
+	margin-right: 3em;
     }
 }
 

@@ -1,0 +1,185 @@
+html
+{
+    height: 100%;
+    display: table;
+    margin: auto;
+}
+
+body
+{
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+
+    line-height: 1.7em;
+
+    font-family: serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+section
+{
+    display: inline-block;
+    width: 620px;
+    margin-top: 80px;
+}
+
+code
+{
+    font-family: mono, monospace;
+    font-size: 14px;
+}
+
+caption
+{
+    text-align: left;
+    font-size: 22px;
+}
+
+td
+{
+    text-align: center;
+
+    line-height: 1.5em;
+    padding: 10px;
+
+    font-family: mono, monospace;
+    font-size: 11px;
+}
+
+h1
+{
+    font-size: 34px;
+    line-height: 0em;
+    font-weight: 500;
+}
+
+h2, h3, h4
+{
+    line-height: 1em;
+    font-weight: 500;
+    font-variant: small-caps;
+}
+
+h3, h4
+{
+    margin-bottom: -5px;
+}
+
+a
+{
+    font-weight: 500;
+    text-decoration: none;
+}
+
+small
+{
+    font-size: 13px;
+    font-family: serif;
+}
+
+ul
+{
+    list-style-type: circle;
+}
+
+
+span.smol
+{
+    font-variant: small-caps;
+}
+
+div.right
+{
+    font-size: 12px;
+    font-family: serif;
+    text-align: right;
+}
+
+/* Look ma, I'm accessible! */
+#skip a
+{
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+#skip a:focus, #skip a:active
+{
+    position: static;
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    z-index: 999;
+
+    color: #220;
+    background-color: #eea;
+    padding: 2px;
+    border-radius: 2px;
+    border: 2px solid #ffa;
+}
+
+
+
+@media screen
+{
+    header
+    {
+        vertical-align: top;
+        display: inline-block;
+        width: 250px;
+        margin-top: 80px;
+    }
+
+    body
+    {
+        background-color: #f8f0f8;
+        background-image: linear-gradient(#f0f0ff, #fff0f0);
+        color: #444;
+    }
+
+    footer
+    {
+        vertical-align: bottom;
+        padding-top: 100px;
+        line-height: 1em;
+        bottom: 30px;
+    }
+
+    code
+    {
+        color: #222;
+        background: #f0f0f0;
+    }
+
+    h2, h3, h4
+    {
+        color: #222;
+    }
+    a
+    {
+        color: #38c;
+    }
+}
+
+@media print
+{
+    header, footer
+    {
+        display: none;
+    }
+}
+
+/*
+  Local Variables:
+    mode: css
+    indent-tabs-mode: nil
+  End:
+*/
