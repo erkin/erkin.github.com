@@ -33,6 +33,11 @@ footer
     bottom: 0;
 }
 
+ul
+{
+    list-style-type: circle;
+}
+
 
 
 /* Look ma, I'm accessible! */
@@ -70,11 +75,16 @@ footer
 {
     html
     {
-        background-color: #111;
+        background-color: #221;
         color: #f0f0f0;
 	margin-left: 3em;
 	margin-right: 3em;
     }
+    a
+    {
+        color: #48c;
+    }
+
 }
 
 @media print
