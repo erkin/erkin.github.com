@@ -36,7 +36,7 @@ footer
 {
 	vertical-align: bottom;
 	position: absolute;
-	bottom: 0;
+	bottom: -1;
 }
 
 ul
