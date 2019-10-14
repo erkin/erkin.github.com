@@ -92,6 +92,18 @@ ul
 		color: #4af;
 	}
 
+	@media (prefers-color-scheme: light)
+	{
+		html
+		{
+			background-color: #f0f0f0;
+			color: #15151a;
+		}
+		a
+		{
+			color: #36c;
+		}
+	}
 }
 
 @media print
