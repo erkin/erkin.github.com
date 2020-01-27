@@ -1,0 +1,29 @@
+code { white-space: pre; }
+body { font-size: 20px; color: white; background-color: black; }
+
+.paren-0  { color: #ef2929; }
+.paren-1  { color: #ffaf5f; }
+.paren-2  { color: #fce94f; }
+.paren-3  { color: #afff00; }
+.paren-4  { color: #87ffff; }
+.paren-5  { color: #5fafd7; }
+.paren-6  { color: #d18aff; }
+.paren-7  { color: #ff7bbb; }
+
+.paren-8  { color: #dd0000; }
+.paren-9  { color: #ff8700; }
+.paren-10 { color: #ffd700; }
+.paren-11 { color: #a1db00; }
+.paren-12 { color: #87d7af; }
+.paren-13 { color: #1f5bff; }
+.paren-14 { color: #af5fff; }
+.paren-15 { color: #ff4ea3; }
+
+.paren-16 { color: #a40000; }
+.paren-17 { color: #ff5d17; }
+.paren-18 { color: #c4a000; }
+.paren-19 { color: #5faf00; }
+.paren-20 { color: #00d7af; }
+.paren-21 { color: #005f87; }
+.paren-22 { color: #9a08ff; }
+.paren-23 { color: #ff1f8b; }

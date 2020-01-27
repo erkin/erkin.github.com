@@ -30,18 +30,18 @@ xkb_symbols "basic" {
     key <AE05> { [ 5,               percent                                     ] };
     key <AE06> { [ 6,               asciicircum                                 ] };
 
-    key <AE07> { [ 7,               ampersand,      U204A                       ] };
+    key <AE07> { [ 7,               ampersand,      U204A                       ] }; // Tironian et
     key <AE08> { [ 8,               asterisk                                    ] };
     key <AE09> { [ 9,               parenleft                                   ] };
-    key <AE10> { [ 0,               parenright                                  ] };
+    key <AE10> { [ 0,               parenright,     U25CA                       ] }; // lozenge
     key <AE11> { [ bracketleft,     braceleft,      guillemotleft,   leftdoublequotemark ] };
     key <AE12> { [ bracketright,    braceright,     guillemotright,  rightdoublequotemark ] };
     key <BKSP> { [ BackSpace,       BackSpace,      BackSpace,       BackSpace  ] };
 
 
     key <AD01> { [ apostrophe,      quotedbl,       paragraph,       section    ] };
-    key <AD02> { [ comma,           less,           guillemotleft,   U201C      ] };
-    key <AD03> { [ period,          greater,        guillemotright,  U201D      ] };
+    key <AD02> { [ comma,           less,           guillemotleft,   U201C      ] }; // lquote
+    key <AD03> { [ period,          greater,        guillemotright,  U201D      ] }; // rquote
     key <AD04> { [ p,               P,              Greek_pi,        Greek_PI   ] };
     key <AD05> { [ y,               Y,              Greek_iota,      Greek_IOTA ] };
     key <AD06> { [ f,               F,              Greek_phi,       Greek_PHI  ] };

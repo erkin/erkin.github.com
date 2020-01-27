@@ -1,0 +1,45 @@
+% Written by <erkin@sdf.org> in March 2019
+
+% Compiles with XeLaTeX
+% Requires Yinit and Unifraktur fonts.
+\documentclass[preview]{standalone}
+\usepackage{fontspec}
+\setmainfont{UnifrakturMaguntia}
+% Fraktur uses letter spacing for emphasis, as opposed to Antiqua's bolding.
+\renewcommand\emshape{\addfontfeature{LetterSpace=15.0,Ligatures={Required,NoCommon}}}
+% No paragraph indents.
+\setlength{\parindent}{0pt}
+
+% Words of foreign/Latinate origin are written in Antiqua.
+
+% s is becomes ſ if it appears in the middle of a word.
+% ss becomes ß.
+% r becomes ꝛ following o, b, p, h, d and ð.
+% These rules don't apply across word boundaries.
+% Unifraktur naturally handles ligatures, such as tz and ch.
+
+% ꝛ takes the place of ⁊ in ⁊c.
+
+\begin{document}
+\centering
+% Initial uses a separate font.
+{\Huge {\fontspec{Yinit}\selectfont A}}{\Large chtung!}
+{\Large Alles Turiſten und nontekniſchen Lookenpeepers!}
+
+\vspace{2mm}
+Das Komputermaſchine iſt \emph{nicht} für der Gefingerpoken und Mittengraben!
+Oderwiſe iſt eaſy to ſchnappen der Spꝛingenwerk, blowenfuſen und poppencoꝛken
+mit ſpitzerſparken ꝛc.
+Iſt nicht für gewerken bei Dummköpfen.
+Der rubbernecken Sightſeeren keepen das
+{\fontspec{Antiqua}\selectfont cotton-picking}
+Händer in das
+{\fontspec{Antiqua} Pockets}
+muß.
+
+\vspace{1mm}
+
+\centering
+Zo relaxen und watſchen der Blinkenlichten.
+
+\end{document}
