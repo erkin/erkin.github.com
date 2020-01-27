@@ -1,5 +1,4 @@
 #lang racket/base
-
 (require racket/format
          racket/string)
 (require syntax-color/racket-lexer)
@@ -19,11 +18,6 @@
          (lexinate (cons str results) depth)))))
 
 (module+ main
-  (displayln "<code>")
+  (display "<code>")
   (displayln (lexinate '() 0))
   (displayln "</code>"))
-
-;; Local Variables:
-;; mode: racket
-;; eval: (rainbow-mode)
-;; End:
