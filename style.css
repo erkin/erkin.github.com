@@ -92,7 +92,7 @@ ul
 		color: #4af;
 	}
 
-	@media only (prefers-color-scheme: light)
+	@media (prefers-color-scheme: light)
 	{
 		html
 		{
@@ -104,7 +104,8 @@ ul
 			color: #36c;
 		}
 	}
-	@media only (min-width: 768px)
+
+	@media (min-width: 768px)
 	{
 		html
 		{

@@ -71,7 +71,7 @@
       <p>
         This page seeks to collect and list Scheme books in one place for easy
         access.
-        See the <a href="notes">notes</a> at the bottom for additional
+        See the <a href="#notes">notes</a> at the bottom for additional
         information.
       </p>
       <hr/>
@@ -96,15 +96,15 @@
           The time-tested classic that first comes to mind when someone says
           "computer science textbook." It is a thorough trip through fundamental
           principles of computer science where you implement algorithms and data
-          structures using by defining a high-level domain-specific language for
-          your project in layers (ie "language-oriented design").
+          structures by defining a high-level domain-specific language in layers
+          (ie "language-oriented design").
           <br/>
-          Difficulty: Moderate. You can jump right into it with no background in
-          computer science, but make sure not to skip any parts you do not
-          understand.
+          <em>Difficulty:</em> Moderate. You can jump right into it with no
+          background in computer science, but make sure not to skip any parts
+          you do not understand.
           <br/>
-          Recommended implementation: Racket's <code>#lang sicp</code> or plain
-          MIT/GNU Scheme.
+          <em>Recommended implementation:</em> Racket's <code>#lang sicp</code>
+          or plain MIT/GNU Scheme.
         </li>
         <li style="list-style-type: square">
           <a href="https://htdp.org/">HtDP</a>
@@ -117,12 +117,12 @@
           and breaking the book into clean-cut sections that correspond to
           students' proficiency.
           <br/>
-          Difficulty: Easy. It can even be used to teach algorithms to
+          <em>Difficulty:</em> Easy. It can even be used to teach algorithms to
           children. It starts off gently and slowly ramps up. Some might find
           the first parts too easy and boring, but you can freely skip to the
           parts you feel more comfortable with.
           <br/>
-          Recommended implementation: Racket's HtDP teachpacks in DrRacket.
+          <em>Recommended implementation:</em> Racket's HtDP teachpacks in DrRacket.
         </li>
         <li>
           The Little Series &mdash;
@@ -138,11 +138,11 @@
               Scheme. The book gradually moves on to teach functional
               programming and data structures in the second half.
               <br/>
-              Difficulty: Very easy. Probably the simplest book on this
+              <em>Difficulty:</em> Very easy. Probably the simplest book on this
               list. With enough determination you can teach lambda calculus to
               middle schoolers with the first half of this book.
               <br/>
-              Recommended implementation: Any. It uses the bare minimum primitives
+              <em>Recommended implementation:</em> Any. It uses the bare minimum primitives
               of Scheme and builds up on them.
             </li>
             <li style="list-style-type: circle">
@@ -152,9 +152,9 @@
               concepts and delves deeper into functional programming
               algorithms.
               <br/>
-              Difficulty: Intermediate. It helps reading TLS first.
+              <em>Difficulty:</em> Intermediate. It helps reading TLS first.
               <br/>
-              Recommended implementation: Any. It builds upon the language built in
+              <em>Recommended implementation:</em> Any. It builds upon the language built in
               the previous book.
             </li>
             <li style="list-style-type: circle">
@@ -163,20 +163,20 @@
               Continuing from the previous little books, this book explores type
               systems including dependent types.
               <br/>
-              Difficulty: Intermediate. It helps reading TLS first.
+              <em>Difficulty:</em> Intermediate. It helps reading TLS first.
               <br/>
-              Recommended implementation: Racket's <code>#lang pie</code>.
+              <em>Recommended implementation:</em> Racket's <code>#lang pie</code>.
             </li>
             <li style="list-style-type: circle">
               <a href="http://www.ccs.neu.edu/home/matthias/BRS/">The Reasoned Schemer</a> (2018)
               <br/>
-              Recommended implementation: Any implementation of
+              <em>Recommended implementation:</em> Any implementation of
               <a href="http://minikanren.org/#implementations">miniKanren</a>.
             </li>
             <li style="list-style-type: circle">
               <a href="https://the-little-prover.github.io/">The Little Prover</a> (2015)
               <br/>
-              Recommended implementation: Preferably Racket's
+              <em>Recommended implementation:</em> Preferably Racket's
               <code>#lang dracula</code> in DrRacket but you can use any Scheme
               with the ACL2 shims provided with the book.
             </li>
@@ -184,51 +184,69 @@
         <li style="list-style-type: circle">
           <a href="https://www.realmofracket.com/">Realm of Racket</a> (2013)
           <br/>
-          Recommended implementation: Racket, naturally.
+          <em>Recommended implementation:</em> Racket, naturally.
         </li>
         <li style="list-style-type: square">
           <a href="https://ds26gte.github.io/tyscheme/index.html">Teach Yourself Scheme in Fixnum Days</a> (2005)
           <br/>
-          Recommended implementation: Any R5RS Scheme.
+          <em>Recommended implementation:</em> Any R5RS conformant Scheme.
         </li>
         <li style="list-style-type: square">
           <a href="https://people.eecs.berkeley.edu/~bh/ss-toc2.html">Simply Scheme</a>:
           Introducing Computer Science (1999)
+          <br/>
+          <em>Recommended implementation:</em> Any IEEE or R5RS conformant Scheme.
+          The author seems to be using SCM.
         </li>
         <li style="list-style-type: square">
           <a href="https://gustavus.edu/mcs/max/concrete-abstractions.html">Concrete Abstractions</a>:
           An Introduction to Computer Science Using Scheme (1997)
+          <br/>
+          <em>Recommended implementation:</em> Any R4RS conformant Scheme.
         </li>
         <li style="list-style-type: circle">
           <a href="https://www.t3x.org/sketchy/index.html">Sketchy Scheme</a>:
           An Introduction to Functional Programming (2011)
+          <br/>
+          <em>Recommended implementation:</em> Any R5RS conformant Scheme.
         </li>
         <li style="list-style-type: circle">
           <a href="https://www.t3x.org/amk/index.html">Logic Programming in Scheme</a> (2012)
+          <br/>
+          <em>Recommended implementation:</em> Any R5RS conformant Scheme.
         </li>
-        <li style="list-style-type: circle">
-          <a href="https://www.cs.ubc.ca/~little/schematics.html">The Schematics of Computation</a> (1995)
-        </li>
-        <li style="list-style-type: circle">
-          Scheme and the Art of Programming (1989)
-        </li>
-        <li style="list-style-type: circle">
-          Programming in Scheme (1988)
-        </li>
+        <li>
+          <ul>Outdated books
+            <li style="list-style-type: circle">
+              Programming in Scheme (1988)
+            </li>
+            <li style="list-style-type: circle">
+              Scheme and the Art of Programming (1989)
+            </li>
+            <li style="list-style-type: circle">
+              <a href="https://www.cs.ubc.ca/~little/schematics.html">The Schematics of Computation</a> (1995)
+            </li>
+          </ul>
       </ul>
       <h3>Theory</h3>
       <ul>
         <li style="list-style-type: square">
           <a href="http://cs.brown.edu/~sk/Publications/Books/ProgLangs/">PLAI</a>
           &mdash; Programming Languages: Application and Interpretation (2007)
+          <br/>
+          <em>Recommended implementation:</em> Racket's <code>#lang plai</code>.
         </li>
         <li style="list-style-type:circle">
           <a href="http://www.eopl3.com/">EoPL</a>
           &mdash; Essentials of Programming Languages (2008)
+          <br/>
+          <em>Recommended implementation:</em> Racket's <code>#lang eopl</code>.
         </li>
         <li style="list-style-type: circle">
           <a href="https://redex.racket-lang.org/">SEwPR</a>
           &mdash; Semantics Engineering with PLT Redex (2009)
+          <br/>
+          <em>Recommended implementation:</em> Racket.
         </li>
         <li style="list-style-type: circle">
           <a href="https://www.t3x.org/s9book/index.html">S9fES</a>
@@ -243,6 +261,8 @@
         <li style="list-style-type: square">
           <a href="https://mitpress.mit.edu/sites/default/files/titles/content/sicm_edition_2/book.html">SICM</a>
           &mdash; Structure and Interpretation of Classical Mechanics (2015)
+          <br/>
+          <em>Recommended implementation:</em> MIT/GNU Scheme.
         </li>
         <li style="list-style-type: square">
           <a href="https://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours">Write Yourself a Scheme in 48 Hours</a>
@@ -340,6 +360,10 @@
         <li>
           <a href="https://web.archive.org/web/20180829032322/https://cs.indiana.edu/scheme-repository/home.html">
             Indiana University Scheme Repository</a> (archived)
+        </li>
+        <li>
+          <a href="https://groups.csail.mit.edu/mac/projects/scheme/">
+            MIT's Scheme website</a>
         </li>
       </ul>
       <h3>Implementation documentation</h3>
