@@ -13,7 +13,7 @@
     <link rel="canonical"
           href="https://erkin.party/scheme/"/>
 
-    <!-- Favicon stuff -->
+   <!-- Favicon stuff -->
     <link href="/images/favicons/apple-touch-icon.png"
           rel="apple-touch-icon" sizes="180x180"/>
     <link href="/images/favicons/favicon-32x32.png"
@@ -47,57 +47,33 @@
     <section>
       <h1>Scheme resources</h1>
       <a name="top"></a>
-      <h2>Standards &amp; Specifications</h2>
-      <ul>
-        <li>
-          <a href="files/scheme.pdf">R0RS</a> (1975)
-          &mdash; Scheme: An Interpreter for Extended Lambda Calculus
-        </li>
-        <li>
-          <a href="files/rrs.pdf">R1RS</a> (1978)
-          &mdash; The Revised Report on Scheme, A Dialect of Lisp
-        </li>
-        <li>
-          <a href="files/rrrs.pdf">R2RS</a> (1985)
-          &mdash; The Revised Revised Report on Scheme, or An UnCommon Lisp
-        </li>
-        <li>
-          <a href="files/r3rs.pdf">R3RS</a> (1986)
-          &mdash; Revised<sup>3</sup> Report on Algorithmic Language Scheme
-        </li>
-        <li style="list-style-type: circle">
-          <a href="https://standards.ieee.org/standard/1178-1990.html">IEEE</a> (1990)
-          &mdash; IEEE Standard for the Scheme Programming Language
-        </li>
-        <li>
-          <a href="files/r4rs.pdf">R4RS</a> (1991)
-          &mdash; Revised<sup>4</sup> Report on Algorithmic Language Scheme
-        </li>
-        <li>
-          <a href="files/r5rs.pdf">R5RS</a> (1998)
-          &mdash; Revised<sup>5</sup> Report on Algorithmic Language Scheme
-        </li>
-        <li style="list-style-type: square">
-          <a href="https://web.archive.org/web/20131225021348/http://scheme-punks.org/wiki/index.php?title=ERR5RS:Charter">ERR5RS</a> (2007)
-          &mdash; Emergency Revision of Revised<sup>5</sup> Report on Algorithmic Language Scheme
-        </li>
-        <li>
-          <a href="files/r6rs.pdf">R6RS</a> (2007)
-          &mdash; Revised<sup>6</sup> Report on Algorithmic Language Scheme
-        </li>
-        <li>
-          <a href="files/r7rs-small.pdf">R7RS Small</a> (2013)
-          &mdash; Revised<sup>7</sup> Report on Algorithmic Language Scheme
-        </li>
-        <li style="list-style-type: square">
-          <a href="https://r7rs.org">R7RS Large</a> (WIP)
-          &mdash; Revised<sup>7</sup> Report on Algorithmic Language Scheme
-        </li>
-        <li style="list-style-type: square">
-          <a href="https://srfi.schemers.org/">SRFI</a>
-          &mdash; Scheme Requests for Implementation
-        </li>
-      </ul>
+      <p>
+        <a href="https://en.wikipedia.org/wiki/Scheme_(programming_language)">Scheme</a>
+        is a simple,
+        <a href="https://en.wikipedia.org/wiki/Dynamic_programming_language">dynamically-typed</a>
+        <a href="https://en.wikipedia.org/wiki/Functional_programming">functional</a>
+        programming language. It is a dialect of
+        <a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)">Lisp</a>,
+        meaning it is related to languages such as
+        <a href="https://en.wikipedia.org/wiki/Common_Lisp">Common Lisp</a>
+        and
+        <a href="https://en.wikipedia.org/wiki/Clojure">Clojure</a>.
+        <br/>
+        Due to its simplicity, Scheme is often used as a teaching aid in
+        computer science classes and also as a vessel for
+        <a href="https://en.wikipedia.org/wiki/Programming_language_theory">programming language theory</a>
+        research.
+        <br/>
+        Since there is no canonical implementation of Scheme, it can be
+        described as a cluster of mutually intelligible dialects rather than a
+        single language.
+      </p>
+      <p>
+        This page seeks to collect and list Scheme books in one place for easy
+        access.
+        See the <a href="notes">notes</a> at the bottom for additional
+        information.
+      </p>
       <hr/>
       <h2>Textbooks &amp; Guides</h2>
       <h3>Reference</h3>
@@ -121,9 +97,6 @@
           <a href="https://htdp.org/">HtDP</a>
           &mdash; How to Design Programs (2018)
         </li>
-        <li style="list-style-type: square">
-          <a href="https://ds26gte.github.io/tyscheme/index.html">Teach Yourself Scheme in Fixnum Days</a> (2005)
-        </li>
         <li style="list-style-type: circle">
           <a href="http://www.ccs.neu.edu/home/matthias/BTLS/">The Little Schemer</a> (1995)
         </li>
@@ -138,6 +111,12 @@
         </li>
         <li style="list-style-type: circle">
           <a href="https://the-little-prover.github.io/">The Little Prover</a> (2015)
+        </li>
+        <li style="list-style-type: circle">
+          <a href="https://www.realmofracket.com/">Realm of Racket</a> (2013)
+        </li>
+        <li style="list-style-type: square">
+          <a href="https://ds26gte.github.io/tyscheme/index.html">Teach Yourself Scheme in Fixnum Days</a> (2005)
         </li>
         <li style="list-style-type: square">
           <a href="https://people.eecs.berkeley.edu/~bh/ss-toc2.html">Simply Scheme</a>:
@@ -188,9 +167,75 @@
         </li>
       </ul>
       <hr/>
+      <h2>Standards &amp; Specifications</h2>
+      <p>
+        R5RS was the last commonly agreed-upon standard before the Grand
+        Schism, although it is considered to be woefully inadequate today.
+        The previous standards are only of historic interest nowadays.
+        <br/>
+        R6RS and R7RS are the contemporary standards that continue to
+        coexist. R7RS comes in "small" (R5RS-like) and "large" (R6RS-like)
+        versions, although at the time of writing (2020), only the small version
+        has been finalised.
+      </p>
+      <ul>
+        <li>
+          <a href="files/scheme.pdf">R0RS</a> (1975)
+          &mdash; Scheme: An Interpreter for Extended Lambda Calculus
+        </li>
+        <li>
+          <a href="files/rrs.pdf">R1RS</a> (1978)
+          &mdash; The Revised Report on Scheme, A Dialect of Lisp
+        </li>
+        <li>
+          <a href="files/rrrs.pdf">R2RS</a> (1985)
+          &mdash; The Revised Revised Report on Scheme, or An UnCommon Lisp
+        </li>
+        <li>
+          <a href="files/r3rs.pdf">R3RS</a> (1986)
+          &mdash; Revised<sup>3</sup> Report on Algorithmic Language Scheme
+        </li>
+        <li style="list-style-type: circle">
+          <a href="https://standards.ieee.org/standard/1178-1990.html">IEEE</a> (1990)
+          &mdash; IEEE Standard for the Scheme Programming Language
+        </li>
+        <li>
+          <a href="files/r4rs.pdf">R4RS</a> (1991)
+          &mdash; Revised<sup>4</sup> Report on Algorithmic Language Scheme
+        </li>
+        <li>
+          <a href="files/r5rs.pdf">R5RS</a> (1998)
+          &mdash; Revised<sup>5</sup> Report on Algorithmic Language Scheme
+        </li>
+        <li style="list-style-type: square">
+          <a href="https://web.archive.org/web/20131225021348/http://scheme-punks.org/wiki/index.php?title=ERR5RS:Charter">ERR5RS</a> (2007)
+          &mdash; Emergency Revision of Revised<sup>5</sup> Report on Algorithmic Language Scheme
+        </li>
+        <li>
+          <a href="files/r6rs.pdf">R6RS</a> (2007)
+          &mdash; Revised<sup>6</sup> Report on Algorithmic Language Scheme
+        </li>
+        <li>
+          <a href="files/r7rs-small.pdf">R7RS Small</a> (2013)
+          &mdash; Revised<sup>7</sup> Report on Algorithmic Language Scheme
+        </li>
+        <li style="list-style-type: square">
+          <a href="https://r7rs.org">R7RS Large</a> (WIP)
+          &mdash; Revised<sup>7</sup> Report on Algorithmic Language Scheme
+        </li>
+        <li style="list-style-type: square">
+          <a href="https://srfi.schemers.org/">SRFI</a>
+          &mdash; Scheme Requests for Implementation
+        </li>
+      </ul>
     </section>
+    <hr/>
 
     <footer>
+      <h3>Notes</h3>
+      <a name="notes"></a>
+      <p>Years indicate the release date of the last edition.</p>
+      <!-- <p>Suitable Scheme implementation noted wherever possible.</p> -->
       <p>Bulletpoint legend:</p>
       <ul>
         <li>PDF link:
@@ -201,7 +246,6 @@
           Link to the document's website where you can order a copy of it.
         </li>
       </ul>
-      <p>Years indicate the release date of the last edition.</p>
       <a href="#top"><small>↑ Back to top</small></a>
       <p>
         <small>
