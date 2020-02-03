@@ -84,15 +84,15 @@ ul
 	{
 		background-color: #15151a;
 		color: #f0f0f0;
-		margin-left: 15%;
-		margin-right: 15%;
+		margin-left: 5%;
+		margin-right: 5%;
 	}
 	a
 	{
 		color: #4af;
 	}
 
-	@media (prefers-color-scheme: light)
+	@media only (prefers-color-scheme: light)
 	{
 		html
 		{
@@ -102,6 +102,14 @@ ul
 		a
 		{
 			color: #36c;
+		}
+	}
+	@media only (min-width: 768px)
+	{
+		html
+		{
+			margin-left: 15%;
+			margin-right: 15%;
 		}
 	}
 }
