@@ -92,31 +92,104 @@
         <li style="list-style-type: square">
           <a href="https://mitpress.mit.edu/sites/default/files/sicp/index.html">SICP</a>
           &mdash; Structure and Interpretation of Computer Programs (1996)
+          <br/>
+          The time-tested classic that first comes to mind when someone says
+          "computer science textbook." It is a thorough trip through fundamental
+          principles of computer science where you implement algorithms and data
+          structures using by defining a high-level domain-specific language for
+          your project in layers (ie "language-oriented design").
+          <br/>
+          Difficulty: Moderate. You can jump right into it with no background in
+          computer science, but make sure not to skip any parts you do not
+          understand.
+          <br/>
+          Recommended implementation: Racket's <code>#lang sicp</code> or plain
+          MIT/GNU Scheme.
         </li>
         <li style="list-style-type: square">
           <a href="https://htdp.org/">HtDP</a>
           &mdash; How to Design Programs (2018)
+          <br/>
+          Another university textbook that uses Scheme to teach computer
+          science. HtDP seeks to
+          <a href="https://en.wikipedia.org/wiki/The_Structure_and_Interpretation_of_the_Computer_Science_Curriculum">address the shortcomings</a>
+          of SICP in the 21st century by pulling down the initial learning curve
+          and breaking the book into clean-cut sections that correspond to
+          students' proficiency.
+          <br/>
+          Difficulty: Easy. It can even be used to teach algorithms to
+          children. It starts off gently and slowly ramps up. Some might find
+          the first parts too easy and boring, but you can freely skip to the
+          parts you feel more comfortable with.
+          <br/>
+          Recommended implementation: Racket's HtDP teachpacks in DrRacket.
         </li>
-        <li style="list-style-type: circle">
-          <a href="http://www.ccs.neu.edu/home/matthias/BTLS/">The Little Schemer</a> (1995)
-        </li>
-        <li style="list-style-type: circle">
-          <a href="http://www.ccs.neu.edu/home/matthias/BTSS/">The Seasoned Schemer</a> (1995)
-        </li>
-        <li style="list-style-type: circle">
-          <a href="http://www.ccs.neu.edu/home/matthias/BRS/">The Reasoned Schemer</a> (2018)
-        </li>
-        <li style="list-style-type: circle">
-          <a href="http://thelittletyper.com/">The Little Typer</a> (2018)
-        </li>
-        <li style="list-style-type: circle">
-          <a href="https://the-little-prover.github.io/">The Little Prover</a> (2015)
-        </li>
+        <li>
+          The Little Series &mdash;
+          A book series featuring a hypothetical instructor with a whiteboard
+          asking questions to pupils and getting responses and further
+          questions.
+          <ul>
+            <li style="list-style-type: circle">
+              <a href="http://www.ccs.neu.edu/home/matthias/BTLS/">The Little Schemer</a> (1995)
+              <br/>
+              First book of the series. Starts from the basics and introduces
+              concepts one by one. The first half is dedicated to teaching
+              Scheme. The book gradually moves on to teach functional
+              programming and data structures in the second half.
+              <br/>
+              Difficulty: Very easy. Probably the simplest book on this
+              list. With enough determination you can teach lambda calculus to
+              middle schoolers with the first half of this book.
+              <br/>
+              Recommended implementation: Any. It uses the bare minimum primitives
+              of Scheme and builds up on them.
+            </li>
+            <li style="list-style-type: circle">
+              <a href="http://www.ccs.neu.edu/home/matthias/BTSS/">The Seasoned Schemer</a> (1995)
+              <br/>
+              The sequel to The Little Schemer. It introduces several advanced
+              concepts and delves deeper into functional programming
+              algorithms.
+              <br/>
+              Difficulty: Intermediate. It helps reading TLS first.
+              <br/>
+              Recommended implementation: Any. It builds upon the language built in
+              the previous book.
+            </li>
+            <li style="list-style-type: circle">
+              <a href="http://thelittletyper.com/">The Little Typer</a> (2018)
+              <br/>
+              Continuing from the previous little books, this book explores type
+              systems including dependent types.
+              <br/>
+              Difficulty: Intermediate. It helps reading TLS first.
+              <br/>
+              Recommended implementation: Racket's <code>#lang pie</code>.
+            </li>
+            <li style="list-style-type: circle">
+              <a href="http://www.ccs.neu.edu/home/matthias/BRS/">The Reasoned Schemer</a> (2018)
+              <br/>
+              Recommended implementation: Any implementation of
+              <a href="http://minikanren.org/#implementations">miniKanren</a>.
+            </li>
+            <li style="list-style-type: circle">
+              <a href="https://the-little-prover.github.io/">The Little Prover</a> (2015)
+              <br/>
+              Recommended implementation: Preferably Racket's
+              <code>#lang dracula</code> in DrRacket but you can use any Scheme
+              with the ACL2 shims provided with the book.
+            </li>
+          </ul>
         <li style="list-style-type: circle">
           <a href="https://www.realmofracket.com/">Realm of Racket</a> (2013)
+          <br/>
+          Recommended implementation: Racket, naturally.
         </li>
         <li style="list-style-type: square">
           <a href="https://ds26gte.github.io/tyscheme/index.html">Teach Yourself Scheme in Fixnum Days</a> (2005)
+          <br/>
+          Recommended implementation: Any R5RS Scheme.
         </li>
         <li style="list-style-type: square">
           <a href="https://people.eecs.berkeley.edu/~bh/ss-toc2.html">Simply Scheme</a>:
@@ -174,91 +247,6 @@
         <li style="list-style-type: square">
           <a href="https://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours">Write Yourself a Scheme in 48 Hours</a>
         </li>
-      </ul>
-      <hr/>
-      <h2>Additional resources</h2>
-      <h3>Other repositories</h3>
-      <h4>Individual collections</h4>
-      <ul>
-        <li>
-          Oleg Kiselyov's works
-          <a href="http://okmij.org/ftp/Scheme/">on Scheme</a> and
-          <a href="http://okmij.org/ftp/continuations/">on continuations</a>
-        </li>
-        <li><a href="https://www2.ccs.neu.edu/racket/pubs/">
-            Northeastern University PLT publications</a>
-        </li>
-      </ul>
-      <h4>Outdated collections</h4>
-      <ul>
-        <li><a href="https://schemers.org/Documents/">
-            schemers.org<a/>
-        </li>
-        <li><a href="https://web.archive.org/web/20081216061300/http://library.readscheme.org/">
-            readscheme.org</a> (archived)
-        </li>
-        <li>
-          <a href"https://web.archive.org/web/20180829032322/https://cs.indiana.edu/scheme-repository/home.html">
-            Indiana University Scheme Repository</a> (archived)
-        </li>
-      </ul>
-      <h3>Implementation documentation</h3>
-      <p>In alphabetical order</p>
-      <ul>
-        <li><a href="https://www-sop.inria.fr/mimosa/fp/Bigloo/doc/bigloo.pdf">
-            Bigloo User Manual
-        </a></li>
-        <li>
-          <a href="https://cisco.github.io/ChezScheme/csug9.5/csug.html">
-            Chez Scheme v9 User's Guide
-        </a></li>
-        <li><a href="http://synthcode.com/scheme/chibi/">
-            Chibi Scheme Manual
-        </a></li>
-        <li><a href="http://wiki.call-cc.org/man/5/The User's Manual">
-            The CHICKEN User's Manual
-        </a></li>
-        <li><a href="http://www.iro.umontreal.ca/~gambit/doc/gambit.html">
-            Gambit User Manual
-        </a></li>
-        <li><a href="http://practical-scheme.net/gauche/man/gauche-refe/index.html">
-            Gauche Users' Reference
-        </a></li>
-        <li><a href="https://cons.io/reference/">
-            Gerbil Scheme Reference Documentation
-        </a></li>
-        <li><a href="https://www.gnu.org/software/guile/manual/html_node/index.html">
-            Guile Reference Manual
-        </a></li>
-        <li><a href="https://www.gnu.org/software/kawa/pt01.html">
-            Kawa Reference Documentation
-        </a></li>
-        <li>
-          <a href="http://www.larcenists.org/Documentation/Documentation1.3/user-manual-alt.html">
-            Larceny v1.3</a> and <a href="http://www.larcenists.org/CommonLarceny/user-manual.html">
-            Common Larceny</a> User Manuals
-        </li>
-        <li><a href="https://scheme.fail/manual/loko.html">
-            The Loko Scheme Developer's Manual
-        </a></li>
-        <li>MIT/GNU Scheme
-          <a href="https://www.gnu.org/software/mit-scheme/documentation/mit-scheme-user/index.html">
-            User Manual</a>
-          <a href="https://www.gnu.org/software/mit-scheme/documentation/mit-scheme-ref/index.html">
-            Reference Guide</a>
-        </li>
-        <li><a href="https://docs.racket-lang.org/">
-            Racket Documentation
-        </a></li>
-        <li><a href="https://ktakashi.github.io/sagittarius-ref.html">
-            Sagittarius Users' Reference
-        </a></li>
-        <li><a href="http://s48.org/1.9.2/manual/manual.html">
-            The Incomplete Scheme 48 v1.9.2 Reference Manual
-        </a></li>
-        <li><a href="https://people.csail.mit.edu/jaffer/scm/">
-            SCM Manual
-        </a></li>
       </ul>
       <hr/>
       <h2>Standards &amp; Specifications</h2>
@@ -326,6 +314,91 @@
           <a href="https://srfi.schemers.org/">SRFI</a>
           &mdash; Scheme Requests for Implementation
         </li>
+      </ul>
+    <hr/>
+      <h2>Additional resources</h2>
+      <h3>Other repositories</h3>
+      <h4>Individual collections</h4>
+      <ul>
+        <li>
+          Oleg Kiselyov's works
+          <a href="http://okmij.org/ftp/Scheme/">on Scheme</a> and
+          <a href="http://okmij.org/ftp/continuations/">on continuations</a>
+        </li>
+        <li><a href="https://www2.ccs.neu.edu/racket/pubs/">
+            Northeastern University PLT publications</a>
+        </li>
+      </ul>
+      <h4>Outdated collections</h4>
+      <ul>
+        <li><a href="https://schemers.org/Documents/">
+            schemers.org<a/>
+        </li>
+        <li><a href="https://web.archive.org/web/20081216061300/http://library.readscheme.org/">
+            readscheme.org</a> (archived)
+        </li>
+        <li>
+          <a href="https://web.archive.org/web/20180829032322/https://cs.indiana.edu/scheme-repository/home.html">
+            Indiana University Scheme Repository</a> (archived)
+        </li>
+      </ul>
+      <h3>Implementation documentation</h3>
+      <p>In alphabetical order</p>
+      <ul>
+        <li><a href="https://www-sop.inria.fr/mimosa/fp/Bigloo/doc/bigloo.pdf">
+            Bigloo User Manual
+        </a></li>
+        <li>
+          <a href="https://cisco.github.io/ChezScheme/csug9.5/csug.html">
+            Chez Scheme v9 User's Guide
+        </a></li>
+        <li><a href="http://synthcode.com/scheme/chibi/">
+            Chibi Scheme Manual
+        </a></li>
+        <li><a href="http://wiki.call-cc.org/man/5/The User's Manual">
+            The CHICKEN User's Manual
+        </a></li>
+        <li><a href="http://www.iro.umontreal.ca/~gambit/doc/gambit.html">
+            Gambit User Manual
+        </a></li>
+        <li><a href="http://practical-scheme.net/gauche/man/gauche-refe/index.html">
+            Gauche Users' Reference
+        </a></li>
+        <li><a href="https://cons.io/reference/">
+            Gerbil Scheme Reference Documentation
+        </a></li>
+        <li><a href="https://www.gnu.org/software/guile/manual/html_node/index.html">
+            Guile Reference Manual
+        </a></li>
+        <li><a href="https://www.gnu.org/software/kawa/pt01.html">
+            Kawa Reference Documentation
+        </a></li>
+        <li>
+          <a href="http://www.larcenists.org/Documentation/Documentation1.3/user-manual-alt.html">
+            Larceny v1.3</a> and <a href="http://www.larcenists.org/CommonLarceny/user-manual.html">
+            Common Larceny</a> User Manuals
+        </li>
+        <li><a href="https://scheme.fail/manual/loko.html">
+            The Loko Scheme Developer's Manual
+        </a></li>
+        <li>MIT/GNU Scheme
+          <a href="https://www.gnu.org/software/mit-scheme/documentation/mit-scheme-user/index.html">
+            User Manual</a> and
+          <a href="https://www.gnu.org/software/mit-scheme/documentation/mit-scheme-ref/index.html">
+            Reference Guide</a>
+        </li>
+        <li><a href="https://docs.racket-lang.org/">
+            Racket Documentation
+        </a></li>
+        <li><a href="https://ktakashi.github.io/sagittarius-ref.html">
+            Sagittarius Users' Reference
+        </a></li>
+        <li><a href="http://s48.org/1.9.2/manual/manual.html">
+            The Incomplete Scheme 48 v1.9.2 Reference Manual
+        </a></li>
+        <li><a href="https://people.csail.mit.edu/jaffer/scm/">
+            SCM Manual
+        </a></li>
       </ul>
     </section>
     <hr/>
