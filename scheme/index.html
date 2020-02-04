@@ -87,11 +87,13 @@
           "computer science textbook." It is a thorough trip through fundamental
           principles of computer science where you implement algorithms and data
           structures by defining a high-level domain-specific language in layers
-          (ie "language-oriented design").
+          (ie "language-oriented design"). It is recommended to read the whole
+          thing back to back even if you consider yourself proficient.
           <br/>
-          <em>Difficulty:</em> Moderate. You can jump right into it with no
-          background in computer science, but make sure not to skip any parts
-          you do not understand.
+          <em>Difficulty:</em> Moderate. It is a fairly thick book dense in
+          content. You can begin reading right away with no background in
+          computer science, but make sure not to skip any parts you do not
+          understand, as it continuously builds upon previous concepts.
           <br/>
           <em>Recommended implementation:</em> Racket's <code>#lang sicp</code>
           or plain MIT/GNU Scheme.
@@ -105,7 +107,8 @@
           <a href="https://en.wikipedia.org/wiki/The_Structure_and_Interpretation_of_the_Computer_Science_Curriculum">address the shortcomings</a>
           of SICP in the 21st century by pulling down the initial learning curve
           and breaking the book into clean-cut sections that correspond to
-          students' proficiency.
+          students' proficiency. If you consider yourself well-versed in Scheme,
+          you can start reading at Chapter IV.
           <br/>
           <em>Difficulty:</em> Easy. It can even be used to teach algorithms to
           children. It starts off gently and slowly ramps up. Some might find
@@ -118,7 +121,8 @@
           The Little Series &mdash;
           A lighthearted book series featuring a hypothetical instructor with a
           whiteboard asking questions to pupils and getting responses and
-          further questions.
+          further questions. A high-level language is incrementally built from
+          the ground up in each book.
           <ul>
             <li style="list-style-type: circle">
               <a href="http://www.ccs.neu.edu/home/matthias/BTLS/">The Little Schemer</a> (1995)
@@ -161,11 +165,23 @@
             <li style="list-style-type: circle">
               <a href="http://www.ccs.neu.edu/home/matthias/BRS/">The Reasoned Schemer</a> (2018)
               <br/>
+              This book goes into the domain of logic programming
+              (relational programming in particular).
+              <br/>
+              <em>Difficulty:</em> Intermediate. Same as above. You do not need
+              to know anything about logic programming to read this.
+              <br/>
               <em>Recommended implementation:</em> Any implementation of
               <a href="http://minikanren.org/#implementations">miniKanren</a>.
             </li>
             <li style="list-style-type: circle">
               <a href="https://the-little-prover.github.io/">The Little Prover</a> (2015)
+              <br/>
+              This book teaches the principles of computational theorem proving
+              and writing provably correct programs.
+              <br/>
+              <em>Difficulty:</em> Intermediate. Same as above. You do not need
+              to know anything about theorem proving beforehand.
               <br/>
               <em>Recommended implementation:</em> Preferably Racket's
               <code>#lang dracula</code> in DrRacket but you can use any Scheme
@@ -304,6 +320,16 @@
         <li style="list-style-type: square">
           <a href="https://mitpress.mit.edu/sites/default/files/titles/content/sicm_edition_2/book.html">SICM</a>
           &mdash; Structure and Interpretation of Classical Mechanics (2015)
+          <br/>
+          A mechanics textbook in the style of SICP. The significance of this
+          book for Scheme programmers is that it is accompanied by
+          <a href="https://groups.csail.mit.edu/mac/users/gjs/6946/installation.html"><code>scmutils</code></a>,
+          a full-blown linear algebra and numerical analysis library written in
+          MIT/GNU Scheme.
+          <br/>
+          <em>Difficulty:</em> Difficult. You <em>must</em> have a good grasp of
+          algebra, calculus and differential equations to make progress.
+          Fortunately, it is not a computer science book.
           <br/>
           <em>Recommended implementation:</em> MIT/GNU Scheme.
         </li>
@@ -500,7 +526,7 @@
       <a href="#top"><small>↑ Back to top</small></a>
       <p>
         <small>
-          <b>Last updated:</b> <time>2020-02-03</time>
+          <b>Last updated:</b> <time>2020-02-04</time>
           <br/>
           Kindly hosted by
           <a href="https://pages.github.com">
