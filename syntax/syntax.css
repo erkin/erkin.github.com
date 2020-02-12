@@ -1,5 +1,5 @@
 a { color: cyan; }
-code { white-space: pre; }
+code { white-space: pre; hyphens: none; }
 body { font-size: 20px; color: white; background-color: black; }
 
 .paren-0  { color: #ef2929; }
