@@ -1,0 +1,175 @@
+Informal glossary of Kobaïan language v0.5
+
+expressions | -
+------------|---
+Ğensünk!    | I feel for you!, I empathise! (see: egeun)
+Hür!        | Hello!, Greetings!, I salute you! (see: hamtaï)
+Wlasik!     | I apologise!, Sorry!
+
+pronouns | -
+---------|---
+ëk       | what, who/whom/whomst
+di       | the, this/that
+dö(el)   | you (sub)
+zur      | you (obj)
+dusz     | your, yours
+lud      | he/she/it/they
+ud       | his/her/its/their
+üd       | his/hers/its/theirs, himself/herself/itself/themself
+warreï   | why
+wï       | where
+
+verbs     | -
+----------|---
+andaksik  | pour, spill, flow
+antsik    | ask, request
+bradïa    | talk, speak
+deuhl     | flood, overflow
+drest     | explode, burst, break, shatter
+fuẁest    | shine
+ham(a)taï | greet, salute
+host      | shout, bark, yell, roar
+inwa      | wait
+meurhdëm  | take revenge, avenge
+rait(ah)  | burn
+reugh     | eat
+rownah    | purge
+rugh      | crush, grind, smash
+lantsei   | flee, escape, run away, evade, break out
+lohessi   | lengthen, stretch, extend
+loff      | lose
+sïrï      | cry, weep
+sruhditt  | scream
+straïn    | tear
+sün(h)    | be, is/am/are
+triwen    | wither, wilt
+umennh    | breathe
+
+particles | -
+----------|---
+eden      | without, -less/-free
+da        | the
+de        | of
+dë        | of a/the
+doïa      | not (negation)
+dros      | out of/from
+fu        | one, a/an
+fü        | to a/the
+fuh       | to
+fur       | for
+furwolt   | whilst/while, during
+fü        | to
+is        | (such) as, like
+met       | on, upon, above, top of
+nansei    | never, (for) ever
+mëm       | in/inside, within
+steuh(n)  | towards
+uz        | and
+wöl       | since
+
+nouns         | -
+--------------|---
+Dondaï        | Angel of Truth
+archïw        | archive
+blüm          | people
+brus          | root, origin
+bünder        | pillar, column
+dëstruktïẁ    | destroyer
+dewa          | tree
+dewëlëss      | area, land, expanse
+dihhël        | life, vitality
+dindol        | ghost, spectre, apparition, spook
+dreïak        | hypocrisy
+dün           | heart
+egeulsik      | cycle, rotation
+ëktah         | hero
+essi          | sea, ocean
+etnah         | heredity
+ëmgalaï       | apocalypse
+falt          | sweat
+fennh         | blades
+flöë          | girl
+funërarïum    | mortuary
+glao          | blood
+gorkeulhzenht | convulsion
+hamtaahk      | hatred, loathing
+heldesz       | drop, droplet
+hel(l)        | life
+hiẁeusz       | vein, artery, pulse
+hummahn       | human
+ïtah          | earth
+kahnt         | chants
+kalain        | passion
+klawiehr      | keyboards
+kömmandöh     | commando
+korusz        | chorus
+kosmïk        | universe
+krematöhm     | cremation, crematorium
+lah           | air
+lantsëm       | ghost, spectre, apparition, spook
+lidenté       | fortune, destiny, fate
+lihns         | rain
+lëm           | noise
+lëmworitstëm  | darkness
+malaẁëlëkaahm | incantation
+meletsi       | parfume, scent, fragrance
+mennh         | smell, stench
+meurhd/ëk     | vengeance, revenge
+muss          | vitality, sap, essence
+muzïk         | music
+otsilennhetë  | imaginary, imagination
+rinstë        | prisoner, captive
+rogh          | crust, peel, bark, shell
+saaht         | fear, dread, anxiety, panic
+setnait       | breast, bosom, chest
+seẁolaẁen     | silence
+sinowi        | spine, backbone
+slibenli      | flow, wave
+soïa          | night
+stauhi        | ashes
+strowis       | forged
+stöht         | mirror
+süms          | nothing, nil
+sünk          | fortune, destiny, fate
+tendiwa       | soul
+theusz        | time
+tüdüwan       | liar
+übea          | fruit
+ümdëm         | ocean
+ünsaï         | pass, passage
+undazir       | vision
+unsai         | past
+urwa          | violence
+wainsaht      | forward, forth
+walomendêm    | universe
+weulh         | waves
+wlasik        | pardon, forgival, ascension
+wurdin        | nothingness, nothing, void
+zain          | brain
+zanka         | sun
+zess          | master
+zeuhl         | celestial music
+zort          | aggression, persistence
+zunh          | sound
+
+adjectives    | -
+--------------|---
+egeun         | poor, miserable, pitiful
+hoï           | one
+hurt          | first
+hhaï          | alive, live
+hindits       | awful, terrible, horrible
+(s')hündin    | infinite
+ïnstaï        | constant
+kobaïa        | eternal
+linsinh       | translucent
+loile/loï     | thirsty
+luszt         | perfect, sublime
+manëh         | together
+mëkanïk       | mechanical
+(s')noszfeuhl | endless, interminable
+runhdê        | calm, imperturbable
+sürra         | pure
+udenstaï      | devoid, lacking
+urfakt        | last
+ẁurdah        | dead

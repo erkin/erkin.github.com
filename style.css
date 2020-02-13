@@ -15,6 +15,7 @@ body
 code
 {
 	font-size: 16px;
+	white-space: pre;
 	hyphens: none;
 }
 
