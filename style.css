@@ -49,6 +49,23 @@ ul
 
 
 
+div.indent0
+{
+	text-indent: 5%;
+}
+
+div.indent1
+{
+	text-indent: 10%;
+}
+
+div.indent2
+{
+	text-indent: 15%;
+}
+
+
+
 /* Look ma, I'm accessible! */
 #skip a
 {
