@@ -56,21 +56,29 @@
 	code at macro expansion time, based on symbols/keywords that
 	stand for features the implementation chooses to provide as a
 	guarantee of portability, (not unlike Common Lisp's <code>#+</code>
-	read macro). To give an example;
+	read macro).
+        <br/>
+        Consider the following (overly simplistic) example;
       </p>
-<code><span class="paren-0">(</span>display
- <span class="paren-1">(</span>cond-expand
-  <span class="paren-2">(</span><span class="paren-3">(</span>and srfi-1 srfi-8<span class="paren-3">)</span>
-   "This implementation contains the list library and the `receive' procedure."<span class="paren-2">)</span>
-  <span class="paren-2">(</span><span class="paren-3">(</span>or guile chicken<span class="paren-3">)</span>
-   "This is either Guile or CHICKEN Scheme."<span class="paren-2">)</span>
-  <span class="paren-2">(</span>else
-   "This implementation is neither CHICKEN Scheme nor Guile, nor does it support SRFI-1 and SRFI-8."<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<code>;; We need SRFI-1.
+<span class="paren-0">(</span>cond-expand
+ <span class="paren-1">(</span>srfi-1<span class="paren-1">)</span>; We already have it!
+ <span class="paren-1">(</span><span class="paren-2">(</span>or gauche chicken-3 chicken-4<span class="paren-2">)</span>
+  <span class="paren-2">(</span>use srfi-1<span class="paren-2">)</span><span class="paren-1">)</span>
+ <span class="paren-1">(</span>chicken-5
+  <span class="paren-2">(</span>import srfi-1<span class="paren-2">)</span><span class="paren-1">)</span>
+ <span class="paren-1">(</span>guile
+  <span class="paren-2">(</span>use-modules <span class="paren-3">(</span>srfi srfi-1<span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span>
+ <span class="paren-1">(</span>chibi
+  <span class="paren-2">(</span>import <span class="paren-3">(</span>srfi 1<span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span>
+ <span class="paren-1">(</span>else
+  <span class="paren-2">(</span>display "SRFI-1 could not be loaded."<span class="paren-2">)</span>
+  <span class="paren-2">(</span>newline<span class="paren-2">)</span>
+  <span class="paren-2">(</span>exit<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>display "SRFI-1 successfully loaded."<span class="paren-0">)</span>
 <span class="paren-0">(</span>newline<span class="paren-0">)</span>
 </code>
-      <p>
-	TODO: Feature matrix, implementation-specific features.
-      </p>
+      <p>TODO: Add table of implementation-specific symbols</p>
     </section>
 
     <footer>
