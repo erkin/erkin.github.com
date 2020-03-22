@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="title"
+          content="Scheme bibliography"/>
+    <meta name="description"
+          content="Scheme books"/>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=yes"/>
+
+    <link rel="canonical"
+          href="https://erkin.party/scheme/bibliography/"/>
+
+   <!-- Favicon stuff -->
+    <link href="/images/favicons/apple-touch-icon.png"
+          rel="apple-touch-icon" sizes="180x180"/>
+    <link href="/images/favicons/favicon-32x32.png"
+          rel="icon" type="image/png" sizes="32x32"/>
+    <link href="/images/favicons/favicon-16x16.png"
+          rel="icon" type="image/png" sizes="16x16"/>
+    <link href="/images/favicons/site.webmanifest"
+          rel="manifest"/>
+    <link href="/images/favicons/safari-pinned-tab.svg"
+          rel="mask-icon" color="#6e6e6e"/>
+    <link href="/images/favicons/favicon.ico"
+          rel="shortcut icon"/>
+
+    <meta name="msapplication-TileColor"
+          content="#000000"/>
+    <meta name="msapplication-config"
+          content="/images/favicons/browserconfig.xml"/>
+    <meta name="theme-color"
+          content="#000000"/>
+
+    <!-- Uses native fonts only! :-) -->
+    <link rel="stylesheet" type="text/css" href="/style.css"/>
+
+    <title>Scheme books</title>
+  </head>
+
+  <body>
+    <section>
+      <h1>Scheme books</h1>
+      <a id="top"></a>
+      <a href="/scheme"><small>← Back up</small></a>
+      <p>
+        This page seeks to collect and list English-language Scheme books in one
+        place for easy access.
+        See the <a href="#notes">notes</a> at the bottom for additional
+        information.
+      </p>
+      <hr/>
+      <h2>Books</h2>
+      <h3>Computer Science</h3>
+      <p>Books that teach computer science concepts using Scheme</p>
+      <ul>
+        <li style="list-style-type: square">
+          <a href="https://mitpress.mit.edu/sites/default/files/sicp/index.html">SICP</a>
+          &mdash; Structure and Interpretation of Computer Programs (1996)
+          <br/>
+          The time-tested classic that first comes to mind when someone says
+          "computer science textbook." It is a thorough trip through fundamental
+          principles of computer science where you implement algorithms and data
+          structures by defining a high-level domain-specific language in layers
+          (ie "language-oriented design"). It is recommended to read the whole
+          thing back to back even if you consider yourself proficient.
+          <br/>
+          <em>Difficulty:</em> Moderate. It is a fairly thick book dense in
+          content. You can begin reading right away with no background in
+          computer science, but make sure not to skip any parts you do not
+          understand, as it continuously builds upon previous concepts.
+          <br/>
+          <em>Recommended implementation:</em> Racket's <code>#lang sicp</code>
+          or plain MIT/GNU Scheme.
+        </li>
+        <li style="list-style-type: square">
+          <a href="https://htdp.org/">HtDP</a>
+          &mdash; How to Design Programs (2018)
+          <br/>
+          Another university textbook that uses Scheme to teach computer
+          science. HtDP seeks to
+          <a href="https://en.wikipedia.org/wiki/The_Structure_and_Interpretation_of_the_Computer_Science_Curriculum">address the shortcomings</a>
+          of SICP in the 21st century by pulling down the initial learning curve
+          and breaking the book into clean-cut sections that correspond to
+          students' proficiency. If you consider yourself well-versed in Scheme,
+          you can start reading at Chapter IV.
+          <br/>
+          <em>Difficulty:</em> Easy. It can even be used to teach algorithms to
+          children. It starts off gently and slowly ramps up. Some might find
+          the first parts too easy and boring, but you can freely skip to the
+          parts you feel more comfortable with.
+          <br/>
+          <em>Recommended implementation:</em> Racket's HtDP teachpacks in DrRacket.
+        </li>
+        <li style="list-style-type: circle">
+          The Little Series &mdash;
+          A lighthearted book series featuring a hypothetical instructor with a
+          whiteboard asking questions to pupils and getting responses and
+          further questions. A high-level language is incrementally built from
+          the ground up in each book.
+          <ul>
+            <li style="list-style-type: circle">
+              <a href="http://www.ccs.neu.edu/home/matthias/BTLS/">The Little Schemer</a> (1995)
+              <br/>
+              First book of the series. Starts from the basics and introduces
+              concepts one by one. The first half is dedicated to teaching
+              Scheme. The book gradually moves on to teach functional
+              programming and data structures in the second half.
+              <br/>
+              <em>Difficulty:</em> Very easy. Probably the simplest book on this
+              list. With enough determination you can teach lambda calculus to
+              middle schoolers with the first half of this book.
+              <br/>
+              <em>Recommended implementation:</em> Any. It uses the bare minimum primitives
+              of Scheme and builds up on them.
+            </li>
+            <li style="list-style-type: circle">
+              <a href="http://www.ccs.neu.edu/home/matthias/BTSS/">The Seasoned Schemer</a> (1995)
+              <br/>
+              The sequel to The Little Schemer. It introduces several advanced
+              concepts and delves deeper into functional programming
+              algorithms.
+              <br/>
+              <em>Difficulty:</em> Intermediate. It helps reading TLS first.
+              <br/>
+              <em>Recommended implementation:</em> Any. It builds upon the language built in
+              the previous book.
+            </li>
+            <li style="list-style-type: circle">
+              <a href="http://thelittletyper.com/">The Little Typer</a> (2018)
+              <br/>
+              Continuing from the previous little books, this book explores type
+              systems including dependent types.
+              <br/>
+              <em>Difficulty:</em> Intermediate. Again, it helps reading TLS
+              first. You do not need prior understanding of static typing.
+              <br/>
+              <em>Recommended implementation:</em> Racket's <code>#lang pie</code>.
+            </li>
+            <li style="list-style-type: circle">
+              <a href="http://www.ccs.neu.edu/home/matthias/BRS/">The Reasoned Schemer</a> (2018)
+              <br/>
+              This book goes into the domain of logic programming
+              (relational programming in particular).
+              <br/>
+              <em>Difficulty:</em> Intermediate. Same as above. You do not need
+              to know anything about logic programming to read this.
+              <br/>
+              <em>Recommended implementation:</em> Any implementation of
+              <a href="http://minikanren.org/#implementations">miniKanren</a>.
+            </li>
+            <li style="list-style-type: circle">
+              <a href="https://the-little-prover.github.io/">The Little Prover</a> (2015)
+              <br/>
+              This book teaches the principles of computational theorem proving
+              and writing provably correct programs.
+              <br/>
+              <em>Difficulty:</em> Intermediate. Same as above. You do not need
+              to know anything about theorem proving beforehand.
+              <br/>
+              <em>Recommended implementation:</em> Preferably Racket's
+              <code>#lang dracula</code> in DrRacket but you can use any Scheme
+              with the ACL2 shims provided with the book.
+            </li>
+          </ul>
+        </li>
+        <li style="list-style-type: square">
+          <a href="https://beautifulracket.com/">Beautiful Racket</a> (2019)
+          <br/>
+          An excellent book on language-oriented programming, made up of two
+          parts. The first part "Tutorials" is a collection of well-annotated
+          recipes that underline principles of high-level DSL design. The second
+          part "Explainers" revisits Racket's semantics and features.
+          <br/>
+          <em>Difficulty:</em> Moderate. You're expected to know at least a bit
+          of Racket, although "Explainers" will serve as a refresher.
+          <br/>
+          <em>Recommended implementation:</em> Racket, naturally.
+        </li>
+        <li style="list-style-type: square">
+          <a href="https://gustavus.edu/mcs/max/concrete-abstractions.html">Concrete Abstractions</a>:
+          An Introduction to Computer Science Using Scheme (1997)
+          <br/>
+          <em>Recommended implementation:</em> Any R4RS conformant Scheme.
+        </li>
+        <li style="list-style-type: circle">
+          <a href="https://www.t3x.org/amk/index.html">Logic Programming in Scheme</a> (2012)
+          <br/>
+          <em>Recommended implementation:</em> Any R5RS conformant Scheme.
+        </li>
+      </ul>
+      <h3>Scheme</h3>
+      <p>Books that teach Scheme itself</p>
+      <ul>
+        <li style="list-style-type: square">
+          <a href="https://www.scheme.com/tspl4/">TSPL</a>
+          &mdash; The Scheme Programming Language (2009)
+          <br/>
+          This book is simultaneously a comprehensive language reference and a
+          learning source. The book flows sequentially and introduces new
+          concepts step by step with exercises and example use-cases.
+          <br/>
+          <em>Difficulty:</em> Easy. It assumes no knowledge of Scheme in the
+          first sections, which you can skip if you consider yourself
+          well-versed in the language.
+          <br/>
+          <em>Recommended implementation:</em> Chez Scheme or any other R6RS
+          conformant Scheme.
+        </li>
+        <li style="list-style-type: circle">
+          <a href="https://www.realmofracket.com/">Realm of Racket</a> (2013)
+          <br/>
+          <em>Recommended implementation:</em> Racket, naturally.
+        </li>
+        <li style="list-style-type: square">
+          <a href="https://ds26gte.github.io/tyscheme/index.html">Teach Yourself Scheme in Fixnum Days</a> (2005)
+          <br/>
+          <em>Recommended implementation:</em> Any R5RS conformant Scheme.
+        </li>
+        <li style="list-style-type: square">
+          <a href="https://people.eecs.berkeley.edu/~bh/ss-toc2.html">Simply Scheme</a>:
+          Introducing Computer Science (1999)
+          <br/>
+          <em>Recommended implementation:</em> Any IEEE or R5RS conformant Scheme.
+          The author seems to be using SCM.
+        </li>
+        <li style="list-style-type: circle">
+          <a href="https://www.t3x.org/sketchy/index.html">Sketchy Scheme</a>:
+          An Introduction to Functional Programming (2011)
+          <br/>
+          <em>Recommended implementation:</em> Any R5RS conformant Scheme.
+        </li>
+        <li>Outdated books &mdash; Included for historic significance.
+          <ul>
+            <li style="list-style-type: circle">
+              Programming in Scheme (1988)
+            </li>
+            <li style="list-style-type: circle">
+              Scheme and the Art of Programming (1989)
+            </li>
+            <li style="list-style-type: circle">
+              <a href="https://www.cs.ubc.ca/~little/schematics.html">The Schematics of Computation</a> (1995)
+            </li>
+            <li style="list-style-type: square">
+              <a href="http://www.cs.utexas.edu/ftp/garbage/cs345/schintro-v14/schintro_toc.html">
+                An Introduction to Scheme and Its Implementation</a> (1997)
+            </li>
+            <li style="list-style-type: square">
+              <a href="https://htus.org/">
+                How to Use Scheme</a>: The Book (2001)
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Theory</h3>
+      <p>Programming language theory books that build upon Scheme</p>
+      <ul>
+        <li style="list-style-type: square">
+          <a href="http://cs.brown.edu/~sk/Publications/Books/ProgLangs/">PLAI</a>
+          &mdash; Programming Languages: Application and Interpretation (2007)
+          <br/>
+          <em>Recommended implementation:</em> Racket's <code>#lang plai</code>.
+        </li>
+        <li style="list-style-type:circle">
+          <a href="http://www.eopl3.com/">EoPL</a>
+          &mdash; Essentials of Programming Languages (2008)
+          <br/>
+          <em>Recommended implementation:</em> Racket's <code>#lang eopl</code>.
+        </li>
+        <li style="list-style-type: circle">
+          <a href="https://redex.racket-lang.org/">SEwPR</a>
+          &mdash; Semantics Engineering with PLT Redex (2009)
+          <br/>
+          <em>Recommended implementation:</em> Racket.
+        </li>
+      </ul>
+      <h3>Implementing</h3>
+      <p>Scheme implementation guides</p>
+      <ul>
+        <li style="list-style-type: circle">
+          <a href="https://www.t3x.org/s9book/index.html">S9fES</a>
+          &mdash; Scheme 9 from Empty Space: A Guide to Implementing Scheme in C (2014)
+        </li>
+        <li style="list-style-type: circle">
+          <a href="https://www.t3x.org/clc/index.html">Compiling Lambda Calculus</a> (2018)
+        </li>
+        <li style="list-style-type: square">
+          <a href="https://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours">Write Yourself a Scheme in 48 Hours</a>
+        </li>
+        <li style="list-style-type: circle">
+          <a href="https://pages.lip6.fr/Christian.Queinnec/WWW/LiSP.html">LiSP</a>
+            &mdash; Lisp in Small Pieces (1994)
+        </li>
+      </ul>
+      <h3>Other</h3>
+      <ul>
+        <li style="list-style-type: square">
+          <a href="https://mitpress.mit.edu/sites/default/files/titles/content/sicm_edition_2/book.html">SICM</a>
+          &mdash; Structure and Interpretation of Classical Mechanics (2015)
+          <br/>
+          A mechanics textbook in the style of SICP. The significance of this
+          book for Scheme programmers is that it is accompanied by
+          <a href="https://groups.csail.mit.edu/mac/users/gjs/6946/installation.html"><code>scmutils</code></a>,
+          a full-blown linear algebra and numerical analysis library written in
+          MIT/GNU Scheme.
+          <br/>
+          <em>Difficulty:</em> Difficult. You <em>must</em> have a good grasp of
+          algebra, calculus and differential equations to make progress.
+          Fortunately, it is not a computer science book.
+          <br/>
+          <em>Recommended implementation:</em> MIT/GNU Scheme.
+        </li>
+      </ul>
+      <hr/>
+      <h2>Standards &amp; Specifications</h2>
+      <p>
+        R5RS was the last commonly agreed-upon standard before the Grand
+        Schism, although it is considered to be woefully inadequate today.
+        The previous standards are only of historic interest nowadays.
+        <br/>
+        R6RS and R7RS are the contemporary standards that continue to
+        coexist. R7RS comes in "small" (R5RS-like) and "large" (R6RS-like)
+        versions, although at the time of writing (2020), only the small version
+        has been finalised.
+      </p>
+      <ul>
+        <li>
+          <a href="files/scheme.pdf">R0RS</a> (1975)
+          &mdash; Scheme: An Interpreter for Extended Lambda Calculus
+        </li>
+        <li>
+          <a href="files/rrs.pdf">R1RS</a> (1978)
+          &mdash; The Revised Report on Scheme, A Dialect of Lisp
+        </li>
+        <li>
+          <a href="files/rrrs.pdf">R2RS</a> (1985)
+          &mdash; The Revised Revised Report on Scheme, or An UnCommon Lisp
+        </li>
+        <li>
+          <a href="files/r3rs.pdf">R3RS</a> (1986)
+          &mdash; Revised<sup>3</sup> Report on Algorithmic Language Scheme
+        </li>
+        <li style="list-style-type: circle">
+          <a href="https://standards.ieee.org/standard/1178-1990.html">IEEE 1178</a> (1990)
+          &mdash; IEEE Standard for the Scheme Programming Language
+        </li>
+        <li>
+          <a href="files/r4rs.pdf">R4RS</a> (1991)
+          &mdash; Revised<sup>4</sup> Report on Algorithmic Language Scheme
+        </li>
+        <li>
+          <a href="files/r5rs.pdf">R5RS</a> (1998)
+          &mdash; Revised<sup>5</sup> Report on Algorithmic Language Scheme
+        </li>
+        <li style="list-style-type: square">
+          <a href="https://web.archive.org/web/20131225021348/http://scheme-punks.org/wiki/index.php?title=ERR5RS:Charter">ERR5RS</a> (2007)
+          &mdash; Emergency Revision of Revised<sup>5</sup> Report on Algorithmic Language Scheme (archived)
+        </li>
+        <li>
+          <a href="files/r6rs.pdf">R6RS</a> (2007)
+          &mdash; Revised<sup>6</sup> Report on Algorithmic Language Scheme
+        </li>
+        <li>
+          <a href="files/r7rs-small.pdf">R7RS Small</a> (2013)
+          &mdash; Revised<sup>7</sup> Report on Algorithmic Language Scheme
+        </li>
+        <li style="list-style-type: square">
+          <a href="https://r7rs.org">R7RS Large</a> (WIP)
+          &mdash; Revised<sup>7</sup> Report on Algorithmic Language Scheme
+        </li>
+        <li style="list-style-type: none">&nbsp;</li>
+        <li style="list-style-type: square">
+          <a href="http://scheme-reports.org/">Scheme Reports</a>
+          &mdash; Standardisation Process
+        </li>
+        <li style="list-style-type: square">
+          <a href="https://srfi.schemers.org/">SRFI</a>
+          &mdash; Scheme Requests for Implementation
+        </li>
+      </ul>
+    <hr/>
+      <h2>Additional resources</h2>
+      <h3>Other repositories</h3>
+      <h4>Individual collections</h4>
+      <ul>
+        <li>
+          Oleg Kiselyov's works
+          <a href="http://okmij.org/ftp/Scheme/">on Scheme</a> and
+          <a href="http://okmij.org/ftp/continuations/">on continuations</a>
+        </li>
+        <li><a href="https://www2.ccs.neu.edu/racket/pubs/">
+            Northeastern University PLT publications</a>
+        </li>
+        <li>
+          <a href="https://github.com/rain-1/continuations-study-group/wiki/Reading-List">
+            Continuations Study Group Reading List</a>
+        </li>
+      </ul>
+      <h4>Outdated collections</h4>
+      <ul>
+        <li><a href="https://schemers.org/Documents/">
+            schemers.org</a>
+        </li>
+        <li>
+          <a href="https://web.archive.org/web/20081216061300/http://library.readscheme.org/">
+            readscheme.org</a> (archived)
+          |
+          <a href="https://github.com/schemedoc/bibliography">
+            SchemeDoc rescue</a>
+        </li>
+        <li>
+          <a href="https://web.archive.org/web/20180829032322/https://cs.indiana.edu/scheme-repository/home.html">
+            Indiana University Scheme Repository</a> (archived)
+        </li>
+        <li>
+          <a href="https://groups.csail.mit.edu/mac/projects/scheme/">
+            MIT's Scheme website</a>
+        </li>
+      </ul>
+      <h3>Implementation documentation</h3>
+      <p>In alphabetical order</p>
+      <ul>
+        <li><a href="https://www-sop.inria.fr/mimosa/fp/Bigloo/doc/bigloo.pdf">
+            Bigloo User Manual
+        </a></li>
+        <li>
+          <a href="https://cisco.github.io/ChezScheme/csug9.5/csug.html">
+            Chez Scheme v9 User's Guide
+        </a></li>
+        <li><a href="http://synthcode.com/scheme/chibi/">
+            Chibi Scheme Manual
+        </a></li>
+        <li><a href="http://wiki.call-cc.org/man/5/The%20User's%20Manual">
+            The CHICKEN User's Manual
+        </a></li>
+        <li><a href="http://www.iro.umontreal.ca/~gambit/doc/gambit.html">
+            Gambit User Manual
+        </a></li>
+        <li><a href="http://practical-scheme.net/gauche/man/gauche-refe/index.html">
+            Gauche Users' Reference
+        </a></li>
+        <li><a href="https://cons.io/reference/">
+            Gerbil Scheme Reference Documentation
+        </a></li>
+        <li><a href="https://www.gnu.org/software/guile/manual/html_node/index.html">
+            Guile Reference Manual
+        </a></li>
+        <li><a href="https://justinethier.github.io/husk-scheme/manual/index.html">
+            Husk Scheme User Manual
+        </a></li>
+        <li><a href="https://www.gnu.org/software/kawa/pt01.html">
+            Kawa Reference Documentation
+        </a></li>
+        <li>
+          <a href="http://www.larcenists.org/Documentation/Documentation1.3/user-manual-alt.html">
+            Larceny v1.3</a> and <a href="http://www.larcenists.org/CommonLarceny/user-manual.html">
+            Common Larceny User Manuals
+        </a></li>
+        <li><a href="https://scheme.fail/manual/loko.html">
+            The Loko Scheme Developer's Manual
+        </a></li>
+        <li><a href="https://www.gnu.org/software/mit-scheme/documentation/mit-scheme-user/index.html">
+            MIT/GNU Scheme User Manual</a> and
+          <a href="https://www.gnu.org/software/mit-scheme/documentation/mit-scheme-ref/index.html">
+            Reference Guide
+        </a></li>
+        <li><a href="https://picrin.readthedocs.io/en/stable/index.html">
+            Picrin Documentation
+        </a></li>
+        <li><a href="https://docs.racket-lang.org/">
+            Racket Documentation
+        </a></li>
+        <li><a href="https://ktakashi.github.io/sagittarius-ref.html">
+            Sagittarius Users' Reference
+        </a></li>
+        <li><a href="http://s48.org/1.9.2/manual/manual.html">
+            The Incomplete Scheme 48 v1.9.2 Reference Manual
+        </a></li>
+        <li><a href="https://people.csail.mit.edu/jaffer/scm/">
+            SCM Manual
+        </a></li>
+      </ul>
+    </section>
+    <hr/>
+
+    <footer>
+      <h3>Notes</h3>
+      <a id="notes"></a>
+      <p>Years indicate the release date of the last edition.</p>
+      <p>Bulletpoint legend for books and standards:</p>
+      <ul>
+        <li>PDF link:
+          This document can be freely downloaded.</li>
+        <li style="list-style-type: square">Web link:
+          This document can be freely read online.</li>
+        <li style="list-style-type: circle">Not freely available.
+          Link to the document's website if there is one.
+        </li>
+      </ul>
+      <p>Please purchase the books if you can to support the authors.</p>
+      <a href="#top"><small>↑ Back to top</small></a>
+      <p>
+        <small>
+          <b>Last updated:</b> <time>2020-03-22</time>
+          <br/>
+          Kindly hosted by
+          <a href="https://pages.github.com">
+            GitHub Pages</a>.
+        </small>
+        <br/>
+        <a href="https://erkin.party/emacs/">
+          <img src="/images/emacs/made0.png"
+               title="Powered by GNU Emacs, everyone's favourite thermonuclear editor!"
+               alt="Made with GNU Emacs"/>
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>
+
+<!--
+    Local Variables:
+    mode: html
+    coding: utf-8-unix
+    indent-tabs-mode: nil
+    End:
+  -->
