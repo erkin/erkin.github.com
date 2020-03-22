@@ -3,17 +3,19 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="title"
-          content="Scheme resources"/>
+          content="SRFI-0 support"/>
     <meta name="description"
-          content="Personal collection of Scheme programming resources"/>
+          content="cond-expand symbols across Scheme implementations"/>
+    <meta name="keywords"
+          content="Scheme, Lisp, Guile, cond-expand, SRFI-0, Scheme portability, Scheme features"/>
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=yes"/>
 
     <link rel="canonical"
-          href="https://erkin.party/scheme/"/>
+          href="https://erkin.party/scheme/cond-expand/"/>
 
-    <!-- Favicon stuff -->
+   <!-- Favicon stuff -->
     <link href="/images/favicons/apple-touch-icon.png"
           rel="apple-touch-icon" sizes="180x180"/>
     <link href="/images/favicons/favicon-32x32.png"
@@ -36,54 +38,42 @@
 
     <!-- Uses native fonts only! :-) -->
     <link rel="stylesheet" type="text/css" href="/style.css"/>
+    <!-- For rainbow parens -->
+    <link rel="stylesheet" type="text/css" href="/syntax/syntax.css"/>
 
-    <title>Scheme resources</title>
+    <title>SRFI-0</title>
   </head>
 
   <body>
     <section>
-      <h1>Scheme resources</h1>
+      <h1><code>cond-expand</code></h1>
       <a id="top"></a>
+      <a href="/scheme"><small>← Back up</small></a>
       <p>
-        <a href="https://en.wikipedia.org/wiki/Scheme_(programming_language)">Scheme</a>
-        is a simple,
-        <a href="https://en.wikipedia.org/wiki/Dynamic_programming_language">dynamically-typed</a>
-        <a href="https://en.wikipedia.org/wiki/Functional_programming">functional</a>
-        programming language. It is a dialect of
-        <a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)">Lisp</a>,
-        meaning it is related to languages such as
-        <a href="https://common-lisp.net/">Common Lisp</a>
-        and
-        <a href="https://clojure.org/">Clojure</a>.
-        <br/>
-        Due to its simplicity, Scheme is often used as a teaching aid in
-        computer science classes and also as a vessel for
-        <a href="https://en.wikipedia.org/wiki/Programming_language_theory">programming language theory</a>
-        research (especially the <a href="https://racket-lang.org/">Racket</a> dialect).
-        <br/>
-        Since there is no canonical implementation of Scheme, it can be
-        described as a cluster of mutually intelligible dialects rather than a
-        single language.
+	<a href="SRFI-0">https://srfi.schemers.org/srfi-0/srfi-0.html</a>
+	is the first <a href="SRFI">https://srfi.schemers.org/</a>,
+	describing a simple macro <code>cond-expand</code> that expands
+	code at macro expansion time, based on symbols/keywords that
+	stand for features the implementation chooses to provide as a
+	guarantee of portability, (not unlike Common Lisp's <code>#+</code>
+	read macro). To give an example;
       </p>
-      <ul>
-	<li>
-	  <a href="/scheme/bibliography/">Books</a>
-	</li>
-	<li>
-	  <a href="/scheme/cond-expand/">SRFI support</a>
-	</li>
-      </ul>
+<code><span class="paren-0">(</span>display
+ <span class="paren-1">(</span>cond-expand
+  <span class="paren-2">(</span><span class="paren-3">(</span>and srfi-1 srfi-8<span class="paren-3">)</span>
+   "This implementation contains the list library and the `receive' procedure."<span class="paren-2">)</span>
+  <span class="paren-2">(</span><span class="paren-3">(</span>or guile chicken<span class="paren-3">)</span>
+   "This is either Guile or CHICKEN Scheme."<span class="paren-2">)</span>
+  <span class="paren-2">(</span>else
+   "This implementation is neither CHICKEN Scheme nor Guile, nor does it support SRFI-1 and SRFI-8."<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>newline<span class="paren-0">)</span>
+</code>
+      <p>
+	TODO: Feature matrix, implementation-specific features.
+      </p>
     </section>
 
     <footer>
-      <p>
-        This page is still a work in progress.
-        For corrections and suggestions:
-        poke <code>erkin</code> in
-        <a href="ircs://irc.freenode.net/scheme"><code>#scheme</code></a>
-        or mail
-        <code>(base64-decode #"bWVAZXJraW4ucGFydHk=")</code>.
-      </p>
       <a href="#top"><small>↑ Back to top</small></a>
       <p>
         <small>
