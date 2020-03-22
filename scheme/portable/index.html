@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="title"
-          content="SRFI-0 support"/>
+          content="Portable Scheme"/>
     <meta name="description"
-          content="cond-expand symbols across Scheme implementations"/>
+          content="Writing portable Scheme programs"/>
     <meta name="keywords"
-          content="Scheme, Lisp, Guile, cond-expand, SRFI-0, Scheme portability, Scheme features"/>
+          content="Scheme, Lisp, Guile, cond-expand, portable Scheme, Scheme features"/>
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=yes"/>
 
     <link rel="canonical"
-          href="https://erkin.party/scheme/cond-expand/"/>
+          href="https://erkin.party/scheme/portable/"/>
 
    <!-- Favicon stuff -->
     <link href="/images/favicons/apple-touch-icon.png"
@@ -41,14 +41,54 @@
     <!-- For rainbow parens -->
     <link rel="stylesheet" type="text/css" href="/syntax/syntax.css"/>
 
-    <title>SRFI-0</title>
+    <title>Writing portable Scheme programs</title>
   </head>
 
   <body>
     <section>
-      <h1><code>cond-expand</code></h1>
+      <h1>Writing portable Scheme programs</h1>
       <a id="top"></a>
       <a href="/scheme"><small>← Back up</small></a>
+      <p>
+        Scheme, due to its simplistic nature, has a deeply fragmented
+        ecosystem. This means that any non-trivial program ultimately
+        needs to depend on implementation-specific features. This page
+        quickly explains a few methods a Scheme hacker can rely on for
+        writing portable Scheme programs, scripts and libraries.
+      </p>
+
+      <h2>Standard-conformant code</h2>
+      <p>
+        As far as Scheme standards go, you have three choices:
+        R5RS, R6RS and R7RS.
+        (See the <a href="/bibliography#standards">Bibliography</a>
+        for links to the standards.)
+      </p>
+      <h3>R5RS</h3>
+      <p>
+        <em>Revised<sup>5</sup> Report on Scheme</em> was the last
+        agreed upon standard before The Grand Schism. Unfortunately,
+        it is woefully inadequate and
+      </p>
+      <h4>Relying on SLIB</h4>
+      <p>
+
+      </p>
+      <h3>R6RS</h3>
+      <p>
+
+      </p>
+      <h3>R7RS</h3>
+      <p>
+
+      </p>
+
+      <h2>SRFI implementations as libraries</h2>
+      <p>
+        
+      </p>
+
+      <h2><code>cond-expand</code> for platform-specific code</h2>
       <p>
 	<a href="SRFI-0">https://srfi.schemers.org/srfi-0/srfi-0.html</a>
 	is the first <a href="SRFI">https://srfi.schemers.org/</a>,
@@ -60,9 +100,9 @@
         <br/>
         Consider the following (overly simplistic) example;
       </p>
-<code>;; We need SRFI-1.
+<code>;;; We need SRFI-1.
 <span class="paren-0">(</span>cond-expand
- <span class="paren-1">(</span>srfi-1<span class="paren-1">)</span>; We already have it!
+ <span class="paren-1">(</span>srfi-1<span class="paren-1">)</span> ; We already have it!
  <span class="paren-1">(</span><span class="paren-2">(</span>or gauche chicken-3 chicken-4<span class="paren-2">)</span>
   <span class="paren-2">(</span>use srfi-1<span class="paren-2">)</span><span class="paren-1">)</span>
  <span class="paren-1">(</span>chicken-5
@@ -78,7 +118,14 @@
 <span class="paren-0">(</span>display "SRFI-1 successfully loaded."<span class="paren-0">)</span>
 <span class="paren-0">(</span>newline<span class="paren-0">)</span>
 </code>
-      <p>TODO: Add table of implementation-specific symbols</p>
+
+      <h2>Appendix A: SRFI support matrix</h2>
+      <table>
+      </table>
+
+      <h2>Appendix B: <code>cond-expand</code> features across implementations</h2>
+      <table>
+      </table>
     </section>
 
     <footer>
