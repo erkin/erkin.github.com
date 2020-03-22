@@ -1,3 +1,6 @@
+@charset "UTF-8";
+@import "/syntax/syntax.css";
+
 html
 {
 	height: 100%;
@@ -10,13 +13,6 @@ body
 	
 	font-family: serif;
 	font-size: 18px;
-}
-
-code
-{
-	font-size: 16px;
-	white-space: pre;
-	hyphens: none;
 }
 
 header
