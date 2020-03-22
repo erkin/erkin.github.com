@@ -36,10 +36,10 @@
     <meta name="theme-color"
           content="#000000"/>
 
-    <!-- Uses native fonts only! :-) -->
-    <link rel="stylesheet" type="text/css" href="/style.css"/>
     <!-- For rainbow parens -->
     <link rel="stylesheet" type="text/css" href="/syntax/syntax.css"/>
+    <!-- Uses native fonts only! :-) -->
+    <link rel="stylesheet" type="text/css" href="/style.css"/>
 
     <title>Writing portable Scheme programs</title>
   </head>
@@ -50,11 +50,12 @@
       <a id="top"></a>
       <a href="/scheme"><small>← Back up</small></a>
       <p>
-        Scheme, due to its simplistic nature, has a deeply fragmented
-        ecosystem. This means that any non-trivial program ultimately
-        needs to depend on implementation-specific features. This page
-        quickly explains a few methods a Scheme hacker can rely on for
-        writing portable Scheme programs, scripts and libraries.
+        Scheme, due to its minimalistic nature, has a deeply
+        fragmented ecosystem. This means that any non-trivial program
+        ultimately needs to depend on implementation-specific
+        features. This page simply explains a few methods a Scheme
+        hacker can rely on for writing portable Scheme programs,
+        scripts and libraries.
       </p>
 
       <h2>Standard-conformant code</h2>
