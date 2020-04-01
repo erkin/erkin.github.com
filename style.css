@@ -43,6 +43,11 @@ ul
 	list-style-type: disc;
 }
 
+li
+{
+	margin: 7px 0;
+}
+
 
 
 div.indent0
