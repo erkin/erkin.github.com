@@ -92,12 +92,12 @@
 	describing a simple macro <code>cond-expand</code> that expands
 	code at macro expansion time, based on symbols/keywords that
 	stand for features the implementation chooses to provide as a
-	guarantee of portability, (not unlike Common Lisp's <code>#+</code>
-	read macro).
+	guarantee of portability, (not unlike Common Lisp's
+        <code>#+</code>/<code>#-</code> read macros).
         <br/>
         Consider the following (overly simplistic) example;
       </p>
-<code>;;; We need SRFI-1.
+<code>;;; We need procedures from SRFI-1.
 <span class="paren-0">(</span>cond-expand
  <span class="paren-1">(</span>srfi-1<span class="paren-1">)</span> ; We already have it!
  <span class="paren-1">(</span><span class="paren-2">(</span>or gauche chicken-3 chicken-4<span class="paren-2">)</span>
