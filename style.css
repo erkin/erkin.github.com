@@ -100,9 +100,12 @@ div.indent2
 
 @media screen
 {
-	html
+	*
 	{
 		background-color: #15151a;
+	}
+	html
+	{
 		color: #f0f0f0;
 		margin-left: 5%;
 		margin-right: 5%;
@@ -114,9 +117,12 @@ div.indent2
 
 	@media (prefers-color-scheme: light)
 	{
-		html
+		*
 		{
 			background-color: #f0f0f0;
+		}
+		html
+		{
 			color: #15151a;
 		}
 		a
