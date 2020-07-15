@@ -30,5 +30,20 @@
       multiparadigm languages, such as Java.
     </summary>
   </entry>
+  <entry>
+    <title>The evolution of a Scheme programmer</title>
+    <link rel="alternate"
+          type="text/html"
+          href="https://erkin.party/blog/200715/evolution/"/>
+    <id>urn:uuid:09d8d0a9-62ff-4dea-be9c-5aa762e8e891</id>
+    <published>2020-07-15T00:00:00Z</published>
+    <author>
+      <name>Erkin Batu Altunbaş</name>
+    </author>
+    <summary>
+      Different implementations of the factorial procedure across a
+      Scheme hacker's life.
+    </summary>
+  </entry>
 
 </feed>
