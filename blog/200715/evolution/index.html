@@ -196,21 +196,15 @@
        <span class="paren-4">(</span>f n k<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
 
 ;; Attempted to make their CPS procedures simpler, failed
-<span class="paren-0">(</span>define %factorial-retry 'fnord<span class="paren-0">)</span>
 <span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
+  <span class="paren-1">(</span>define %factorial-retry #f<span class="paren-1">)</span>
   <span class="paren-1">(</span>if <span class="paren-2">(</span>= n 1<span class="paren-2">)</span>
       <span class="paren-2">(</span>call-with-current-continuation
        <span class="paren-3">(</span>lambda <span class="paren-4">(</span>k<span class="paren-4">)</span>
          <span class="paren-4">(</span>set! %factorial-retry k<span class="paren-4">)</span> 1<span class="paren-3">)</span><span class="paren-2">)</span>
       <span class="paren-2">(</span>* n <span class="paren-3">(</span>factorial <span class="paren-4">(</span>sub1 n<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
 
-;; Concerned about wasted performance, appreciates referential transparency, really likes the word 'amortised'
-<span class="paren-0">(</span>define <span class="paren-1">(</span>hashtable-ref! table key thunk<span class="paren-1">)</span>
-  <span class="paren-1">(</span>if <span class="paren-2">(</span>hashtable-contains? table key<span class="paren-2">)</span>
-      <span class="paren-2">(</span>hashtable-ref table args #f<span class="paren-2">)</span>
-      <span class="paren-2">(</span>let <span class="paren-3">(</span><span class="paren-4">(</span>value <span class="paren-5">(</span>thunk<span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span>
-        <span class="paren-3">(</span>hashtable-set! table key value<span class="paren-3">)</span>
-        value<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+;; Concerned about wasted performance, really likes the word 'amortised'
 <span class="paren-0">(</span>define <span class="paren-1">(</span>memoise proc<span class="paren-1">)</span>
   <span class="paren-1">(</span>let <span class="paren-2">(</span><span class="paren-3">(</span>table <span class="paren-4">(</span>make-hashtable equal-hash equal?<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span>
     <span class="paren-2">(</span>lambda args
@@ -247,7 +241,6 @@
      <span class="paren-3">(</span>lambda _
        <span class="paren-4">(</span>error 'factorial "Cannot import library" 'math/number-theory<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
 </code></div>
-
       <p>Inspired by
 	<a href="https://willamette.edu/~fruehr/haskell/evolution.html">The Evolution of a Haskell Programmer</a>.</p>
       <p>Some implementations taken from <a href="https://github.com/lwhjp">Leo Uino</a>'s
