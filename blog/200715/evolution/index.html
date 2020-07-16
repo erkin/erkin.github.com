@@ -53,7 +53,8 @@
         <a href="/blog">← Back to index</a>
       </header>
       <br/>
-<div style="line-height: 1em;">
+
+      <div style="line-height: 1em;">
 <code>;; Studying Scheme in university or reading The Little Schemer
 <span class="paren-0">(</span>define factorial
   <span class="paren-1">(</span>lambda <span class="paren-2">(</span>n<span class="paren-2">)</span>
@@ -230,13 +231,12 @@
 <span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
   <span class="paren-1">(</span>define fact-iter
     <span class="paren-2">(</span>memoise
-     <span class="paren-3">(</span>lambda <span class="paren-4">(</span>product counter max-count<span class="paren-4">)</span>
-       <span class="paren-4">(</span>if <span class="paren-5">(</span>> counter max-count<span class="paren-5">)</span>
+     <span class="paren-3">(</span>lambda <span class="paren-4">(</span>product counter<span class="paren-4">)</span>
+       <span class="paren-4">(</span>if <span class="paren-5">(</span>> counter n<span class="paren-5">)</span>
            product
            <span class="paren-5">(</span>fact-iter <span class="paren-6">(</span>* counter product<span class="paren-6">)</span>
-                      <span class="paren-6">(</span>add1 counter<span class="paren-6">)</span>
-                      max-count<span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span>
-  <span class="paren-1">(</span>fact-iter 1 1 n<span class="paren-1">)</span><span class="paren-0">)</span>
+                      <span class="paren-6">(</span>add1 counter<span class="paren-6">)</span><span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span>
+  <span class="paren-1">(</span>fact-iter 1 1<span class="paren-1">)</span><span class="paren-0">)</span>
 
 
 ;; Lazy programmer
@@ -249,8 +249,9 @@
 
 
 ;; Lazier programmer
+<span class="paren-0">(</span>define factorials <span class="paren-1">(</span>stream-scan * 1 <span class="paren-2">(</span>stream-from 1<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
 <span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
-  <span class="paren-1">(</span>stream-ref <span class="paren-2">(</span>stream-scan * 1 <span class="paren-3">(</span>stream-from 1<span class="paren-3">)</span><span class="paren-2">)</span> n<span class="paren-1">)</span><span class="paren-0">)</span>
+  <span class="paren-1">(</span>stream-ref factorials n<span class="paren-1">)</span><span class="paren-0">)</span>
 
 
 ;; Laziest programmer
@@ -259,9 +260,10 @@
    'math/number-theory
    'factorial
    <span class="paren-2">(</span>lambda <span class="paren-3">(</span><span class="paren-3">)</span>
-     <span class="paren-3">(</span>lambda _
-       <span class="paren-4">(</span>error 'factorial "Cannot import library" 'math/number-theory<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+     <span class="paren-3">(</span>lambda <span class="paren-4">(</span>n<span class="paren-4">)</span>
+       <span class="paren-4">(</span>error 'factorial "Cannot import library: ~a" 'math/number-theory<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
 </code></div>
+
       <p>Inspired by
 	<a href="https://willamette.edu/~fruehr/haskell/evolution.html">The Evolution of a Haskell Programmer</a>.</p>
       <p>Some implementations taken from <a href="https://github.com/lwhjp">Leo Uino</a>'s
