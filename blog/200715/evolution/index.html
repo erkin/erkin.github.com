@@ -96,7 +96,7 @@
   <span class="paren-1">(</span>define <span class="paren-2">(</span>fact-aux product counter<span class="paren-2">)</span>
     <span class="paren-2">(</span>if <span class="paren-3">(</span>> counter n<span class="paren-3">)</span>
         product
-        <span class="paren-3">(</span>fact-iter <span class="paren-4">(</span>* counter product<span class="paren-4">)</span>
+        <span class="paren-3">(</span>fact-aux <span class="paren-4">(</span>* counter product<span class="paren-4">)</span>
                    <span class="paren-4">(</span>add1 counter<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span>
   <span class="paren-1">(</span>fact-aux 1 1 n<span class="paren-1">)</span><span class="paren-0">)</span>
 
