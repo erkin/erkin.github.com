@@ -71,16 +71,14 @@
       <p>
 	You see, I decided to use this opportunity to make a toy
 	<code>#lang</code>. It started out dead simple:
-
-	<div style="line-height: 1em;">
-	  <code><span class="paren-0">(</span>provide #%app #%datum #%module-begin #%top-interaction #%top
+	<div style="line-height: 1em;"><code><span class="paren-0">(</span>provide #%app #%datum #%module-begin #%top-interaction #%top
          λ define let quote
          cond if and or not else
          + - / * = > <<span class="paren-0">)</span>
 
 </code></div>
 
-        The first line of exported identifiers are necessary for the
+        The first line of exported identifiers is necessary for the
         reader and the module system. <code>λ</code> is an alias
         of <code>lambda</code> (because I&apos;m a spoilt brat like
         that), <code>else</code> needs to be exported explicitly
@@ -105,8 +103,7 @@
       <p>
 	<code>1.scm</code> is as follows:
 	<div style="line-height: 1em;">
-          <code>;;; Procedures defined in Chapter 1
-
+	  <code>;;; Procedures defined in Chapter 1
 <span class="paren-0">(</span>define abs
   <span class="paren-1">(</span>λ <span class="paren-2">(</span>x<span class="paren-2">)</span>
     <span class="paren-2">(</span>if <span class="paren-3">(</span>< x 0<span class="paren-3">)</span> <span class="paren-3">(</span>- x<span class="paren-3">)</span> x<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
