@@ -61,7 +61,7 @@
 	read it all the way from the beginning, cover-to-cover,
 	solving all exercises along the way. I decided to use Racket
 	for this, instead of MIT/GNU Scheme, the traditional
-	choice. There's a very nice Racket
+	choice. There&apos;s a very nice Racket
 	<a href="https://docs.racket-lang.org/sicp-manual/index.html">package</a>
 	for SICP, containing <code>#lang sicp</code>, a simple
 	extension of <code>#lang r5rs</code>. But it turned out to be
@@ -77,16 +77,17 @@
          λ define let quote
          cond if and or not else
          + - / * = > <<span class="paren-0">)</span>
+
 </code></div>
 
         The first line of exported identifiers are necessary for the
-         reader and the module system. <code>λ</code> is an alias
-         of <code>lambda</code> (because I&apos;m a spoilt brat like
-         that), <code>else</code> needs to be exported explicitly
-         because it&apos;s a
-         <a href="https://srfi.schemers.org/srfi-139/srfi-139.html">syntax parameter</a>
-	 for <code>cond</code> (something of a Racketism) and the rest
-	 is the usual.
+        reader and the module system. <code>λ</code> is an alias
+        of <code>lambda</code> (because I&apos;m a spoilt brat like
+        that), <code>else</code> needs to be exported explicitly
+        because it&apos;s a
+        <a href="https://srfi.schemers.org/srfi-139/srfi-139.html">syntax parameter</a>
+	for <code>cond</code> (something of a Racketism) and the rest
+	is the usual.
       </p>
 
       <p>
@@ -259,10 +260,14 @@
 
       <p>
 	So we managed to create an abomination of a <code>#lang</code>
-	to break referential transparency, just to be lazy. But it
-	works and that&apos;s all that matters, right? I don&apos;t
-	mind building up the module language piece-by-piece in
-	<code>provide</code> but I don&apos;t want to deal with
+	to break referential transparency, just to be lazy. We
+	probably could&apos;ve done this with some
+	crafty <code>syntax-parse</code> macros around module language
+	primitives but I&apos;m not smart enough for that. What
+	we&apos;ve got works and that&apos;s all that matters, right?
+	I don&apos;t mind building up the module language
+	piece-by-piece in <code>provide</code> but I don&apos;t want
+	to deal with
 	<a href="https://docs.racket-lang.org/compatibility/mlists.html"><code>compatibility/mlist</code></a>
 	(or its less scary alias <code>racket/mlist</code>) to get
 	mutable lists so eventually I&apos;m just going
@@ -271,7 +276,7 @@
 	<code>#%module-begin</code>.)
       </p>
     </article>
-
+
     <footer>
       <p>
         <a href="#top">↑ Back to top</a>
