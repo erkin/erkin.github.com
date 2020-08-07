@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="title"
+          content="Breaking referential transparency in Racket"/>
+    <meta name="author"
+          content="Erkin B Altunbaş"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=yes"/>
+
+    <link rel="canonical"
+          href="https://erkin.party/blog/200807/opaque/"/>
+
+    <!-- Favicon stuff -->
+    <link href="/images/favicons/apple-touch-icon.png"
+          rel="apple-touch-icon" sizes="180x180"/>
+    <link href="/images/favicons/favicon-32x32.png"
+          rel="icon" type="image/png" sizes="32x32"/>
+    <link href="/images/favicons/favicon-16x16.png"
+          rel="icon" type="image/png" sizes="16x16"/>
+    <link href="/images/favicons/site.webmanifest"
+          rel="manifest"/>
+    <link href="/images/favicons/safari-pinned-tab.svg"
+          rel="mask-icon" color="#6e6e6e"/>
+    <link href="/images/favicons/favicon.ico"
+          rel="shortcut icon"/>
+
+    <meta name="msapplication-TileColor"
+          content="#000000"/>
+    <meta name="msapplication-config"
+          content="/images/favicons/browserconfig.xml"/>
+    <meta name="theme-color"
+          content="#000000"/>
+
+    <link rel="stylesheet" type="text/css" href="/blog.css"/>
+
+    <title>Breaking referential transparency in Racket</title>
+  </head>
+
+  <body>
+    <article>
+      <header>
+        <h1>Breaking referential transparency in Racket</h1>
+        <p>
+          <b>Created:</b>
+          <time>2020-08-07</time>
+          <br/>
+          <!-- <b>Updated:</b> -->
+          <!-- <time>2069-04-20</time> -->
+        </p>
+        <hr/>
+        <a href="/blog">← Back to index</a>
+      </header>
+      <br/>
+
+      <p>
+	I recently
+	<a href="https://functional.cafe/@erkin/104423588821508220">purchased a copy of SICP</a>
+	to spend time productively during the quarantine. I decided to
+	read it all the way from the beginning, cover-to-cover,
+	solving all exercises along the way. I decided to use Racket
+	for this, instead of MIT/GNU Scheme, the traditional
+	choice. There's a very nice Racket
+	<a href="https://docs.racket-lang.org/sicp-manual/index.html">package</a>
+	for SICP, containing <code>#lang sicp</code>, a simple
+	extension of <code>#lang r5rs</code>. But it turned out to be
+	too inadequate for my... rather peculiar needs.
+      </p>
+
+      <p>
+	You see, I decided to use this opportunity to make a toy
+	<code>#lang</code>. It started out dead simple:
+	<code><span class="paren-0">(</span>provide #%app #%datum #%module-begin #%top-interaction #%top
+         λ define let quote
+         cond if and or not else
+         + - / * = > <<span class="paren-0">)</span></code>
+        The first line of exported identifiers are necessary for the
+         reader and the module system. <code>λ</code> is an alias
+         of <code>lambda</code> (because I'm a spoilt brat like
+         that), <code>else</code> needs to be exported explicitly
+         because it&apos;s a
+         <a href="https://srfi.schemers.org/srfi-139/srfi-139.html">syntax parameter</a>
+	 for <code>cond</code> (something of a Racketism) and the rest
+	 is the usual.
+      </p>
+
+      <p>
+	Okay, so far so good. We&apos;ll need to add more later on but
+	this is quite enough for the first bits of the first
+	chapter. This is where my hare-brained scheme (heh heh) comes
+	in. I wanted to do something like this: Put procedures and
+	constants defined in the first chapter into
+	<code>1.scm</code>, then load it from, say,
+	<code>1.7.scm</code>, containing my solution to exercise 1.7,
+	so that I can overload some procedures with the improved ones
+	as part of the exercise.
+      </p>
+
+      <p>
+	<code>1.scm</code> is as follows:
+	<div style="line-height: 1em;">
+          <code>;;; Procedures defined in Chapter 1
+
+<span class="paren-0">(</span>define abs
+  <span class="paren-1">(</span>λ <span class="paren-2">(</span>x<span class="paren-2">)</span>
+    <span class="paren-2">(</span>if <span class="paren-3">(</span>< x 0<span class="paren-3">)</span> <span class="paren-3">(</span>- x<span class="paren-3">)</span> x<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+<span class="paren-0">(</span>define square
+  <span class="paren-1">(</span>λ <span class="paren-2">(</span>x<span class="paren-2">)</span>
+    <span class="paren-2">(</span>* x x<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+<span class="paren-0">(</span>define improve
+  <span class="paren-1">(</span>λ <span class="paren-2">(</span>guess x<span class="paren-2">)</span>
+    <span class="paren-2">(</span>average guess <span class="paren-3">(</span>/ x guess<span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+<span class="paren-0">(</span>define average
+  <span class="paren-1">(</span>λ <span class="paren-2">(</span>x y<span class="paren-2">)</span>
+    <span class="paren-2">(</span>/ <span class="paren-3">(</span>+ x y<span class="paren-3">)</span> 2<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+<span class="paren-0">(</span>define good-enough?
+  <span class="paren-1">(</span>λ <span class="paren-2">(</span>guess x<span class="paren-2">)</span>
+    <span class="paren-2">(</span>< <span class="paren-3">(</span>abs <span class="paren-4">(</span>- <span class="paren-5">(</span>square guess<span class="paren-5">)</span> x<span class="paren-4">)</span><span class="paren-3">)</span> 0.001<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+<span class="paren-0">(</span>define sqrt-iter
+  <span class="paren-1">(</span>λ <span class="paren-2">(</span>guess x<span class="paren-2">)</span>
+    <span class="paren-2">(</span>if <span class="paren-3">(</span>good-enough? guess x<span class="paren-3">)</span>
+        guess
+        <span class="paren-3">(</span>sqrt-iter <span class="paren-4">(</span>improve guess x<span class="paren-4">)</span> x<span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+<span class="paren-0">(</span>define sqrt
+  <span class="paren-1">(</span>λ <span class="paren-2">(</span>x<span class="paren-2">)</span>
+    <span class="paren-2">(</span>sqrt-iter 1.0 x<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+</code></div>
+        They&apos;re all given in the book as-is. Exercise 1.7 asks
+        you to redefine <code>good-enough?</code> so that it
+        continuously compares the iteration of the guess. All right,
+	we can do that. This isn&apos;t the complicated part yet.
+	<div style="line-height: 1em;">
+	  <code>
+<span class="paren-0">(</span>define good-enough?
+  <span class="paren-1">(</span>λ <span class="paren-2">(</span>guess x<span class="paren-2">)</span>
+    <span class="paren-2">(</span>= <span class="paren-3">(</span>improve guess x<span class="paren-3">)</span> guess<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+</code></div>
+      </p>
+
+      <p>
+	At first, I used Racket&apos;s default module system: I
+	declared <code>1.scm</code> a module that exports every
+	defined identifier through
+	<code><span class="paren-0">(</span>provide <span class="paren-1">(</span>all-defined-out<span class="paren-1">)</span></code>.
+	But Racket is very adamant about preventing redefinition of
+	imported identifiers. In fact, this is a subject Racket
+	<a href="https://blog.racket-lang.org/2009/03/the-drscheme-repl-isnt-the-one-in-emacs.html">deviates from the Lisp tradition</a>.
+	So we reach into the guts of the module system and set the
+	parameter
+	<code><span class="paren-0">(</span>compile-enforce-module-constants #f<span class="paren-0">)</span></code>
+	to break that. Great! Now we can redefine imported
+	identifiers!
+      </p>
+
+      <p>
+	It turns out it (quite reasonably) lets you <em>shadow</em>
+	the identifiers, but naturally the contents of the closures
+	remain the same, as the <code>sqrt-iter</code> continues to
+	refer to the original <code>good-enough?</code>.
+        I should&apos;ve expected that... But I remain undaunted
+	because I want my stupid hack to work, dammit! What if...
+	we circumvent this hard-nosed module system altogether and
+	directly include the file at compile-time? That&apos;s how
+	most Schemes separated code into files prior to R6RS &mdash;
+	with a mere <code>load</code>. After some cursory search, I
+	discover the module
+	<a href="https://docs.racket-lang.org/reference/include.html"><code>racket/include</code></a>.
+	It does exactly what it says on the tin: It exports
+	an <code>include</code> macro that directly inlines the given
+	file. Great! And voilà, <code>1.7.scm</code> now shares the
+	same namespace as the prepended <code>1.scm</code>, which now
+	contains... two separate definitions... of the same
+	identifier... which is unacceptable for most Schemes... Okay,
+	we&apos;re on the wrong track.
+      </p>
+
+      <p>
+	Hey, wait a minute... How does the REPL do it? I can
+	continuously call <code>define</code> on the same identifiers
+	in the REPL without having to wipe the namespace or
+	call <code>set!</code> on everything like a barbarian! Then
+	I remember REPL doesn&apos;t use <code>require</code>
+	(nor <code>include</code>) for that matter, but
+	<code>load</code> for importing files. Could this be what
+	I&apos;m looking for? There it is:
+	<a href="https://docs.racket-lang.org/reference/load-lang.html"><code>racket/load</code></a>!
+	The
+	<a href="https://docs.racket-lang.org/guide/load.html">guide</a>
+	says says it musn&apos;t be used outside the REPL except for
+	experimenting with the namespace. What we&apos;re doing counts
+	as experimentation, I suppose. A huge price to pay for this
+	hack is that it breaks macros in inexplicable ways. Oh well.
+      </p>
+
+      <p>
+	Besides exporting the <code>load</code> macro,
+	<code>racket/load</code> overrides the
+	<code>#&37;module-begin</code> and
+	<code>#&37;top-interaction</code> forms so that it treats
+	every line of code as though it&apos;s run in the REPL.
+	Sounds good! So here it is:
+	<div style="line-height: 1em;">
+	  <code>#lang racket/base
+<span class="paren-0">(</span>provide #%app #%datum #%module-begin #%top-interaction #%top
+         λ define let quote load
+         cond if and or not else
+         + - / * = > <<span class="paren-0">)</span>
+<span class="paren-0">(</span>require racket/load<span class="paren-0">)</span>
+
+<span class="paren-0">(</span>compile-enforce-module-constants #f<span class="paren-0">)</span>
+<span class="paren-0">(</span>print-as-expression #f<span class="paren-0">)</span>
+<span class="paren-0">(</span>load-on-demand-enabled #f<span class="paren-0">)</span>
+<span class="paren-0">(</span>print-mpair-curly-braces #f<span class="paren-0">)</span>
+
+</code></div>
+      </p>
+
+      <p>
+	Does it work? Let&apos;s see. Since macros no longer work, I
+	can&apos;t write assertion macros, so I just wrap all
+	assertions in an <code>and</code> expression and see if it
+	returns <code>#t</code>.
+
+	<div style="line-height: 1em;">
+	  <code><code>#lang s-exp "sicp.rkt"
+;; Excercise 1.7
+
+<span class="paren-0">(</span>load "1.scm"<span class="paren-0">)</span>
+
+<span class="paren-0">(</span>define old-value <span class="paren-1">(</span>sqrt 900<span class="paren-1">)</span><span class="paren-0">)</span>
+
+<span class="paren-0">(</span>define good-enough?
+  <span class="paren-1">(</span>λ <span class="paren-2">(</span>guess x<span class="paren-2">)</span>
+    <span class="paren-2">(</span>= <span class="paren-3">(</span>improve guess x<span class="paren-3">)</span> guess<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+<span class="paren-0">(</span>define new-value <span class="paren-1">(</span>sqrt 900<span class="paren-1">)</span><span class="paren-0">)</span>
+
+<span class="paren-0">(</span>< <span class="paren-1">(</span>- new-value 30<span class="paren-1">)</span> <span class="paren-1">(</span>- old-value 30<span class="paren-1">)</span><span class="paren-0">)</span>
+
+</code></div>
+
+	When run, <code>1.7.scm</code> returns <code>#t</code>.
+	Splendid! Our new <code>good-enough?</code> is indeed better!
+      </p>
+
+      <p>
+	So we managed to create an abomination of a <code>#lang</code>
+	to break referential transparency, just to be lazy. But it
+	works and that&apos;s all that matters, right? I don&apos;t
+	mind building up the module language piece-by-piece in
+	<code>provide</code> but I don&apos;t want to deal with
+	<a href="https://docs.racket-lang.org/compatibility/mlists.html"><code>compatibility/mlist</code></a>
+	(or its less scary alias <code>racket/mlist</code>) to get
+	mutable lists so eventually I&apos;m just going
+	to <code>provide</code> the whole <code>#lang r5rs</code>.
+	(Be careful not to let it export identifiers like
+	<code>#&37;module-begin</code>.)
+      </p>
+    </article>
+
+    <footer>
+      <p>
+        <a href="#top">↑ Back to top</a>
+        <br/>
+        <a href="/blog">← Back to index</a>
+      </p>
+      <hr/>
+      <details>
+        <summary><small>&copy; 2020 Erkin Batu Altunbaş</small></summary>
+        <p>
+          <small>
+	    This work is licensed under a
+	    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+          </small>
+        </p>
+      </details>
+      <br/>
+      <a href="https://erkin.party/emacs/">
+        <img src="/images/emacs/powered1.jpg"
+             title="Powered by GNU Emacs, the environmentally friendly editor!"
+             alt="[Powered by GNU Emacs]"/></a>
+      <a href="https://lynx.invisible-island.net/">
+        <img src="/images/cheesy/lynx/paula.gif"
+             title="Lynx Friendly"
+             alt="[Dehanced for Lynx!]"/></a>
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+	<img src="https://i.creativecommons.org/l/by/4.0/88x31.png"
+	     alt="Creative Commons Attribution 4.0 Licence"/></a>
+    </footer>
+  </body>
+</html>
