@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="title"
+          content="Post title"/>
+    <meta name="author"
+          content="Erkin B Altunbaş"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=yes"/>
+
+    <link rel="canonical"
+          href="https://erkin.party/blog/200715/evolution/"/>
+
+    <!-- Favicon stuff -->
+    <link href="/images/favicons/apple-touch-icon.png"
+          rel="apple-touch-icon" sizes="180x180"/>
+    <link href="/images/favicons/favicon-32x32.png"
+          rel="icon" type="image/png" sizes="32x32"/>
+    <link href="/images/favicons/favicon-16x16.png"
+          rel="icon" type="image/png" sizes="16x16"/>
+    <link href="/images/favicons/site.webmanifest"
+          rel="manifest"/>
+    <link href="/images/favicons/safari-pinned-tab.svg"
+          rel="mask-icon" color="#6e6e6e"/>
+    <link href="/images/favicons/favicon.ico"
+          rel="shortcut icon"/>
+
+    <meta name="msapplication-TileColor"
+          content="#000000"/>
+    <meta name="msapplication-config"
+          content="/images/favicons/browserconfig.xml"/>
+    <meta name="theme-color"
+          content="#000000"/>
+
+    <link rel="stylesheet" type="text/css" href="/blog.css"/>
+
+    <title>The evolution of a Scheme programmer</title>
+  </head>
+
+  <body>
+    <article>
+      <header>
+        <h1>The evolution of a Scheme programmer</h1>
+        <p>
+          <b>Created:</b>
+          <time>2020-07-15</time>
+          <br/>
+          <b>Updated:</b>
+          <time>2020-07-17</time>
+        </p>
+        <hr/>
+        <a href="/blog">← Back to index</a>
+      </header>
+      <br/>
+
+      <div style="line-height: 1em;">
+<code>;; Studying Scheme in university or reading The Little Schemer
+<span class="paren-0">(</span>define factorial
+  <span class="paren-1">(</span>lambda <span class="paren-2">(</span>n<span class="paren-2">)</span>
+    <span class="paren-2">(</span>cond <span class="paren-3">(</span><span class="paren-4">(</span>= n 0<span class="paren-4">)</span> 1<span class="paren-3">)</span>
+          <span class="paren-3">(</span>else <span class="paren-4">(</span>* <span class="paren-5">(</span>factorial <span class="paren-6">(</span>- n 1<span class="paren-6">)</span><span class="paren-5">)</span> n<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Newbie programmer, enjoys recursion and simplicity in life
+<span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
+  <span class="paren-1">(</span>if <span class="paren-2">(</span>zero? n<span class="paren-2">)</span>
+      1
+      <span class="paren-2">(</span>* n <span class="paren-3">(</span>factorial <span class="paren-4">(</span>sub1 n<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Hates functional programming and resents being taught Scheme in university
+<span class="paren-0">(</span>define <span class="paren-1">(</span>return x<span class="paren-1">)</span> x<span class="paren-0">)</span>
+<span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
+  <span class="paren-1">(</span>define result 0<span class="paren-1">)</span>
+  <span class="paren-1">(</span>do <span class="paren-2">(</span><span class="paren-3">(</span>counter 1 <span class="paren-4">(</span>add1 counter<span class="paren-4">)</span><span class="paren-3">)</span>
+       <span class="paren-3">(</span>product 1 <span class="paren-4">(</span>* counter product<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span>
+      <span class="paren-2">(</span><span class="paren-3">(</span>> counter <span class="paren-4">(</span>add1 n<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span>
+    <span class="paren-2">(</span>set! result product<span class="paren-2">)</span><span class="paren-1">)</span>
+  <span class="paren-1">(</span>return result<span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; SICP reader, appreciates helper procedures and understands the power of tail calls
+<span class="paren-0">(</span>define <span class="paren-1">(</span>fact-iter product counter max-count<span class="paren-1">)</span>
+  <span class="paren-1">(</span>if <span class="paren-2">(</span>> counter max-count<span class="paren-2">)</span>
+      product
+      <span class="paren-2">(</span>fact-iter <span class="paren-3">(</span>* counter product<span class="paren-3">)</span>
+                 <span class="paren-3">(</span>add1 counter<span class="paren-3">)</span>
+                 max-count<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
+  <span class="paren-1">(</span>fact-iter 1 1 n<span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Astute SICP reader, doesn't want to clutter the namespace
+<span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
+  <span class="paren-1">(</span>define <span class="paren-2">(</span>fact-aux product counter<span class="paren-2">)</span>
+    <span class="paren-2">(</span>if <span class="paren-3">(</span>> counter n<span class="paren-3">)</span>
+        product
+        <span class="paren-3">(</span>fact-aux <span class="paren-4">(</span>* counter product<span class="paren-4">)</span>
+                  <span class="paren-4">(</span>add1 counter<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span>
+  <span class="paren-1">(</span>fact-aux 1 1 n<span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Adept programmer, getting a hang of the idioms
+<span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
+  <span class="paren-1">(</span>let loop <span class="paren-2">(</span><span class="paren-3">(</span>product 1<span class="paren-3">)</span> <span class="paren-3">(</span>counter 1<span class="paren-3">)</span><span class="paren-2">)</span>
+    <span class="paren-2">(</span>if <span class="paren-3">(</span>> counter n<span class="paren-3">)</span>
+        product
+        <span class="paren-3">(</span>loop <span class="paren-4">(</span>* counter product<span class="paren-4">)</span>
+              <span class="paren-4">(</span>add1 counter<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Came from a different functional language, sees patterns everywhere
+<span class="paren-0">(</span>define factorial
+  <span class="paren-1">(</span>match-lambda
+   <span class="paren-2">(</span>0 1<span class="paren-2">)</span>
+   <span class="paren-2">(</span>n <span class="paren-3">(</span>* n <span class="paren-4">(</span>factorial <span class="paren-5">(</span>sub1 n<span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Really likes lists, carries around their own 300 line file of helper procedures
+<span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
+  <span class="paren-1">(</span>apply * <span class="paren-2">(</span>build-list n add1<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Discovering different functional approaches and came across SRFI-1
+<span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
+  <span class="paren-1">(</span>fold * 1 <span class="paren-2">(</span>iota 1 <span class="paren-3">(</span>add1 n<span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Eagerly believes that the ideal solution can always be found in an SRFI
+<span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
+  <span class="paren-1">(</span>product-ec <span class="paren-2">(</span>: i 1 <span class="paren-3">(</span>add1 n<span class="paren-3">)</span><span class="paren-2">)</span> i<span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Spoilt by Racket's macros
+<span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
+  <span class="paren-1">(</span>for/product <span class="paren-2">(</span><span class="paren-3">(</span>i <span class="paren-4">(</span>in-range 1 <span class="paren-5">(</span>add1 n<span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span> i<span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Heard about the Y-combinator and went down a rabbithole
+<span class="paren-0">(</span>define factorial
+  <span class="paren-1">(</span><span class="paren-2">(</span>λ <span class="paren-3">(</span>f<span class="paren-3">)</span>
+     <span class="paren-3">(</span><span class="paren-4">(</span>λ <span class="paren-5">(</span>g<span class="paren-5">)</span>
+        <span class="paren-5">(</span>f <span class="paren-6">(</span>λ <span class="paren-7">(</span>x<span class="paren-7">)</span>
+             <span class="paren-7">(</span><span class="paren-8">(</span>g g<span class="paren-8">)</span> x<span class="paren-7">)</span><span class="paren-6">)</span><span class="paren-5">)</span><span class="paren-4">)</span>
+      <span class="paren-4">(</span>λ <span class="paren-5">(</span>g<span class="paren-5">)</span>
+        <span class="paren-5">(</span>f <span class="paren-6">(</span>λ <span class="paren-7">(</span>x<span class="paren-7">)</span>
+             <span class="paren-7">(</span><span class="paren-8">(</span>g g<span class="paren-8">)</span> x<span class="paren-7">)</span><span class="paren-6">)</span><span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span>
+   <span class="paren-2">(</span>λ <span class="paren-3">(</span>f<span class="paren-3">)</span>
+     <span class="paren-3">(</span>λ <span class="paren-4">(</span>n<span class="paren-4">)</span>
+       <span class="paren-4">(</span>if <span class="paren-5">(</span>zero? n<span class="paren-5">)</span>
+           1
+           <span class="paren-5">(</span>* n <span class="paren-6">(</span>f <span class="paren-7">(</span>sub1 n<span class="paren-7">)</span><span class="paren-6">)</span><span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Spent an idle weekend learning about Peano numerals and combinatory logic
+;; Will forget about it all in a week and all this will become unreadable in two days
+<span class="paren-0">(</span>define Ω <span class="paren-1">(</span>λ <span class="paren-2">(</span>f<span class="paren-2">)</span> <span class="paren-2">(</span>f f<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define S <span class="paren-1">(</span>λ <span class="paren-2">(</span>f<span class="paren-2">)</span> <span class="paren-2">(</span>λ <span class="paren-3">(</span>g<span class="paren-3">)</span> <span class="paren-3">(</span>λ <span class="paren-4">(</span>x<span class="paren-4">)</span> <span class="paren-4">(</span><span class="paren-5">(</span>f x<span class="paren-5">)</span> <span class="paren-5">(</span>g x<span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define K <span class="paren-1">(</span>λ <span class="paren-2">(</span>x<span class="paren-2">)</span> <span class="paren-2">(</span>λ <span class="paren-3">(</span>y<span class="paren-3">)</span> x<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define ι <span class="paren-1">(</span>λ <span class="paren-2">(</span>x<span class="paren-2">)</span> <span class="paren-2">(</span>x <span class="paren-3">(</span>S K<span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define I <span class="paren-1">(</span>Ω ι<span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define Z <span class="paren-1">(</span>λ <span class="paren-2">(</span>f<span class="paren-2">)</span> <span class="paren-2">(</span>Ω <span class="paren-3">(</span>λ <span class="paren-4">(</span>x<span class="paren-4">)</span> <span class="paren-4">(</span>f <span class="paren-5">(</span>v<span class="paren-5">)</span> <span class="paren-5">(</span><span class="paren-6">(</span>Ω x<span class="paren-6">)</span> v<span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define true <span class="paren-1">(</span>λ <span class="paren-2">(</span>a<span class="paren-2">)</span> <span class="paren-2">(</span>λ <span class="paren-3">(</span>b<span class="paren-3">)</span> a<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define false <span class="paren-1">(</span>λ <span class="paren-2">(</span>a<span class="paren-2">)</span> <span class="paren-2">(</span>λ <span class="paren-3">(</span>b<span class="paren-3">)</span> b<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define if <span class="paren-1">(</span>λ <span class="paren-2">(</span>p<span class="paren-2">)</span> <span class="paren-2">(</span>λ <span class="paren-3">(</span>a<span class="paren-3">)</span> <span class="paren-3">(</span>λ <span class="paren-4">(</span>b<span class="paren-4">)</span> <span class="paren-4">(</span><span class="paren-5">(</span>p a<span class="paren-5">)</span> b<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define and <span class="paren-1">(</span>λ <span class="paren-2">(</span>p<span class="paren-2">)</span> <span class="paren-2">(</span>λ <span class="paren-3">(</span>q<span class="paren-3">)</span> <span class="paren-3">(</span><span class="paren-4">(</span>p q<span class="paren-4">)</span> p<span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define zero <span class="paren-1">(</span>λ <span class="paren-2">(</span>f<span class="paren-2">)</span> <span class="paren-2">(</span>λ <span class="paren-3">(</span>x<span class="paren-3">)</span> x<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define add1 <span class="paren-1">(</span>λ <span class="paren-2">(</span>n<span class="paren-2">)</span> <span class="paren-2">(</span>λ <span class="paren-3">(</span>f<span class="paren-3">)</span> <span class="paren-3">(</span>λ <span class="paren-4">(</span>x<span class="paren-4">)</span> <span class="paren-4">(</span>f <span class="paren-5">(</span><span class="paren-6">(</span>n f<span class="paren-6">)</span> x<span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define sub1 <span class="paren-1">(</span>λ <span class="paren-2">(</span>n<span class="paren-2">)</span> <span class="paren-2">(</span>λ <span class="paren-3">(</span>f<span class="paren-3">)</span> <span class="paren-3">(</span>λ <span class="paren-4">(</span>x<span class="paren-4">)</span> <span class="paren-4">(</span><span class="paren-5">(</span><span class="paren-6">(</span>n <span class="paren-7">(</span>λ <span class="paren-8">(</span>g<span class="paren-8">)</span> <span class="paren-8">(</span>λ <span class="paren-9">(</span>h<span class="paren-9">)</span> <span class="paren-9">(</span>h <span class="paren-10">(</span>g f<span class="paren-10">)</span><span class="paren-9">)</span><span class="paren-8">)</span><span class="paren-7">)</span><span class="paren-6">)</span> <span class="paren-6">(</span>λ <span class="paren-7">(</span>u<span class="paren-7">)</span> x<span class="paren-6">)</span><span class="paren-5">)</span> I<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define + <span class="paren-1">(</span>λ <span class="paren-2">(</span>m<span class="paren-2">)</span> <span class="paren-2">(</span>λ <span class="paren-3">(</span>n<span class="paren-3">)</span> <span class="paren-3">(</span>n <span class="paren-4">(</span>add1 m<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define * <span class="paren-1">(</span>λ <span class="paren-2">(</span>m<span class="paren-2">)</span> <span class="paren-2">(</span>λ <span class="paren-3">(</span>n<span class="paren-3">)</span> <span class="paren-3">(</span>λ <span class="paren-4">(</span>f<span class="paren-4">)</span> <span class="paren-4">(</span>m <span class="paren-5">(</span>n f<span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define zero? <span class="paren-1">(</span>λ <span class="paren-2">(</span>n<span class="paren-2">)</span> <span class="paren-2">(</span><span class="paren-3">(</span>n <span class="paren-4">(</span>λ <span class="paren-5">(</span>x<span class="paren-5">)</span> false<span class="paren-4">)</span><span class="paren-3">)</span> true<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define <= <span class="paren-1">(</span>λ <span class="paren-2">(</span>m<span class="paren-2">)</span> <span class="paren-2">(</span>λ <span class="paren-3">(</span>n<span class="paren-3">)</span> <span class="paren-3">(</span>zero? <span class="paren-4">(</span><span class="paren-5">(</span>- m<span class="paren-5">)</span> n<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define = <span class="paren-1">(</span>λ <span class="paren-2">(</span>m<span class="paren-2">)</span> <span class="paren-2">(</span>λ <span class="paren-3">(</span>n<span class="paren-3">)</span> <span class="paren-3">(</span><span class="paren-4">(</span>and <span class="paren-5">(</span><span class="paren-6">(</span><= m<span class="paren-6">)</span> n<span class="paren-5">)</span><span class="paren-4">)</span> <span class="paren-4">(</span><span class="paren-5">(</span><= n<span class="paren-5">)</span> m<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define factorial
+  <span class="paren-1">(</span>λ <span class="paren-2">(</span>x<span class="paren-2">)</span>
+    <span class="paren-2">(</span><span class="paren-3">(</span>Z <span class="paren-4">(</span>λ <span class="paren-5">(</span>f<span class="paren-5">)</span>
+          <span class="paren-5">(</span>λ <span class="paren-6">(</span>n<span class="paren-6">)</span>
+            <span class="paren-6">(</span><span class="paren-7">(</span><span class="paren-8">(</span>if <span class="paren-9">(</span>zero? n<span class="paren-9">)</span><span class="paren-8">)</span> <span class="paren-8">(</span>add1 zero<span class="paren-8">)</span><span class="paren-7">)</span> <span class="paren-7">(</span><span class="paren-8">(</span>* n<span class="paren-8">)</span> <span class="paren-8">(</span>f <span class="paren-9">(</span>sub1 n<span class="paren-9">)</span><span class="paren-8">)</span><span class="paren-7">)</span><span class="paren-6">)</span><span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span> x<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span> 
+
+
+;; Gone mad with power after discovering macros, likes -funroll-loops
+<span class="paren-0">(</span>define-syntax factorial
+  <span class="paren-1">(</span>lambda <span class="paren-2">(</span>stx<span class="paren-2">)</span>
+    <span class="paren-2">(</span>syntax-case stx <span class="paren-3">(</span><span class="paren-3">)</span>
+      <span class="paren-3">(</span><span class="paren-4">(</span>_ 0<span class="paren-4">)</span> #'1<span class="paren-3">)</span>
+      <span class="paren-3">(</span><span class="paren-4">(</span>_ n<span class="paren-4">)</span> #`<span class="paren-4">(</span>* n <span class="paren-5">(</span>factorial
+                     #,<span class="paren-6">(</span>sub1 <span class="paren-7">(</span>syntax->datum #'n<span class="paren-7">)</span><span class="paren-6">)</span><span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Feels enlightened after learning about CPS but doesn't know what to do with this information
+<span class="paren-0">(</span>define <span class="paren-1">(</span>fact-cont n k<span class="paren-1">)</span>
+  <span class="paren-1">(</span>if <span class="paren-2">(</span>= n 1<span class="paren-2">)</span>
+      <span class="paren-2">(</span>k 1<span class="paren-2">)</span>
+      <span class="paren-2">(</span>fact-cont <span class="paren-3">(</span>sub1 n<span class="paren-3">)</span>
+                 <span class="paren-3">(</span>lambda <span class="paren-4">(</span>x<span class="paren-4">)</span>
+                   <span class="paren-4">(</span>k <span class="paren-5">(</span>* n x<span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
+  <span class="paren-1">(</span>fact-cont n values<span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Overjoyed to see first-class continuations in Scheme, still doesn't know what to do with them
+<span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
+  <span class="paren-1">(</span>letrec <span class="paren-2">(</span><span class="paren-3">(</span>f <span class="paren-4">(</span>lambda <span class="paren-5">(</span>n k<span class="paren-5">)</span>
+                <span class="paren-5">(</span>if <span class="paren-6">(</span>= n 1<span class="paren-6">)</span>
+                    <span class="paren-6">(</span>k 1<span class="paren-6">)</span>
+                    <span class="paren-6">(</span>f <span class="paren-7">(</span>sub1 n<span class="paren-7">)</span>
+                       <span class="paren-7">(</span>lambda <span class="paren-8">(</span>ret<span class="paren-8">)</span>
+                         <span class="paren-8">(</span>k <span class="paren-9">(</span>* n ret<span class="paren-9">)</span><span class="paren-8">)</span><span class="paren-7">)</span><span class="paren-6">)</span><span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span>
+    <span class="paren-2">(</span>call-with-current-continuation
+     <span class="paren-3">(</span>lambda <span class="paren-4">(</span>k<span class="paren-4">)</span>
+       <span class="paren-4">(</span>f n k<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Attempted to make their CPS procedures simpler, failed
+<span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
+  <span class="paren-1">(</span>define retry #f<span class="paren-1">)</span>
+  <span class="paren-1">(</span>if <span class="paren-2">(</span>= n 1<span class="paren-2">)</span>
+      <span class="paren-2">(</span>call-with-current-continuation
+       <span class="paren-3">(</span>lambda <span class="paren-4">(</span>k<span class="paren-4">)</span>
+         <span class="paren-4">(</span>set! retry k<span class="paren-4">)</span> 1<span class="paren-3">)</span><span class="paren-2">)</span>
+      <span class="paren-2">(</span>* n <span class="paren-3">(</span>factorial <span class="paren-4">(</span>sub1 n<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Concerned about wasted performance, really likes the word 'amortised'
+<span class="paren-0">(</span>define <span class="paren-1">(</span>memoise proc<span class="paren-1">)</span>
+  <span class="paren-1">(</span>let <span class="paren-2">(</span><span class="paren-3">(</span>table <span class="paren-4">(</span>make-hashtable equal-hash equal?<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span>
+    <span class="paren-2">(</span>lambda args
+      <span class="paren-3">(</span>hashtable-ref! table args <span class="paren-4">(</span>lambda <span class="paren-5">(</span><span class="paren-5">)</span> <span class="paren-5">(</span>apply proc args<span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
+  <span class="paren-1">(</span>define fact-iter
+    <span class="paren-2">(</span>memoise
+     <span class="paren-3">(</span>lambda <span class="paren-4">(</span>product counter<span class="paren-4">)</span>
+       <span class="paren-4">(</span>if <span class="paren-5">(</span>> counter n<span class="paren-5">)</span>
+           product
+           <span class="paren-5">(</span>fact-iter <span class="paren-6">(</span>* counter product<span class="paren-6">)</span>
+                      <span class="paren-6">(</span>add1 counter<span class="paren-6">)</span><span class="paren-5">)</span><span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span>
+  <span class="paren-1">(</span>fact-iter 1 1<span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Lazy programmer
+<span class="paren-0">(</span>define-coroutine-generator <span class="paren-1">(</span>factorials<span class="paren-1">)</span>
+  <span class="paren-1">(</span>let loop <span class="paren-2">(</span><span class="paren-3">(</span>product 1<span class="paren-3">)</span> <span class="paren-3">(</span>counter 1<span class="paren-3">)</span><span class="paren-2">)</span>
+    <span class="paren-2">(</span>yield product<span class="paren-2">)</span>
+    <span class="paren-2">(</span>loop <span class="paren-3">(</span>* product counter<span class="paren-3">)</span> <span class="paren-3">(</span>add1 counter<span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
+  <span class="paren-1">(</span>car <span class="paren-2">(</span>generator->list <span class="paren-3">(</span>gindex factorials <span class="paren-4">(</span>generator n<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Lazier programmer
+<span class="paren-0">(</span>define factorials <span class="paren-1">(</span>stream-scan * 1 <span class="paren-2">(</span>stream-from 1<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+<span class="paren-0">(</span>define <span class="paren-1">(</span>factorial n<span class="paren-1">)</span>
+  <span class="paren-1">(</span>stream-ref factorials n<span class="paren-1">)</span><span class="paren-0">)</span>
+
+
+;; Laziest programmer
+<span class="paren-0">(</span>define factorial
+  <span class="paren-1">(</span>dynamic-require
+   'math/number-theory
+   'factorial
+   <span class="paren-2">(</span>lambda <span class="paren-3">(</span><span class="paren-3">)</span>
+     <span class="paren-3">(</span>lambda <span class="paren-4">(</span>n<span class="paren-4">)</span>
+       <span class="paren-4">(</span>error 'factorial "Cannot import library: ~a" 'math/number-theory<span class="paren-4">)</span><span class="paren-3">)</span><span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span>
+</code></div>
+
+      <p>Inspired by
+	<a href="https://willamette.edu/~fruehr/haskell/evolution.html">The Evolution of a Haskell Programmer</a>.</p>
+      <p>Some implementations taken from <a href="https://github.com/lwhjp">Leo Uino</a>'s
+	<a href="https://gist.github.com/lwhjp/ba74b14f6a5eefa9c7fb">gist</a>.</p>
+      <p>For a real-life implementation, see how Racket's
+	<a href="https://docs.racket-lang.org/math/number-theory.html"><code>math/number-theory</code></a> does it
+	<a href="https://github.com/racket/math/blob/master/math-lib/math/private/number-theory/factorial.rkt">here</a>.</p>
+    </article>
+    <footer>
+      <p>
+        <a href="#top">↑ Back to top</a>
+        <br/>
+        <a href="/blog">← Back to index</a>
+      </p>
+      <hr/>
+      <details>
+        <summary><small>&copy; 2020 Erkin Batu Altunbaş</small></summary>
+        <p>
+          <small>
+	    This work is licensed under a
+	    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+          </small>
+        </p>
+      </details>
+      <br/>
+      <a href="https://erkin.party/emacs/">
+        <img src="/images/emacs/powered1.jpg"
+             title="Powered by GNU Emacs, the environmentally friendly editor!"
+             alt="[Powered by GNU Emacs]"/></a>
+      <a href="https://lynx.invisible-island.net/">
+        <img src="/images/cheesy/lynx/paula.gif"
+             title="Lynx Friendly"
+             alt="[Dehanced for Lynx!]"/></a>
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+	<img src="https://i.creativecommons.org/l/by/4.0/88x31.png"
+	     alt="Creative Commons Attribution 4.0 Licence"/></a>
+    </footer>
+  </body>
+</html>

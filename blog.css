@@ -1,7 +1,8 @@
+@import "/syntax/syntax.css";
 html
 {
     height: 100%;
-    max-width: 820px;
+    max-width: 1024px;
     margin: auto;
 }
 
@@ -10,7 +11,6 @@ body
     height: 100%;
     vertical-align: middle;
 
-    width: 800px;
     margin-top: 30px;
 
     line-height: 1.7em;
@@ -89,11 +89,6 @@ ul
         line-height: 1em;
         width: 350px;
         bottom: 30px;
-    }
-
-    code
-    {
-        color: #A0A0C0;
     }
 
     h2, h3, h4

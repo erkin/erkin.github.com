@@ -30,5 +30,36 @@
       multiparadigm languages, such as Java.
     </summary>
   </entry>
+  <entry>
+    <title>The evolution of a Scheme programmer</title>
+    <link rel="alternate"
+          type="text/html"
+          href="https://erkin.party/blog/200715/evolution/"/>
+    <id>urn:uuid:09d8d0a9-62ff-4dea-be9c-5aa762e8e891</id>
+    <published>2020-07-15T00:00:00Z</published>
+    <updated>2020-07-16T00:00:00Z</updated>
+    <author>
+      <name>Erkin Batu Altunbaş</name>
+    </author>
+    <summary>
+      Different implementations of the factorial procedure across a
+      Scheme hacker's life.
+    </summary>
+  </entry>
+  <entry>
+    <title>Breaking referential transparency in Racket</title>
+    <link rel="alternate"
+          type="text/html"
+          href="https://erkin.party/blog/200807/opaque/"/>
+    <id>urn:uuid:d7b2a7d9-ab09-41c6-a466-11bb52b26dde</id>
+    <published>2020-08-07T00:00:00Z</published>
+    <author>
+      <name>Erkin Batu Altunbaş</name>
+    </author>
+    <summary>
+      A brief adventure in which I get distracted from SICP exercises
+      for no benefit.
+    </summary>
+  </entry>
 
 </feed>
