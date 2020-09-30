@@ -71,7 +71,8 @@
       <p>
 	You see, I decided to use this opportunity to make a toy
 	<code>#lang</code>. It started out dead simple:
-	<div style="line-height: 1em;"><code><span class="paren-0">(</span>provide #%app #%datum #%module-begin #%top-interaction #%top
+	<div style="line-height: 1em;"><code>#lang racket/base
+<span class="paren-0">(</span>provide #%app #%datum #%module-begin #%top-interaction #%top
          λ define let quote
          cond if and or not else
          + - / * = > <<span class="paren-0">)</span>
@@ -89,7 +90,7 @@
       </p>
 
       <p>
-	Okay, so far so good. We&apos;ll need to add more later on but
+	Okay, so far so good. I&apos;ll need to add more later on but
 	this is quite enough for the first bits of the first
 	chapter. This is where my hare-brained scheme (heh heh) comes
 	in. I wanted to do something like this: Put procedures and
