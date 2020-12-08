@@ -52,58 +52,29 @@
     <header>
       <div id="skip"><a href="#content">Skip to content</a></div>
       <nav>
-        &lt; <b>Home</b>
-        | <a href="/blog/">Blog</a>
-        | <a href="/projects/">Projects</a>
-        | <a href="/misc/">Misc</a>
-        | <a href="/contact/">Contact</a> &gt;
+        '(<b>Home</b>
+        <a href="/blog/">Blog</a>
+        <a href="/projects/">Projects</a>
+        <a href="/misc/">Misc</a>
+        <a href="/contact/">Contact</a>)
       </nav>
     </header>
     <section>
       <a id="content"></a>
-      <h3>About</h3>
-      <!-- Me -->
-      <p>
-        My name is <strong>erkin</strong> (/'e&#x027E;cin/) and this is my web page.
-      </p>
-      <!-- CV -->
-      <p>
-        <a href="/files/EBAltunbas_CV.pdf">My CV</a> and
-        <a href="/files/EBAltunbas_Europass.pdf">my language passport</a>.
-      </p>
-      <!-- Interests -->
-      <p>
-        I dabble in programming and computer science. I'm particularly
-        interested in programming language theory and systems
-        programming, and their subfields, such as compiler design, operating
-        system development, virtualisation, filesystem design and such.
-        I'm also interested retrocomputing and constrained computing
-        aesthetics. My non-tech-related hobbies are homebrewing and knitting.
-      </p>
-      <!-- Languages -->
-      <p>
-        I'm very fond of functional, expressive and orthogonal languages, which
-        is why Scheme/Racket is my go-to language. In addition, I use Clojure
-        and I'm learning OCaml and Elixir lately.
-      </p>
-      <!-- OS -->
-      <p>
-        I've been using GNU/Linux exclusively since 2009 (in fact, the Arch
-        Linux setup on my desktop dates back to 2011). You can view some of my
-        system configuration <a href="https://github.com/erkin/dotfiles">here</a>.
-      </p>
-      <!-- End -->
-      <p>
-        You can check my social/professional profiles under the
-        <a href="/contact/">contact</a> page.
-      </p>
-      <!-- Footnote -->
-      <p>
-        This website is in Polyglot XHTML5 and was entirely written by hand in
-        Emacs! I value accessibility a lot, so if my page doesn't render well on
-        your end, please let me know. You can view the old website
-        <a href="/index-old.html">here</a>.
-      </p>
+      <code>
+<span class="paren-0">(</span>define me
+  <span class="paren-1">(</span>list
+   :name      'erkin
+   :alias     'Lulu
+   :pronouns  '|they/them|
+   :files     <span class="paren-2">(</span>list <a href="/files/EBAltunbas_CV.pdf">curriculum-vitae</a>
+                    <a href="/files/EBAltunbas_Europass.pdf">language-passport</a><span class="paren-2">)</span>
+   :interests <span class="paren-2">(</span>list 'programming-language-theory
+                    'systems-programming
+                    'retrocomputing
+                    'knitting
+                    'homebrewing<span class="paren-2">)</span>
+   :links    <span class="paren-2">(</span>cons blog contact<span class="paren-2">)</span><span class="paren-1">)</span><span class="paren-0">)</span></code>
     </section>
 
     <footer>
@@ -111,12 +82,18 @@
       <details>
         <summary>
           <small>
-            <b>&copy; 2012&ndash;2020</b> Erkin Batu Altunbaş
+            <b>&copy; 2012&ndash;2020</b> erkin
           </small>
         </summary>
         <p>
+          This website is in Polyglot XHTML5 and was entirely written by hand in
+          Emacs! I value accessibility a lot, so if my page doesn't render well on
+          your end, please let me know. You can view the old website
+          <a href="/index-old.html">here</a>.
+        </p>
+        <p>
           <small>
-            <b>Last updated:</b> <time>2020-02-11</time>
+            <b>Last updated:</b> <time>2020-12-08</time>
             <br/>
             Kindly hosted by
             <a href="https://pages.github.com">

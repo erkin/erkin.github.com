@@ -10,7 +10,7 @@
   <id>urn:uuid:85bd85fe-3f08-4b51-a0b7-8738d42b2521</id>
   <updated>2019-10-07T00:00:00Z</updated>
   <author>
-    <name>Erkin Batu Altunbaş</name>
+    <name>erkin</name>
   </author>
 
   <entry>
@@ -22,7 +22,7 @@
     <published>2019-02-08T00:00:00Z</published>
     <updated>2019-02-10T00:00:00Z</updated>
     <author>
-      <name>Erkin Batu Altunbaş</name>
+      <name>erkin</name>
     </author>
     <summary>
       This is my attempt at making a family tree of programming languages.
@@ -39,7 +39,7 @@
     <published>2020-07-15T00:00:00Z</published>
     <updated>2020-07-16T00:00:00Z</updated>
     <author>
-      <name>Erkin Batu Altunbaş</name>
+      <name>erkin</name>
     </author>
     <summary>
       Different implementations of the factorial procedure across a
@@ -54,7 +54,7 @@
     <id>urn:uuid:d7b2a7d9-ab09-41c6-a466-11bb52b26dde</id>
     <published>2020-08-07T00:00:00Z</published>
     <author>
-      <name>Erkin Batu Altunbaş</name>
+      <name>erkin</name>
     </author>
     <summary>
       A brief adventure in which I get distracted from SICP exercises

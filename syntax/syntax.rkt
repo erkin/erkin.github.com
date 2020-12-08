@@ -1,7 +1,7 @@
 #lang racket/base
 ;; Rainbow paren <span> generator
 ;; See https://erkin.party/syntax/syntax.css for the complementary CSS
-;; January 2020, Erkin Batu Altunbaş
+;; January 2020, erkin
 
 (require racket/format
          racket/string)
