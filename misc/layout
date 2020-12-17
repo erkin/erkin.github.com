@@ -3,17 +3,17 @@ default  partial alphanumeric_keys modifier_keys
 xkb_symbols "basic" {
 
 // naming drafts
-//    name[Group1]= "English (erkin's Programmer's Dvorak alternative international adjusted for emacs keybindings and using standard symbol keys with Turkish and Greek letters and no dead keys)";
-//    name[Group1]= "English (e prog Dvrk alt intl 4 emacs w/ std sym keys w/ tr-gr & !dead keys)";
+//    name[Group1]= "English (Lulu's Programmer's Dvorak alternative international adjusted for Emacs keybindings and using standard symbol keys with Turkish and Greek letters and no dead keys)";
+//    name[Group1]= "English (l prog Dvrk alt intl 4 emacs w/ std sym keys w/ tr-gr & !dead keys)";
 //    name[Group1]= "English (intl prog Dvorak alt w/ Turkish+Greek)";
 //    name[Group1]= "English (Alternative Programmer's Dvorak)";
 //    name[Group1]= "English (Programmer's Alternative Dvorak)";
 //    name[Group1]= "English (Dvorak alternative international with no dead keys);
-//    name[Group1]= "English (erkin's Dvorak Alternative)";
-//    name[Group1]= "English (erkin's layout)";
-    name[Group1]= "English (erkin)";
+//    name[Group1]= "English (Lulu's Dvorak Alternative)";
+//    name[Group1]= "English (Lulu's layout)";
+    name[Group1]= "English (Lulu)";
 
-// v0.6
+// v0.6 (2015)
 //
 // v0.1: Initial version, Programmer's Dvorak with no dead keys
 // v0.2: Add symbols and Turkish letters
