@@ -1,4 +1,4 @@
-Informal glossary of Kobaïan language v0.5
+Informal glossary of Kobaïan language v0.8
 
 expressions | -
 ------------|---
@@ -14,7 +14,6 @@ dö(el)   | you (sub)
 zur      | you (obj)
 dusz     | your, yours
 lud      | he/she/it/they
-ud       | his/her/its/their
 üd       | his/hers/its/theirs, himself/herself/itself/themself
 warreï   | why
 wï       | where
@@ -49,20 +48,17 @@ particles | -
 ----------|---
 eden      | without, -less/-free
 da        | the
-de        | of
 dë        | of a/the
 doïa      | not (negation)
 dros      | out of/from
 fu        | one, a/an
-fü        | to a/the
-fuh       | to
+fü(h)     | to a/the
 fur       | for
 furwolt   | whilst/while, during
-fü        | to
 is        | (such) as, like
+mëm       | in/inside, within
 met       | on, upon, above, top of
 nansei    | never, (for) ever
-mëm       | in/inside, within
 steuh(n)  | towards
 uz        | and
 wöl       | since
@@ -83,7 +79,7 @@ dreïak        | hypocrisy
 dün           | heart
 egeulsik      | cycle, rotation
 ëktah         | hero
-essi          | sea, ocean
+ëssi          | sea, ocean
 etnah         | heredity
 ëmgalaï       | apocalypse
 falt          | sweat
@@ -143,7 +139,9 @@ urwa          | violence
 wainsaht      | forward, forth
 walomendêm    | universe
 weulh         | waves
+wortz         | world
 wlasik        | pardon, forgival, ascension
+ẁurdah        | death
 wurdin        | nothingness, nothing, void
 zain          | brain
 zanka         | sun
